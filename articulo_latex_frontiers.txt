@@ -1,4 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Hola que tal
 % This is just an example/guide for you to refer to when submitting manuscripts to Frontiers; it is not mandatory to use Frontiers .cls files nor frontiers.tex  %
 % This will only generate the Manuscript; the final article will be typeset by Frontiers after acceptance.   
 %                                              %
