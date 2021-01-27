@@ -1,0 +1,1448 @@
+\documentclass[letterpaper,12pt,openright,oneside]{article}
+
+
+\usepackage[left=2.5cm,top=2cm,right=2.5cm,nohead,foot=.5cm]{geometry}
+\usepackage[spanish,mexico]{babel}
+%\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage{url}
+\usepackage{pdflscape}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{babelbib}
+\usepackage{subfig}
+\usepackage{amsmath,amssymb,amsthm} 
+% assumes amsmath package installed
+%\usepackage[document]{ragged2e}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+citecolor=blue,
+urlcolor=black,
+}
+\urlstyle{rm}
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks%  save the current one
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+  \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+  \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+  \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+  \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+  \do\Y\do\Z}
+\newcommand{\grad}{$^{\circ}$}
+\usepackage{multirow}
+\usepackage{todonotes}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{bm,upgreek}
+\usepackage{afterpage}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{marvosym}
+\definecolor{light-gray}{gray}{.7}
+%\spanishdecimal{.}
+
+%-------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newcommand{\parcial}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newtheorem{lemma}{Lema}[subsection]
+%\newtheorem{proof}[theorem]{Proof}
+%\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{remark}{Remark}
+%\newcommand{\parcial}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\DeclareMathOperator{\sign}{sign}
+\newcommand{\m}[1]{\mathbf{#1}}
+\DeclareMathOperator{\diag}{diag}
+
+\renewcommand{\baselinestretch}{1.15}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+%\pagestyle{empty} %No headings for the first pages.
+
+
+%\includegraphics[width=0.05\textwidth]{./logo.jpg}~\\[1cm]
+
+\begin{titlepage}
+\begin{center}
+
+% Upper part of the page. The '~' is needed because \\
+% only works if a paragraph has started.
+
+
+\textsc{\LARGE Universidad Autónoma de Querétaro}\\[1 cm]
+\includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.75cm]
+\textsc{\Large Facultad de Ingeniería \\ \large{Doctorado en Ingeniería}}\\[0.5 cm]
+\textsc{\large Protocolo de Investigación \\ (Agosto 2020 - Julio 2023)}\\[0.5cm]
+%\small{Maestría en Instrumentación y Control Automático \\ 
+
+% Title
+%\HRule \\[0.4cm]
+{ 
+%\huge \bfseries Desarrollo de un sistema de identificación automático basado en espectroscopia para materiales reciclados \\[0.4cm] }
+%\vspace*{2cm}
+
+%\huge \bfseries Desarrollo de un sistema de identificación automático de bajo costo manteniendo la velocidad de clasificación para materiales reciclables con espectroscopia \\[0.4cm] }
+%\vspace*{2cm}
+\huge \bfseries %Desarrollo de un sistema de clasificación de alta detección y diseño asequible respecto a sistemas actuales implementados en plásticos reciclables
+
+Desarrollo de un sistema de clasificación para plásticos reciclables de alta detección y diseño asequible respecto a sistemas actuales
+\\[0.4cm] }
+%\vspace*{2cm}
+\vspace*{1.0cm}
+
+%alta detección
+
+%\huge \bfseries Desarrollo de un sistema de clasificación de bajo costo con diseño de alta velocidad respecto a sistemas actuales en plásticos reciclables \\[0.4cm] 
+%}\vspace*{2cm}
+
+
+%\textbf{}
+
+%\HRule \\[1.5cm]
+
+% Author and supervisor
+\large \textbf{Presenta:} Mtro. Luis Alberto Ángeles Hurtado\\\vspace*{0.5cm}
+\textbf{Director:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
+\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
+\textbf{Secretario:} Dr. Roberto Valentín Carrillo Serrano$^{1}$\\\vspace*{0.5cm}
+\textbf{Vocal:} Dra. Hilda Romero Zepeda$^{1}$\\\vspace*{0.5cm}
+\raggedright
+$^{1}$ Universidad Autónoma de Querétaro, Facultad de Ingeniería.\\
+%$^{2}$ Instituto Tecnológico de Celaya, Departamento de Ingeniería Electrónica.
+\vfill
+\centering
+% Bottom of the page
+{\large \today}
+%{\large 5 de diciembre de 2020}
+\end{center}
+\end{titlepage}
+
+\newpage
+%%%%
+\hypersetup{linkcolor=black}
+\tableofcontents
+
+%\section*{Resumen}
+%\addcontentsline{toc}{section}{Resumen}
+%En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030. La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e incluyen plástico, papel, cartón, vidrio, aluminio. El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios. Solo 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}. 
+%Actualmente los residuos solidos que más se utilizan por sus diversas aplicaciones en toda la industria es el plástico. Existen diferentes tipos de plásticos y la correcta clasificación de los diversos tipos de resinas plásticas es muy importante \cite{INEGI2020}. Existen diversas compañías en el mundo que compran resinas recicladas y buscan que estas resinas recicladas tengan las mismas características que tiene una resina virgen. De lo contrario, no es rentable comprar materiales reciclados. Para la separación a gran escala en la mayoría de los casos se realiza manualmente \cite{Bruno2000}. En la industria mexicana el reciclado de botellas de plástico da empleo directo alrededor de 98 mil personas y genera más de un millón de puestos de trabajo indirecto \cite{IMCC2019}. 
+%El principal problema de reciclar es el tiempo que lleva la inspección al 100{$\%$}, como ejemplo separar 1,800 kg de PET entre dos personas tarda hasta 16 horas. En este sector de la industria existen diversas maquinas comerciales que su grado de inversión es muy alto ver Tabla \ref{Sistemas}. 
+
+%La mayoría de las técnicas prevalentes para la clasificación de plásticos confían en el método de \textit{Near-Infrared spectroscopy} \cite{House2011}. Varios sistemas y métodos utilizan \textit{machine learning} que proporcionan ventajas y desventajas ver Tabla \ref{Comparacion}. Cada uno de los métodos de clasificación que se investigan actualmente tienen diferentes capacidades y costos. En todos los casos una combinación de tecnología parece ser la mejor elección para hacerlo más rentable \cite{HuiWang201975}. La implementación de estos sistemas automatizados rondan entre los 186,000 y 230,000 dólares \cite{Association2008}.
+%Cabe subrayar que se necesita de sistemas automatizados que sean capaces de distinguir tipos de plástico, botellas de color, tipo de etiqueta, tamaño, deformación y merma dentro de las botellas con un costo accesible y sin afectar la eficiencia de la clasificación dichos factores no los tienen los sistemas actuales.
+%En este trabajo se plantea una aproximación para clasificar botellas de plástico a una tasa media de tres botellas por segundo que dentro de ellas contengan merma de manera que separe en un 90{\%} aplicando espectroscopia, espectro-fotometría \cite{Wang20131534},\cite{AsheriArnon2019333}, así como procesamiento de imágenes y  \textit{machine learning} \cite{Hou2014}. 
+%Se desarrollara una metodología para la obtención de datos de las diferentes presentaciones que existen en el mercado, implementando maquinas de soporte vectorial (SVM), análisis de componentes principales (PCA), regresión logística así como diseños de experimentos para medir el efecto del cambio de distancia en los sensores, experimentación para disminuir el efecto de factores de ruido, experimentación  con la combinación de los sistemas de identificación de imágenes con el sistema de espectroscopia  y espectrofotometría.
+
+\newpage
+\section{Introducción}
+
+%-que es un sistema
+%Definir Que es clasificación?
+%-plásticos reciclables
+%-a que le llamo alta detección
+%-que le llamo diseño
+%-que es asequible
+%-sistemas disponibles
+%-alusión al objetivo sin mencionar el método
+
+Sistema es un conjunto de reglas o principios sobre una materia racionalmente enlazados entre sí \cite{RAE}. En otras palabras es un conjunto de partes coordinadas y en interacción para alcanzar un conjunto de objetivos. Por ejemplo para la Teoría General de Sistemas, se considera a la realidad como un sistema y que esta a su vez hubiese sido dividida en un cierto número de subsistemas (independientes, interdependientes, traslapados, etc). Así la Teoría General de Sistemas, la Ingeniería de Sistemas y el Análisis de Sistemas buscan explicar y predecir los principios de la realidad. Los sistemas de clasificación se definen como sistemas de organización temática que se utilizan para asignarles una determinada etiqueta a una característica y así poder identificarla \cite{Johansen2004}.%\vspace*{0.5cm} 
+
+%Definir Que es clasificación?
+
+Clasificar es ordenar o disponer por clases algo \cite{RAE}, extendiendo esta definición se puede decir que es el reconocimiento de similitudes y el agrupamiento de organismos u objetos en función de esas similitudes. El motivo de estudio de las clasificaciones son los objetos y organismos a clasificar \cite{crisci1977clasificacion}. Es importante señalar que la taxonomía es la disciplina que su motivo de estudio es tratar de explicar cómo se realiza la clasificación, cómo se determina, incluyendo sus bases, principios, procedimientos y reglas \cite{RAE}, \cite{crisci1977clasificacion}.%\vspace*{0.5cm} 
+
+%-plásticos reciclables
+
+Los plásticos reciclables (termoplásticos) se definen como polímeros que se pueden fundir y moldear casi indefinidamente. Se derriten cuando se calientan se endurecen cuando se enfrían, sin embargo, si se congelan, los termoplásticos se pueden romper, igual que el vidrio. Esas características, a las que deben su nombre, son reversibles, por lo que el material se puede calentar, moldear y congelar muchas veces. Existen más de 100 tipos de plásticos, siendo seis los más usados \cite{pelaez2018plan} y los que más se reciclan: polipropileno, el polietileno, el policloruro de vinilo, el poliestireno, el tereftalato de polietileno y el policarbonato \cite{garrain2008analisis}. Se identifican por un número dentro de un triángulo que facilita su identificación, y fueron codificados por la Sociedad industrial del plástico en 1980 \cite{Ramli2008}, ver Tabla \ref{Sımbolos}. %\vspace*{0.5cm}
+
+%-a que le llamo alta detección
+%-que es asequible
+
+Detección es la acción y efecto de descubrir la existencia de algo que no era perceptible \cite{RAE}. La alta detección de un proceso: es la acción y efecto sujeto a reglas o pautas recurrentes que ayudan a que un sistema a nivel hardware y software sean más eficientes. Diseño es la concepción original de un objeto u obra destinados a diferentes objetivos como por ejemplo la producción en serie. Asequible se refiere a lo que se puede alcanzar, obtener o lograr, lo que se pretenda o desea \cite{RAE}.  
+%\vspace*{0.5cm}
+
+%-sistemas disponibles
+
+Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación ver Tabla \ref{Sistemas} como el sistema de \textit{BottleSort}. Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}. El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individualmente \cite{Bruno2000}, \cite{Association2008}. Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} es un método de identificación de dos filtros \cite{Scott1995156}, \cite{Masoumi2012}. Otra sistema radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic} y al sistema VS-2 tiene una capacidad eficiente \cite{Bruno2000}, \cite{Foundation2015}.
+%\vspace*{0.5cm}
+
+%-hasta donde esta el estado del arte
+
+Las ultimas investigaciones plantean nuevos métodos como el principio del procesamiento de imágenes utilizando combinaciones de varias técnicas como análisis de componentes principales, espectroscopia \cite{Rani2019} y transformada \textit{Hough} \cite{Duda197211}, \cite{Prasad2012}. Otra técnica usada para clasificar botellas de plástico por extracción de sus características en la intensidad de la imagen es \textit{support vector machine} (SVM) \cite{Nawrocky2010}. También se puede encontrar una aproximación de los envases con operaciones morfológicas para describir la estructura o forma de la imagen \cite{Shahbudin2010}. Un sistema que clasifica las botellas en tiempo real utilizando FPGA fue propuesto en \cite{House2011}. 
+%\vspace*{0.5cm}
+
+Otros sistemas se basan en el uso de redes neuronales en conjunto con espectroscopia infrarroja para una eficiente identificación de los plásticos \cite{THuthFehre1995}. Cada uno de los métodos descritos  utilizan \textit{machine learning} proporcionan ventajas y desventajas ver Tabla \ref{Comparacion} mismas que ayudan diferenciar la mejor opción para implementar un sistema de alta velocidad de clasificación y de bajo costo. 
+
+%-alusión al objetivo sin mencionar el método
+Cada uno de los métodos de clasificación que existen y que se investigan tienen diferentes características y diseños. En este trabajo se plantea una combinación en los métodos y tecnología \cite{HuiWang201975} para clasificar botellas de plástico recicladas con envases que tengan merma \cite{Association2008}.
+ %\vspace*{0.5cm}
+%\newpage
+
+\section{Justificación}
+
+%importancia del tema // por que se estudia?
+%hacer alusión al caso del problema
+%(primer premisa el tema es relevante el tema también)
+%lo que se requiere métodos para la eliminación.
+
+%-el volumen de residuos hasta llegar a plásticos reciclables
+%-impacto económico de la actividad 
+%-impacto ecológico
+%- factor de velocidad de clasificación 
+%- diseño asequible porque?
+%- resumir lo expuesto
+
+En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030. La mitad de nuestros residuos son orgánicos, y la otra mitad son sólidos, e incluyen plástico, papel, cartón, vidrio, aluminio. El 90{$\%$} de estos desperdicios se arrojan a tiraderos de cielo abierto o a rellenos sanitarios lo que provoca contaminación del aire y el suelo. Los plásticos reciclados son materiales muy utilizados a nivel global en México de todos estos residuos que se producen solo el 5{$\%$} se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \cite{SEMARNAT2019}.
+%\vspace*{0.5cm}
+
+%Los plásticos reciclados son materiales muy utilizados a nivel global uno de los grandes problemas es que muchas botellas solo se utilizan una vez.  
+%El PET, HDPE, PP, PS y otros son fuentes de grandes desperdicios sólidos que dañan el medio ambiente. Para resolver este problema, diversos programas de reciclaje se implementan en diferentes países y con diferentes estrategias.\vspace*{0.5cm}
+
+
+%-impacto económico de la actividad 
+
+El crecimiento de la población a nivel mundial contribuye al aumento de materiales sólidos tanto los que que se pueden reciclar y los que no se reciclan. La adecuada clasificación de los plásticos representa una actividad económica para personas físicas y morales que contribuyen en la recolección, traslado y proceso de los diferentes materiales. Existen dos empresas que son lideres en México y América Latina estas procesan el PET, sus nombres comerciales son \textit{PetStar} e \textit{IMER} dan empleo directo alrededor de 98 mil personas y generan más de un millón de puestos de trabajo indirecto \cite{IMCC2019}. A lo largo del territorio Mexicano existen centros de acopio donde se compran resinas recicladas y metales, vidrio etc, Querétaro es una de las entidades con más centros de acopio \cite{INEGI2020}.
+%\vspace*{0.5cm}
+
+%-impacto ecológico
+Las empresas y principalmente la ciudadanía deben seguir contribuyendo a que se recolecten más materiales solidos a través de los centros de acopio, solo para México se procesan 85 mil toneladas al año de plástico PET, el equivalente a 4,100 millones de botellas. Con la adecuada recolección se evita el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono ($CO_2$) cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
+%\vspace*{0.5cm}
+%un ejemplo de contaminación a cielo abierto, es el caso del PET y el PVC; los cuales son materiales que no se distinguen a primera vista, estos dos materiales son contaminantes uno del otro, la combinación de las resinas puede provocar la liberación de gases clorhídricos. La resina de PET se contamina con solo unas pocas partes por millón de resina de PVC \cite{Bruno2000}.
+
+%En México existen varias empresas que transportan procesan distintos materiales reciclables las dos más importantes que existen en América Latina y que procesan el PET son \textit{PetStar} e \textit{IMER} ambas plantas procesan 85 mil toneladas al año, el equivalente a 4,100 millones de botellas. Estas plantas evitan el 87{$\%$} de emisiones de gases de efecto invernadero frente a la producción de resina virgen, lo que equivale a 101,350 toneladas anuales de dióxido de carbono $(CO_2)$ cantidad que se evitaría si todos los automóviles de la ciudad de México dejaran de circular durante dos días \cite{SEMARNAT2019}.
+
+%En la industria mexicana la marca FEMSA da empleo directo alrededor de 98 mil personas y genera más de un millón de puestos de trabajo indirecto \cite{IMCC2019}. A lo largo del territorio Mexicano existen centros de acopio en la gran mayoría realizan la clasificación colocando los plásticos en super sacos y separan las botellas una por una ver Tabla \ref{Porcentaje} en los sistemas más modernos dependen del personal que visualmente identifican y clasifican  mientras viajan en una cinta transportadora.
+%Querétaro es una de las entidades con más centros de acopio \cite{INEGI2020} donde se compran resinas recicladas y se busca que estas resinas tengan las mismas características que tiene una resina virgen el valor en el mercado de estos materiales cambian con respecto a los precios del petroleo.%\vspace*{0.5cm}
+
+%- factor de velocidad de clasificación 
+%- diseño asequible porque?
+
+En México y en el mundo se necesitan tecnologías que sean accesibles e incrementen la velocidad de clasificar la mayor cantidad de materiales. La clasificación manual no es una opción rentable para separar en grandes cantidades. Existen presentaciones de plásticos que se comercializan cada día, las cuales no tienen la nomenclatura que las identifique, en consecuencia si no se cuenta con sistemas automatizados se opta por, raspar el plástico para comprobar su dureza así como observar si no existen otros plásticos mezclados. Se muerde el plástico para determinar la dureza del material. Se dan pequeños golpes con la mano al plástico para escuchar que sonido emite. Se quema el plástico, para observar si emite humo de color blanco y si tiene un olor muy parecido a cera de una veladora.
+
+Las micro empresas se enfrentan diariamente a las pérdidas que ocasiona comprar en grandes cantidades botellas de PET, dichas perdidas llegan a ser de hasta un 20{$\%$} al momento de estar realizando la compra por la dificultad de detectar botellas de plástico que tengan agua, refresco, basura u otros tipos de plástico. Por lo que minimizar los costos de recolección y clasificación es primordial para tener una mayor utilidad para el crecimiento de esta actividad.
+%\vspace*{0.5cm}
+
+%Las micro empresas se enfrentan diariamente a las pérdidas que ocasiona comprar en grandes cantidades botellas de PET, se ha observado que dichas perdidas llegan a ser de hasta un 20{$\%$} por la dificultad de detectar botellas de plástico que tengan agua, refresco, basura u otros tipos de plástico al momento de estar realizando la compra. %\vspace*{0.5cm}
+%La clasificación manual no es una opción rentable para separar en grandes cantidades cabe enfatizar que el uso de los plásticos va en aumento. También se ha observado que la alta rotación entre los trabajadores causa retrasos incrementando los costos de separación y tiempos de entrega. Por lo que minimizar los costos de recolección y clasificación es primordial para tener una mayor utilidad de lo contrario, no es rentable comprar materiales reciclados.
+
+%- resumir lo expuesto
+
+Cabe enfatizar que el uso de materiales solidos y orgánicos va en aumento se estima que aumentara a 21 millones de toneladas en los próximos 10 años \cite{SEMARNAT2019}. Por consiguiente al incrementar la capacidad de clasificar estos residuos en menos tiempo, se podría tener un impacto en el medio ambiente, económico y tecnológico. Por esta razón, la tecnificación de los centros de acopio puede ser una buena manera de monitorear y aplicar herramientas tecnológicas de bajo costo que les ayuden a ser más productivas y sean generadores de empleos. Por añadidura las herramientas estadísticas de aprendizaje autónomo pueden ser muy útiles para aplicarlas en este sector donde el principal problema se resuelve al clasificar correctamente en menos tiempo.
+%\newpage
+
+\section{Descripción del problema}
+
+%lo que es y lo que debe de ser o puede ser
+
+%-lo que es como se hace actualmente la clasificación con los todos los sistemas manual y automatizado.
+%-hablar de los diseños y costos
+%-como debe de ser
+%-como seria mi diseño que resuelva el problema, la velocidad que voy a ofrecer
+%-Cual seria el costo que oferto
+%incógnita que se va a funcionalizar con que? puede incrementar la capacidad de etc.
+%-incógnita científica que pretendo resolver (fundamento de la hipótesis)(en términos científicos y tecnológicos pretendo resolver)
+
+Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permitan tener resultados más favorables en los precios y costes; Por lo que se han implementado varias técnicas manuales que dependen de la interpretación del observador. El material en la mayoría de los casos se encuentra revuelto y se almacena en super sacos o contenedores de manera que manualmente se clasifican al 100{$\%$} debido a que estos materiales suelen estar contaminadas con líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de PVC, aceites etc. 
+%Por ejemplo: separar 1,800 kg de PET entre dos personas tarda hasta 16 horas. Existen presentaciones de plásticos que se comercializan cada día las cuales no tienen la nomenclatura que las identifique, en consecuencia se opta por:
+
+%\begin{enumerate}
+%    \item Raspar el plástico para comprobar su dureza así como observar si no existen otros plásticos mezclados. 
+%    \item Se muerde el plástico para determinar la dureza del material.
+%    \item Se dan pequeños golpes con la mano al plástico para escuchar que sonido emite.
+%    \item Se quema el plástico, para observar si emite humo de color blanco y si tiene un olor muy parecido a cera de una veladora.
+%\end{enumerate}
+
+Comercialmente existen sistemas automatizados para clasificar grandes cantidades de residuos solidos los principales son \textit{BottleSort}, \textit{Poly-Sort}, \textit{Near infrared spectroscopic} y VS-2 ver Tabla \ref{Sistemas} estos sistemas consideran como factores principales el tamaño de la botella, color y ordenan las botellas antes de separarlas. En la Figura \ref{Ejemplo} se muestra el proceso completo de clasificación con un sistema de retroalimentación \cite{Association2008} otros sistemas son diferentes pero en su mayoría siguen el mismo proceso \cite{Bruno2000}. Los sistemas con mayor velocidad de clasificación son los que tienen retroalimentación de las botellas lo que implica que requieren que las botellas pasen más de una ocasión por el sistema de medición \cite{Scott1995156}.
+%\vspace*{0.5cm}
+
+%-hablar de los diseños y costos
+
+Cada uno de los sistemas utiliza diferentes métodos para la identificación y proporcionan ventajas y desventajas, una de ellas es que no son capaces de distinguir si las botellas presentan algún tipo de contaminación dentro o fuera de la botella ver Tabla \ref{Comparacion}. Por otra parte estos sistemas automatizados su grado de inversión es muy alto, la implementación de estos sistemas automatizados rondan entre los 186,000 y 230,000 dólares \cite{Association2008}. %\vspace*{0.5cm}
+
+%-como debe de ser
+
+Se debe tener un sistema automatizado que sea capaz de distinguir entre diferentes diseños de botellas de plástico como el color, tipo de etiqueta, tamaño, deformación y merma dentro de la botella. Se debe tener un sistema que detecte esas propiedades y descarte otros materiales a una alta velocidad sin la retroalimentación de botellas, asimismo el costo de la implementación debe ser accesible, así como mantener la exactitud y precisión, es necesario incidir en que debe ser accesible para centros de acopio ver Figura \ref{factores}. 
+%\vspace*{0.5cm}
+
+%-como seria mi diseño que resuelva el problema, la velocidad que voy a ofrecer
+%-Cual seria el costo que oferto
+
+Por lo anterior, se propone un diseño asequible, ver Figura \ref{propuesta}, merece la pena subrayar que se enfocaría para centros de acopio que en promedio recolectan entre una tonelada a dos toneladas semanalmente, por esta razón se propone una velocidad de tres botellas por segundo, lo que es igual a reducir la mitad del tiempo cuando se realiza manualmente, de esta manera se implementaran diferentes técnicas estadísticas de aprendizaje automático y sensores así como eliminando algunas secciones de los sistemas automatizados actuales. Para el desarrollo y experimentación del sistema se estima un costo entre los 4,500 dólares, lo que representa una reducción del 80\% en comparación con los sistemas más equipados.
+%\vspace*{0.5cm}
+
+%incógnita que se va a funcionalizar con que? puede incrementar la capacidad de etc. 
+%-incógnita científica que pretendo resolver (fundamento de la hipótesis)(en términos científicos y tecnológicos pretendo resolver)
+
+Por lo tanto la incógnita científica es determinar  si al combinar diferentes métodos con espectroscopia infrarroja y \textit{machine learning} se puede incrementar la detección utilizando foto diodos \cite{Masoumi2012} (como el \textit{Indium-Gallium-Arsenide}).
+
+
+%primer aspecto al incrementar la detección de variables y al trabajar con espectroscopia infrarroja con foto diodos (como el \textit{Indium-Gallium-Arsenide}), radica que al hacer la adquisición de los datos \cite{Masoumi2012}, se debe incrementar la capacidad del filtrado en la región de la longitud de onda \cite{Wang20131534},\cite{AsheriArnon2019333}. Por lo tanto si se combina espectrofotometría, procesamiento de imágenes y \textit{machine learning} \cite{Hou2014}, podríamos incrementar la capacidad de detección y no depender de la capacidad del filtrado en la región de la longitud de onda de los sensores infrarrojos.
+
+%Por otra parte la espectroscopia infrarroja necesita de filtros y para poder incrementar la capacidad del filtrado de la longitud de onda \cite{Wang20131534},\cite{AsheriArnon2019333} se plantea combinar procesamiento de imágenes y \textit{machine learning} \cite{Hou2014}. Para simplificar podríamos decir que este desarrollo e implementación es complejo ya que al combinar diversos factores principalmente la velocidad, misma que representa una gran fuente de variación de ahí que se incrementan los costos.
+
+
+%Se puede clasificar correctamente con herramientas de aprendizaje supervisado en un 90{\%}, 1,800 kg de envases plásticos de tereftalato de polietileno (PET) en 4 horas a una tasa media de tres botellas por segundo que además dentro de ellas contengan merma, utilizando un diseño asequible combinando espectroscopia, espectrofotometría, procesamiento de imágenes y \textit{machine learning} en comparación con sistemas actuales.
+
+%Este desarrollo e implementación es complejo al interactuar diversos factores por ejemplo al incrementar la velocidad de detección del sistema se disminuye su exactitud, estos factores son fuentes de variación que incrementan la dificultad del \textit{hardware}, la programación y mecanismo. \vspace*{0.5cm}
+
+%El principal problema es el tiempo de clasificación al 100{$\%$} por que estos materiales suelen estar contaminadas y revueltas con otros materiales como PET que no se recicla, líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de PVC, aceites etc. Lo que al final se traduce en un aumento de costos de inspección, aumentando el tiempo de retorno de la inversión y la posible insatisfacción de las empresas que compactan y procesan el plástico. Por ejemplo: separar 1,800 kg de PET entre dos personas tarda hasta 16 horas. 
+
+%Existen diversas maquinas pero su grado de inversión es muy alto ver Tabla \ref{Sistemas}, la implementación de estos sistemas automatizados rondan entre los 186,000 y 230,000 dólares \cite{Association2008} otro problema de estos sistemas es que en la actualidad no son capaces de distinguir si las botellas presentan algún tipo de contaminación dentro o fuera de la botella.
+
+
+%Los centros de acopio que abastecen de material a diversas empresas en todo el mundo se encuentran con la falta de maquinaria y métodos que les permita ser más productivos; En ocasiones algunos plásticos no tienen la nomenclatura que los identifique. Por lo que han implementado varias técnicas que dependen de la interpretación del observador, 1) se raspa el plástico para comprobar su dureza así como observar si no existen otros plásticos mezclados, otros optan por morder el plástico esta técnica solo la realizan personas que están muy familiarizados con la dureza del material, 2) dar pequeños golpes con la mano al plástico para escuchar que sonido emite, 3) quemar una parte del plástico, si emite humo de color blanco y tiene un olor muy parecido a cera de una veladora se considera que si es un plástico reciclable.
+
+%El principal problema es el tiempo de clasificación al 100{$\%$} por que que estos materiales suelen estar contaminadas y revueltas con otros materiales como PET que no se recicla, líquidos dentro de las botellas, materiales orgánicos, pintura, etiquetas de PVC, aceites etc. Lo que al final se traduce en un aumento de costos de inspección, aumentando el tiempo de retorno de la inversión y la posible insatisfacción de las empresas que compactan y procesan el plástico. Por ejemplo: separar 1,800 kg de PET entre dos personas tarda hasta 16 horas. Existen diversas maquinas pero su grado de inversión es muy alto ver Tabla \ref{Sistemas}, la implementación de estos sistemas automatizados rondan entre los 186,000 y 230,000 dólares \cite{Association2008} otro problema de estos sistemas es que en la actualidad no son capaces de distinguir si las botellas presentan algún tipo de contaminación dentro o fuera de la botella.
+
+%Se necesita un sistema automatizado que sea capaz de distinguir entre factores que presentan las botellas como color, tipo de etiqueta, tamaño, deformación y merma dentro de la botella que tengan un costo accesible y sin afectar la eficiencia de la clasificación ver figura \ref{factores}. Este desarrollo e implementación es complejo al interactuar diversos factores por ejemplo al incrementar la velocidad de detección del sistema se disminuye su exactitud, estos factores son fuentes de variación que incrementan la dificultad del \textit{hardware}, la programación y mecanismo. \vspace*{0.5cm}
+
+%\newpage
+
+\section{Fundamentación teórica}
+
+%-que es un sistema y como se puede considerar aplicable a la clasificación definiendo la clasificación y detección
+
+%-Sistemas actuales de clasificación a profundidad, que les da esa capacidad 
+
+%-Que es el diseño de los sistemas actuales 
+%-(discusión sobre los elementos científicos que hacen posible cada una de las características de los sistemas y diseños) 
+
+Partiendo del concepto de sistema como un conjunto de partes coordinadas de reglas o principios sobre una materia racionalmente enlazados entre sí y en interacción para alcanzar un conjunto de objetivos \cite{RAE}, \cite{Johansen2004}. Se puede afirmar que el conjunto de partes de un sistema es fundamental para que se alcancen sus metas más aun si se trata de sistemas de medición. Para evaluar el conjunto de partes de un sistema se utiliza estadística con la finalidad de recolectar datos que representen el comportamiento de los componentes. Los datos son representaciones simbólicas de los eventos que se presentan en cualquier sistema y se pueden obtener por medio de la observación, por transductores, sensores y modelos matemáticos \cite{crisci1983introduccion}.
+
+En el mundo existe una gran diversidad de materiales con diferentes composiciones, por esta razón, las personas tienen la necesidad de agruparlos \cite{crisci1977clasificacion}. El agrupamiento de objetos en clases sobre la base de sus atributos que poseen en común es el objetivo en un sistema de clasificación. Por consiguiente si se diseñan componentes que realicen una detección de dichos atributos eficientemente y que puedan distinguir entre otro tipo de materiales considerando la naturaleza del mensurando nos llevaría a la obtención de un sistema ideal.
+
+En la república mexicana se recolectan diariamente más de 86,343 toneladas de desechos solidos y orgánicos generados en viviendas, edificios, calles, avenidas, parques y jardines. Más de la mitad de estos materiales que se generan en todo el país se recolecta en siete estados. En México se separa diariamente menos del 11{\%} de la basura recolectada. En el país existen centros de acopio de residuos sólidos urbanos y en algunos compran estos materiales para ser separados, clasificados o bien darles un tratamiento para reutilizarse ver Tabla \ref{Porcentaje}. Actualmente se tiene el registro de 241 centros de acopio que recolectan diariamente materiales diversos, de los cuales 75{\%} es papel, cartón, PET y vidrio. Las entidades federativas con más centros de acopio son: Querétaro con 51, Jalisco 45, Estado de México 43, Michoacán de Ocampo 25 \cite{INEGI2020}. 
+
+%#############################################
+\begin{table}[h]
+    \centering
+    \caption{Porcentaje de materiales reciclables que reciben los centros de acopio \cite{INEGI2020}.}
+    \label{Porcentaje}
+    \begin{tabular}{l c}
+         \hline
+         Tipo de material & Porcentaje  \\
+         \hline
+         Papel y cartón & 39  \\
+         PET & 23  \\
+         Vidrio & 13  \\
+         Fierro, lámina y acero & 9  \\
+         Plástico & 7  \\
+         Aluminio & 3  \\
+         Electrónicos y electrodomésticos & 3\\
+         Otros materiales & 2 \\
+         Cobre, bronce y plomo & 1 \\
+         \hline
+    \end{tabular}
+\end{table}
+%############################################
+
+En México, 87 de cada 100 personas entre los 18 a los 65 años de edad les interesa el cuidado del medio ambiente, pero solo 31 lo practican \cite{INEGI2020}. El material que más presencia tiene por sus diversos usos en toda la industria es el plástico. Existen diferentes tipos de plásticos y la correcta clasificación de los diversos tipos de resinas plásticas es muy importante; existen diversas compañías en el mundo que compran resinas recicladas y buscan que estas resinas recicladas tengan las mismas características que tiene una resina virgen. De lo contrario, no es rentable comprar materiales reciclados. Estas resinas tienen numerosas aplicaciones por ello es necesario tener sistemas y métodos que ayuden a separar las resinas en grandes cantidades y menor tiempo. Es difícil diferenciar entre los tipos de resinas que se utilizan y las diferentes presentaciones que circulan el mercado mundial ver Tabla \ref{Sımbolos}, esta fue una de las razones para que la Sociedad industrial del plástico instituyera un sistema de etiquetado en 1980 \cite{Ramli2008}. El sistema crea un conjunto de códigos para cada uno de los 6 tipos de resinas más comunes. Estos códigos se pueden encontrar en la mayoría de las presentaciones bajo las botellas \cite{Rotheiser2009}.
+%(Rotheiser and Rotheiser, 2009)
+
+%#############################################
+\begin{table}[h]
+    \centering
+    \caption{Símbolos para identificar el tipo de plástico reciclado \cite{Ramli2008}.}
+    \label{Sımbolos}
+    \begin{center}
+    \begin{tabular}{ c c c c c c c }
+        \hline
+        \includegraphics[trim = {31mm 225mm 165mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} & 
+        \includegraphics[trim = {52mm 225mm 142mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} & 
+        \includegraphics[trim = {74mm 225mm 120mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} &
+        \includegraphics[trim = {96mm 225mm 98mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} &
+        \includegraphics[trim = {118mm 225mm 76mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} &
+        \includegraphics[trim = {140mm 225mm 54mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} &
+        \includegraphics[trim = {162mm 225mm 32mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} \\
+            PET & HDPE & PVC & LDPE & PP & PS & OTROS \\ 
+            
+    \end{tabular}
+    \begin{tabular}{l c c c c c c}
+        PET:\textit{Polyethylene Terephthalate} & & & & & & HDPE: \textit{High Density Polyethylene}\\
+        PVC:\textit{Polyvinyl Chloride} & & & & & & LDPE: \textit{Low Density Polyethylene}\\
+        PP:\textit{Polypropylene} & & & & & & PS: \textit{Polystyrene}\\
+        \hline
+    \end{tabular}
+    \end{center}
+    
+\end{table}
+%\vspace*{0.5cm}
+%#############################################
+
+%-Sistemas actuales de clasificación a profundidad, que les da esa capacidad 
+\subsection{Sistemas actuales de clasificación para botellas de plástico}
+
+La clasificación correcta de las diferentes resinas plásticas mantiene un alto valor en el mercado por esta razón es un tema de investigación a nivel mundial y se han propuestos métodos automáticos para clasificar las botellas de plástico. 
+En los últimos nueve años se ha utilizado \textit{Machine learning}, siendo así un conjunto de algoritmos de clasificación de aprendizaje automático basado en la teoría del aprendizaje estadístico, esta modalidad se puede entender como algoritmos que aprenden de los datos ingresados por una persona \cite{1527552} y son implementados en diversas aplicaciones. En la Figura \ref{Ejemplo} se muestra el proceso completo de clasificación con un sistema de retroalimentación \cite{Association2008} existen diversos sistemas que difieren del que se muestra en la Figura \ref{Ejemplo}.
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+    \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{Vg_fig_11.pdf}
+    \caption{Ejemplo de un diagrama de flujo del proceso de clasificación de botellas de plástico \cite{Association2008}.}
+    \label{Ejemplo}
+\end{figure}
+%############################################
+
+La gran cantidad de botellas de plástico que se generan requiere de sistemas que detecten las  propiedades de los envases y descarten otros materiales a una alta velocidad. Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación ver Tabla \ref{Sistemas} como el sistema de \textit{BottleSort} que detecta cualquier material que no cumpla con un tamaño en específico. El sistema remueve contaminantes en su primera etapa, después un sistema neumático se activa para separar las botellas y colocarlas en una banda transportadora de alta velocidad. La banda transportadora lleva las botellas a una unidad de detección de 16 rayos infrarrojos y procesan más de 5,000 lecturas por segundo. La clasificación de las resinas se hace en menos de 5 milisegundos.
+Después de la identificación, la botella se transporta hasta alcanzar la ubicación donde se coloca en un contenedor, la botella es impulsada por aire. Este sistema es capaz de identificar el PET transparente del PET verde \cite{Milgrom1994}, \cite{Bruno2000}. 
+
+%##############################################
+\begin{table}[h]
+    %\centering
+    \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables. }
+    \label{Sistemas}
+    \begin{tabular}{c m{33 em}}
+         \hline
+           Sistema & Ventajas \\  
+         \hline
+           1 & Considera el tamaño de la botella, remueve contaminantes, trabaja con 16 sensores de rayos infrarrojos, clasificación en 5 milisegundos, identifica color, utiliza un sistema neumático expulsando las botellas. \\
+           2 & Utiliza una cámara de color, separa las botellas en orden individual, remueve contaminantes, velocidad de detección de 15 veces por segundo e identificación de 19 milisegundos, identifica tipos de colores en las botellas. \\
+          
+          3 &Alta detección al utilizar el reflejo de rayos x y de sensores infrarrojos por medio de espectroscopia este método es recomendado para detectar PCV. Analiza de 200 veces por segundo, separa 2 a 3 botellas por segundo. \\
+          %&4 & & &  \\
+         \hline
+    \end{tabular}
+    \begin{tabular}{l}
+            1 - \textit{BottleSort}, 2- \textit{Poly-Sort}, 3- \textit{Near infrared spectroscopic} y VS-2 \\
+         \end{tabular}
+\end{table}
+%##############################################
+
+El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individualmente. En este caso las botellas pasan por un sistema de vibración que remueve contaminantes, con un sensores \textit{near}-infrarrojos hace la lectura de cada botella con una velocidad de 15 veces por segundo, en menos de 19 milisegundos. Una cámara de color y una luz estroboscópica permite la identificación del color. Si un material no es identificado es llevado a un contenedor al final de la banda \cite{Bruno2000}, \cite{Association2008}. %\vspace*{0.5cm}
+%(Bruno, 2000; Canadian Plastics Industry Association, 2008).
+
+Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} con un método de identificación de dos filtros y es capaz de distinguir entre PET, HDPE, PVC, PP y PS \cite{Scott1995156}. Los filtros permiten distinguir entre las etiquetas y tapas, pero no es adecuado para la identificación de colores oscuros ver Figura \ref{NIR5}. El más grande problema con el método de los dos filtros es limitar la región de longitud de onda de la luz, así como la adquisición de los datos se obtienen por medio de dos foto diodos \cite{Masoumi2012}, como los \textit{Indium-Gallium-Arsenide}.
+%(Masoumi et al., 2012)
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+    \includegraphics[trim = {107mm 174mm 10mm 54mm},clip,scale=.9]{Vg_fig_25.pdf}
+    \caption{Espectroscopia para identificar cinco clases diferentes de plásticos \cite{Masoumi2012}.}
+    \label{NIR5}
+\end{figure}
+%###########################################
+
+Otra opción de clasificación radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic}. La separación consiste en el ingreso de plástico y por medio de ondas se estudia la respuesta del objeto. En este caso la transmisión y reflexión considera el espectro de los rayos-x. Este método es muy recomendado si se quiere detectar PVC. Del mismo modo el sistema VS-2 tiene una capacidad de 200 análisis por segundo y clasifica de 2 a 3 botellas por segundo \cite{Bruno2000}, \cite{Foundation2015}.  
+
+La mayoría de las técnicas que prevalecen para la clasificación de plásticos confían en el método de \textit{Near-Infrared spectroscopy} debido a que cada tipo de plástico tiene una longitud de onda que es absorbida en sus espectros, los cuales pueden ser analizados para determinar el tipo de plástico \cite{House2011}, \cite{Safavi20102216}.
+%(House et al., 2011)
+
+%-Que es el diseño de los sistemas actuales 
+\subsection{Tendencias recientes para mejorar la detección en los plásticos reciclables}
+
+Las investigaciones recientes plantean nuevos métodos como el principio del procesamiento de imágenes ver Figura \ref{NIR4} utilizando combinaciones de varias técnicas como análisis de componentes principales, espectroscopia \cite{Rani2019} y transformada \textit{Hough} \cite{Duda197211}, una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95{$\%$} \cite{Prasad2012}.
+%(Prasad and D, 2012)
+%#############################################
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+    \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.8]{Vg_fig_24.pdf}
+    \caption{Cámara fotográfica para la detección de botellas de color \cite{Wang2019170}.}
+    \label{NIR4}
+\end{figure}
+%############################################
+
+Algunos de estos sistemas se basan en el método de múltiple correlación para la clasificación de botellas de PET y no PET, se toman fotos y la correlación de cada imagen de la botella de PET se calcula a partir de histogramas de los colores rojo, verde y azul de cada botella ver Figura \ref{NIR3}. La prueba utiliza 200 imágenes de botellas de plástico, 100 imágenes de botellas de PET y 100 imágenes de botellas diferentes al PET, con resultados de identificación  93.33{$\%$} \cite{Srigul2016}, en \cite{Ramli2008} se plantea convertir las imágenes a escala de grises, después se extraen las características principales de la imagen terminando con el método de \textit{Linear discriminat analysis}, (LDA)  obteniendo una presión de 97.5{$\%$}. Estos métodos permiten discriminar las botellas que tienen diferente color \cite{Wang2019170}, \cite{Scavino2009794}. 
+%(Srigul et al., 2016) 
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+    \includegraphics[trim = {10mm 214mm 105mm 20mm},clip,scale=0.8]{Vg_fig_23.pdf}
+    \caption{Histograma con datos normalizados para identificar PET \cite{Srigul2016}.}
+    \label{NIR3}
+\end{figure}
+%#############################################
+ 
+Otra técnica usada para clasificar botellas de plástico es por extracción de sus características en la intensidad de la imagen y se detectan con \textit{support vector machine} (SVM). Su enfoque es en la rotación, traslado y la escala invariable debido a que utiliza características derivadas de los histogramas de imagen. El método es robusto para los factores de tamaño de la botella, forma, tipos de etiqueta y deformación. El sistema logra una precisión por encima del 96{$\%$} utilizando imágenes a escala gris de la cámara  \cite{Nawrocky2010}.
+%(Nawrocky et al., 2010).
+
+También se puede encontrar una aproximación de los envases con operaciones morfológicas para describir la estructura o forma de la imagen. Utilizando la descripción de dos dimensiones de la silueta de las botellas de plástico, la detección del borde de las siluetas de los objetos se desarrolla por el proceso de erosión, así como el proceso de extracción de características del vector y el proceso de SVM y se emplea para clasificar la imagen de dos grupos. Como resultado se obtiene un desempeño de más del 90{$\%$} de precisión \cite{Shahbudin2010}.
+%(Shahbudin et al., 2010)
+Un sistema que clasifica las botellas en tiempo real utilizando FPGA fue propuesto en \cite{House2011}. El método propone identificar dos tipos de materias el PET y botellas de \textit{tetrapack} a una alta velocidad en tiempo real, automáticamente localiza las regiones de mayor probabilidad que contenga estos materiales dentro de la imagen y remueve el fondo de la imagen. Se crea un histograma para la extracción de las características de la imagen y fue usado para clasificar las botellas usando SVM. El método tiene un 93{$\%$} de reconocimiento y es capaz de trabajar con velocidad. Otros sistemas se basan en el uso de redes neuronales en conjunto con espectroscopia infrarroja para una eficiente identificación de los plásticos \cite{THuthFehre1995}. Cada uno de los métodos descritos  utilizan \textit{machine learning} del mismo modo proporcionan ventajas y desventajas ver Tabla \ref{Comparacion} mismas que ayudan a elegir la mejor opción para implementar un sistema de alta velocidad de clasificación y asequible de costo. 
+%(T Huth-Fehre, R Feldhoff, T Kantimm, 1995)
+
+%###########################################
+\begin{table}[h]
+    %\centering
+    \caption{Comparación de los  métodos actuales para la identificación de botellas de plástico utilizando varias técnicas de \textit{machine learning}. }
+    \label{Comparacion}
+    \begin{tabular}{ c m{13 em} m{13 em} m{4.3 em}}
+         \hline
+           Método & Ventajas & Desventajas & \\  
+         \hline
+           1 & Precisión del 93.33{\%}, identifica la deformación y color & Se necesita de más de una cámara para incrementar la velocidad & \cite{Ramli2008}, \cite{Srigul2016}, \cite{Wang2019170}, \cite{Scavino2009794}, \cite{Nawrocky2010}, \cite{Shahbudin2010}.\\
+          
+           2 & Rápida detección y precisión del 95{\%} distingue deformación y color& No identifica colores oscuros& \cite{Scott1995156}, \cite{Masoumi2012}, \cite{House2011}, \cite{Safavi20102216}, \cite{Rani2019}, \cite{THuthFehre1995}. \\
+          
+          3 &Precisión mayor al 95{\%}, identifica color, bajo costo de armado  &Calibración en la cámara, variación en luz, resolución, distancia, baja capacidad para identificar deformación & \cite{Wang2019170}, \cite{House2011}, \cite{Prasad2012}, \cite{HuiWang201975}, \cite{Ozkan201529} \\
+          %&4 & & &  \\
+         \hline
+    \end{tabular}
+    \begin{tabular}{l}
+            1 - Método por histograma RGB, 2- \textit{Near infrared refrectance spectroscopy}\\  3- Principio de procesamiento de imágenes \\
+         \end{tabular}
+\end{table}
+%###########################################
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Análisis de componentes principales}
+
+PCA es un método de investigación numérico, su principal objetivo es explicar la cantidad máxima de varianza con el menor número de componentes ver Figura \ref{Procedimiento}. PCA puede analizar los elementos principales de múltiples características, exponer la naturaleza resaltando sus principales características, acortando las dimensiones de los datos ayudando al análisis de los problemas complejos. Puede proyectar los datos de grandes dimensiones en un espacio de pequeña dimensión. PCA se adapta principalmente para disminuir la dimensión de los datos.
+Los pasos para disminuir la dimensión de la matriz con PCA son$:$ (1) Determinar la matriz de covarianza $S_{nxn}$ de la matriz de muestra $X_{mxn}$.(2) Determinar los vectores propios de la matriz de covarianza $S_{nxn}$ y los autovalores de los vectores propios. Los valores propios se disponen de mayor a menor. Los vectores propios son $e_1, e_2,...,e_N$, y los valores propios son $x_1, x_2 ,..., x_N$  para $i$=$1,2,...,N$. (3) La matriz de componentes principales es el producto de la matriz de vectores propios con la matriz de variables independientes \cite{ArunKumar2016}.
+%(P.K. Arun Kumar, 2016).
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+    \includegraphics[trim = {31mm 177mm 33mm 31mm},clip,scale=0.78]{Vg_fig02.pdf}
+    \caption{Procedimiento para desarrollar la metodología e implementación de la herramienta de Componentes principales.}
+    \label{Procedimiento}
+\end{figure}
+
+El primer componente representa el mayor porcentaje de la variación total de los datos. El segundo componente representa el segundo mayor porcentaje de la variación total de datos, y así sucesivamente \cite{ArunKumar2016}, \cite{Rizanti2016}. PCA usa principios matemáticos para transformar variables correlacionadas en un número menor de variables. PCA también usa una transformación de espacio vectorial. El análisis de componentes principales se utilizará para describir la variación en los conjuntos de variables correlacionadas reduciendo la complejidad ayudando a la interpretación de los datos y la reducción del ruido o variables que se tienen que monitorear.
+
+
+\subsection{Regresión logística y clasificación }
+
+Las funciones de clasificación son basadas en variables cuantitativas; con la regresión logística se puede discutir una aproximación para clasificar datos donde algunos o todas las variables son cualitativas. Esta aproximación se le conoce como regresión logística. La variable de respuesta Y es restringida por dos valores. Por ejemplo, Y puede ser reconocida como “masculino” o “femenino” o “empleado” y “no empleado”. Luego entonces la probabilidad es un parámetro de interés que representa la proporción en la población. Las siguientes ecuaciones se utilizarán para implementar regresión logística por el método del gradiente y se definen como:
+\begin{equation}
+%$$
+J(\theta) = \frac{1}{m} \sum_{i=1}^{m} \bigg[ - y^{i} \log \Big( h_{\theta} (x^{i}) \Big) (1- y^i)\log\Big( 1- h_{\theta}(x^i)\Big)  \bigg]
+%$$
+\end{equation}
+Donde:
+$$g(z)=\frac{1}{1+e^{-z}}$$
+$$h_\theta(x^i)=g(\theta^T x^i)$$
+Las ecuaciones de arriba se pueden resolver por la multiplicación de matrices. Al definir las matrices $x$ y $\theta$. 
+                        $$
+X=
+\begin{bmatrix}
+- & (x^1)^T & -\\
+- & (x^2)^T & -\\
+- & \vdots & -\\
+- & (x^m)^T & -
+\end{bmatrix}
+;
+\theta = 
+\begin{bmatrix}
+\theta_0 \\
+\theta_1 \\
+\vdots \\
+\theta_n \\
+\end{bmatrix}           $$
+Ejecutando la multiplicación de las matrices  $X\theta$.
+$$
+X\theta=
+\begin{bmatrix}
+- & (x^1)^T \theta & -\\
+- & (x^2)^T \theta& -\\
+- & \vdots & -\\
+- & (x^m)^T \theta& -
+\end{bmatrix} = 
+\begin{bmatrix}
+- & \theta^T (x^1) & -\\
+- & \theta^T (x^2) & -\\
+- & \vdots  & -\\
+- & \theta^T (x^m) & - \\ 
+\end{bmatrix}
+$$
+\subsection{Vectorización del gradiente }
+
+El método del gradiente del costo de la regresión logística es un vector donde el elemento $j^{th}$ es definido como:
+
+\begin{equation}
+%$$
+\frac{\partial J}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^{m} \bigg[ \Big( \big( h_{\theta} (x^{i}) \big) - y^i \Big) x_j^i  \bigg]
+%$$
+\end{equation}
+
+Para vectorizar esta operación sobre la base de datos, se escriben todas las derivadas parciales explicadas por $\theta_j$:
+
+%$$
+%\begin{bmatrix}
+%\frac{\partial J}{\partial \theta_o} \\
+%\frac{\partial J}{\partial \theta_1} \\
+%\frac{\partial J}{\partial \theta_2} \\
+%\vdots \\
+%\frac{\partial J}{\partial \theta_n} \\
+%\end{bmatrix} = \frac{1}{m} 
+%\begin{bmatrix}
+%\sum_{i=1}^{m} \bigg[ \Big( \big( h_{\theta} (x^{i}) \big) - y^i \Big) x_0^i  \bigg] \\
+%\sum_{i=1}^{m} \bigg[ \Big( \big( h_{\theta} (x^{i}) \big) - y^i \Big) x_1^i  \bigg] \\
+%\sum_{i=1}^{m} \bigg[ \Big( \big( h_{\theta} (x^{i}) \big) - y^i \Big) x_2^i  \bigg]
+%\\
+%\vdots \\
+%\sum_{i=1}^{m} \bigg[ \Big( \big( h_{\theta} (x^{i}) \big) - y^i \Big) x_n^i  \bigg] \\
+%\end{bmatrix}$$
+
+$$
+\frac{\partial J}{\partial \theta_j}=\frac{1}{m} X^T\bigg[ \Big( \big( h_{\theta} (x^i) \big) - y^1 \Big)  \bigg]
+$$
+Donde: $x^i$ es un vector, mientras que $h_\theta (x^i)-y^i$ es un escalar. Se define $\beta_i=h_\theta (x^i)-y^i$ luego entonces se observa que: 
+\begin{equation}
+%$$
+\sum \beta_i x^i = X^T \beta
+%$$
+\end{equation}
+
+\subsection{Vectorizando regresión logística regularizada }
+
+La regularización para la función de costo es muy importante para reducir el número de factores con los que se trabaja. La regresión logística regularizada está definida como: 
+
+\begin{equation}
+%$$
+J(\theta) = \frac{1}{m} \sum_{i=1}^{m} \bigg[ - y^{i} \log \Big( h_{\theta} (x^{i}) \Big) (1- y^i)\log\Big( 1- h_{\theta}(x^i)\Big)  \bigg] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2 %$$
+\end{equation}
+
+Correspondientemente, las derivadas parciales de la regresión logística regularizada de la función de costo para  $\theta_0$ es definida como: 
+
+\begin{equation}
+%$$
+\frac{\partial J}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^{m} \bigg[ \Big( h_{\theta} (x^{i}) - y^i \Big) x_j^i  \bigg]; para: j=0
+%$$
+\end{equation}
+\begin{equation}
+%$$
+\frac{\partial J}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^{m} \bigg[ \Big( h_{\theta} (x^{i}) - y^i \Big) x_j^i  \bigg] + \Big(\frac{\lambda}{m} \theta_j \Big); para: j\geq1
+%$$
+\end{equation}
+Estas dos ecuaciones son importantes para establecer las condiciones iniciales.
+
+\subsection{\textit{Support vector machine} }
+
+SVM tiene la capacidad robusta de clasificar considerando la teoría del aprendizaje estadístico y el principio del riesgo estructural mínimo, que soluciona efectivamente los problemas de aprendizaje con pequeñas muestras, de alta dimensión, no lineal y supera las deficiencias del aprendizaje de red neuronal artificial que es difícil para determinar la estructura racional. SVM mejora la capacidad de generalización de los métodos de aprendizaje \cite{ArunKumar2016}, \cite{Pune2016}. %(Arun Kumar et al., 2016; Pune, 2016)
+
+En general, SVM es un clasificador lineal para dos tipos de datos uno de ellos es etiquetado como se muestra: $({x_1,y_1} )$,...,$({x_l,y_l})$ donde $x_i \in R^N$ es un vector de características y $y_i \in \{-1,1\}$ es una etiqueta que pertenece a una clase. Un SVM construye un hiperplano óptimo como una decisión de superficie para separar los puntos de datos de dos clases. El margen del hiperplano es definido como la mínima distancia de los puntos de entrenamiento del hiperplano \cite{Vapnik1999}. 
+%(Vapnik, 1999) 
+
+El problema de aprendizaje de SVM es buscar el hiperplano óptimo una vez obtenidos el conjunto de datos, encontrar los valores de $w$  y $b$ tal que satisfagan la condición: $ y_i \left( w^{t}x_i+b \right)\geq1$; $i$$=$1,2,…,$l$ \cite{Kumar2011}.  
+%(Kumar et al., 2011)
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG02.JPG}
+    \includegraphics[trim = {31mm 166mm 33mm 21mm},clip,scale=0.78]{Vg_fig03.pdf}
+    \caption{Ilustración del hiperplano óptimo para clases de datos linealmente separables \cite{Kumar2011}.}
+    \label{fig:mesh2}
+\end{figure} 
+
+La superficie de decisión no es creada en el espacio de las entradas, si no es un espacio de características de alta dimensión. El modelo resultante no es lineal y se logra aplicando la función \textit{kernel}. La función \textit{kernel}, donde $k$ indica la similitud de las medidas entre la muestra $x_i$, y el patrón $x_j$, del conjunto de datos de entrenamiento. Usando \textit{kernel}, el problema dual QP en términos de los multiplicadores de \textit{Lagrange}, $\alpha_i$ en el espacio de características es dado en la ecuación (\ref{lagrange}) \cite{Shahbudin2010}.
+%(Shahbudin et al., 2010).
+
+\begin{equation}
+%$$
+\label{lagrange}
+\omega(\alpha) =\sum_{i=1}^{l} \alpha_{i}-\frac{1}{2}\sum_{i=1}^{l}\sum_{j=1}^{l}\alpha_{i}\alpha_{j}y_i y_j K(x_i , x_j) 
+%$$
+\end{equation}
+$$K(x_i , x_j)=e^{-\frac{\|x-x_i\|^2}{C}}$$
+Sujeto a las condiciones :
+$$ \sum_{i=1}^{l} \alpha_i y_i = 0;  0\leq\alpha_i\leq C $$
+Donde; $i=1,...,l$ 
+Después de encontrar el valor óptimo para $\alpha_i$, la función de decisión es construida de la forma: 
+
+\begin{equation}
+%$$
+f(x)=\sum_{\alpha_i\neq 0}^{l} y_i \alpha_i K(x_i , x_j)+b
+%$$
+\end{equation}
+
+%\includegraphics{Ejemplo SVM}
+
+
+Donde la clase de $x$ es determinada de la señal de $f(x)$. Las $x_i$ corresponden $\alpha_{i\neq 0}$ es llamado vector de soporte. El valor de $b$ es el umbral del límite de la decisión del origen. El parámetro de regulación, $C$, es el parámetro de margen que determina la compensación entre el margen máximo y mínimo del error de clasificación y es elegida por la media de la variación establecida \cite{Osuna1998}.
+Para una solución dual debe involucrar solo el cálculo de productos internos: esto se logra expresando el vector de peso $w$ como una combinación lineal.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Al incrementar la detección de variables y al trabajar con espectroscopia infrarroja con foto diodos (como el \textit{Indium-Gallium-Arsenide}), radica que al hacer la adquisición de los datos \cite{Masoumi2012}, se debe incrementar la capacidad del filtrado en la región de la longitud de onda \cite{Wang20131534}, \cite{AsheriArnon2019333}. Por lo tanto si se combina espectrofotometría, procesamiento de imágenes y \textit{machine learning} \cite{Hou2014}, podríamos incrementar la capacidad de detección y no depender de la capacidad del filtrado en la región de la longitud de onda de los sensores infrarrojos.
+%-(discusión sobre los elementos científicos que hacen posible cada una de las características de los sistemas y diseños) 
+\subsection{Premisas sobre los métodos y diseños utilizados en la clasificación de botellas de plástico}
+
+Para simplificar podríamos decir que actualmente existen dos maneras de clasificar los diferentes tipos de plásticos: sistemas de alimentación individualizados que requieren que los objetos se alimenten a un sistema de sensores que pasen uno por uno, y sistemas de alimentación masiva que requieren que el flujo de solidos se extienda en una banda transportadora. Estos dos sistemas requieren que las botellas pasen más de una ocasión por el sistema de medición. Cada uno de los métodos de clasificación que se investigan tienen diferentes capacidades y costos.
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+    \includegraphics[trim = {24mm 150mm 98mm 98mm},clip,scale=1.1]{Vg_fig_22.pdf}
+    \caption{Cinco clases de plástico utilizando espectroscopia \cite{Rani2019}.}
+    \label{NIR1}
+\end{figure}
+%#############################################
+
+Los sistemas que detecta tamaño de la botella y que tienen las mayores velocidades utilizan un mayor número de sensores infrarrojos pero no detectan el tipo de etiqueta, tapa, merma dentro de la botella . Los sistemas que si consideran el tipo de color de la botella las ordenan individualmente lo que hace que el sistema sea más lento, dichos sistemas utilizan sensores infrarrojos y algunos dependen de la frecuencia de una luz estrobo. Al trabajar con rayos-x se obtiene mayor velocidades pero solo es recomendado para materiales como el PVC. Los sistemas que utilizan el método de \textit{Near-Infrared spectroscopy} ver Figura \ref{NIR1} tiene la capacidad de detectar diferentes plásticos y la adecuada lectura de los datos ayuda a poder limitar la región de trabajo de la longitud de onda, en la Figura \ref{NIR2} se puede ver que cuando se considera el tipo de color las longitudes de onda tienden a ser lineales lo que hace más difícil detectar, de ahí que se considera el procesamiento de imágenes. Del mismo modo cuando dentro de la botella existan líquidos oscuros o merma afectaría la velocidad detección. 
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+    \includegraphics[trim = {20mm 50mm 20mm 165mm},clip,scale=0.7]{Vg_fig_21.pdf}
+    \caption{Representación del espectro infrarrojo considerando el color de la botella \cite{Rani2019}.}
+    \label{NIR2}
+\end{figure}
+%#############################################
+
+%Dado que para hablar de diseño asequible en esta investigación se requiere que sea accesible de costo para centros de acopio en comparación con sistemas actuales \cite{Association2008}. Para lo que se trabajara en una combinación de tecnología y hacerlo más rentable \cite{HuiWang201975}. 
+
+%En este trabajo se plantea una aproximación para clasificar botellas de plástico recicladas aplicando espectroscopia, así como espectro-fotometría para identificar líquidos dentro de las botellas \cite{Wang20131534},\cite{AsheriArnon2019333}, aplicando procesamiento de imágenes y  \textit{machine learning} \cite{Hou2014}.
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Hipótesis}
+%1) suposición relativa a la solución del problema. 2) La fundamentación científica debe ser precisa (Métodos utilizados en el campo temático). 3) Debe tener una entidad de comparación para comprobar. 4) la variable con la que se cuantifica o se prueba la hipótesis.
+
+
+
+Al combinar espectroscopia infrarroja, espectrofotometría y procesamiento de imágenes con herramientas de aprendizaje supervisado como \textit{machine learning} se incrementa la capacidad de detección en botellas de plástico al no depender de la capacidad de filtrado de los sensores infrarrojos, por lo tanto se puede clasificar por lo menos en un 90{\%} envases plásticos de tereftalato de polietileno (PET) en cuatro horas a una tasa media de tres botellas por segundo en comparación con sistemas actuales. 
+
+
+%Se puede clasificar correctamente con herramientas de aprendizaje supervisado como \textit{machine learning} en por lo menos 90{\%}, 1,800 kg de envases plásticos de tereftalato de polietileno (PET) en cuatro horas a una tasa media de tres botellas por segundo, utilizando un diseño asequible combinando espectroscopia, espectrofotometría, procesamiento de imágenes para mantener la velocidad de detección en botellas que dentro de ellas contengan merma, con un alcance en la longitud de onda de 450 nm a 2,000 nm en comparación con sistemas actuales.
+
+%Se puede clasificar correctamente con herramientas de aprendizaje supervisado en un 90{\%}, 1,800 kg de envases plásticos de tereftalato de polietileno (PET) en cuatro horas a una tasa media de tres botellas por segundo que además dentro de ellas contengan merma, utilizando un diseño asequible combinando espectroscopia, espectrofotometría, procesamiento de imágenes y \textit{machine learning} en comparación con sistemas actuales.
+
+
+\section{Objetivo}
+
+%Desarrollar un sistema de clasificación automático con un diseño asequible con capacidad para detectar tres botellas por segundo.
+
+Desarrollar un sistema de clasificación automático para botellas reciclables de polietileno tereftalato con diseño asequible combinando espectroscopia, espectrofotómetro así como procesamiento de imágenes para mantener una alta detección buscando filtrar la merma considerando los factores de tamaño, etiqueta, color y deformación alcanzando una tasa media de tres botellas por segundo. 
+%ayudando a disminuir en un 20{\%} los gastos de compra de merma en un periodo de dos años.
+
+\subsection{Objetivos específicos }
+
+\begin{itemize}
+    \item Categorizar las diferentes presentaciones de PET que existen en el mercado para estimar la variabilidad de los factores a controlar.
+%    \item Determinar los factores a controlar cuando se utiliza una cámara fotográfica.
+%    \item Estimar el efecto del cambio de distancia en la cámara fotográfica.
+%    \item Desarrollar un sistema de detección por medio de procesamiento de imágenes con una cámara digital para la identificación de botellas PET.
+%    \item Desarrollar de un sistema de medición por espectroscopia para la discriminación de plástico PET de color.
+%    \item Desarrollar de un sistema basado en espectrofotometría para identificar materiales dentro de la botella.
+%    \item Estimar el efecto al medir la extracción de características cambiando el ángulo e intensidad de luz en los sensores que midan la longitud de onda.
+%    \item Determinar e identificar la posición óptima del luxómetro.
+%    \item Desarrollar de un sistema de identificación para el tamaño y forma de la botella.
+    \item Desarrollar herramientas de \textit{machine learning} con el sistema de clasificación, sistema de medición para la extracción de las características a discriminar y así estimar la velocidad de detección.
+%    \item Implementación de PCA para caracterizar el color de la botella.
+%    \item Implementación de regresión logística para identificar el tipo de plástico.
+%    \item Extracción de características por medio de transformada \textit{Hough} e histograma RGB.
+%    \item Implementación de SVM para la clasificación de la deformación de la botella.
+%    \item Estimar la velocidad de detección al combinar los sistemas de identificación.
+    \item Diseñar el sistema mecánico y eléctrico para detallar el accionamiento así como las causas que limiten la velocidad de detección.
+%    \item Sugerir un diseño mecánico para automatizar la separación del PET y merma.
+%    \item Detallar el diseño eléctrico para el control de motores y sistemas de accionamiento.
+ 
+\end{itemize}
+%\newpage
+
+\section{Metodología}
+
+Para comenzar en la Figura \ref{propuesta} y Figura \ref{D_red} se ilustra un esquema sobre la propuesta basándose en los sistemas actuales, se plantea que el sistema elimine la retroalimentación lo que implica que solo detecten las botellas una sola vez buscando no afectar la velocidad y tiempo de separación. En la entrada se tendría super sacos o bolsas de plástico y el sistema se encargaría de discriminar el tipo de plástico y merma véase la Figura \ref{Metodologia}. Para la metodología propuesta se aborda desde la obtención de datos hasta el diseño eléctrico y mecánico, con experimentación de las variables buscando que el sistema de detección cumpla con las características propuestas.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {38mm 132mm 38mm 10mm},clip,scale=0.78]{Vg_fig_27.pdf}
+    \caption{Diagrama de la metodología para la sección del desarrollo del sistema de clasificación (Elaboración propia).}
+    \label{Metodologia}
+\end{figure}
+
+\subsection{Categorización y obtención de datos}
+
+Inicialmente se establecerá la comparación de variables entre los factores ver Figura \ref{factores} y se buscara la inferencia estadística para las variables aleatorias que provoca la variación en el espacio muestral para ello se desarrollaran diseños de experimentos de factores para obtener el nivel de cada factor y estimar el nivel óptimo minimizando la variación del sistema.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG02.JPG}
+    \includegraphics[trim = {50mm 162mm 10mm 10mm},clip,scale=0.78]{Vg_fig_19.pdf}
+    \caption{Propuesta del sistema de clasificación y sus diferentes etapas (Elaboración propia).}
+    \label{propuesta}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {36mm 190mm 40mm 40mm},clip,scale=1.2]{V_Fig1_tarea10.pdf}
+    \caption{Diagrama de flujo con posibles fuentes de incertidumbre (Elaboración propia).}
+    \label{D_red}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG02.JPG}
+    \includegraphics[trim = {31mm 155mm 13mm 16mm},clip,scale=0.78]{Vg_fig_14.pdf}
+    \caption{Factores y variables en la clasificación en envases de plástico. El mensurando consiste en la longitud de onda del espectro infrarrojo.}
+    \label{factores}
+\end{figure}
+
+
+Se recolectará información de todas las presentaciones de botellas que actualmente se comercializan en México. Como se puede ver en la Figura \ref{botellasPET} algunas marcas utilizan diferentes tamaños de etiqueta, diferentes colores lo que dificulta detectar si dentro de las botellas se encuentra liquido o basura. 
+
+%primer aspecto al incrementar la detección de variables y al trabajar con espectroscopia infrarroja con foto diodos (como el \textit{Indium-Gallium-Arsenide}), radica que al hacer la adquisición de los datos \cite{Masoumi2012}, se debe incrementar la capacidad del filtrado en la región de la longitud de onda \cite{Wang20131534},\cite{AsheriArnon2019333}. Por lo tanto si se combina espectrofotometría, procesamiento de imágenes y \textit{machine learning} \cite{Hou2014}, podríamos incrementar la capacidad de detección y no depender de la capacidad del filtrado en la región de la longitud de onda de los sensores infrarrojos.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG02.JPG}
+    \includegraphics[trim = {31mm 205mm 33mm 26mm},clip,scale=0.78]{Vg_fig_12.pdf}
+    \caption{Diferentes presentaciones de botellas PET en el mercado Mexicano.}
+    \label{botellasPET}
+\end{figure}
+
+\subsubsection{Configuración del sistema identificación y clasificación }
+
+El sistema consistirá en una cámara digital de por lo menos 12 Megapíxeles la cual tomará fotos de las botellas de PET así como de las botellas de plástico que no sean PET y del PET que ya no se pueda reciclar. Dichas fotos permitirán considerar los factores de tamaño de la botella, deformación de la botella, si tiene tapa u etiquetas. Como inicio se busca la posición óptima de la cámara para que las presentaciones de cada botella no sean significativas, se obtendrán 100 imágenes de PET, no PET y PET que no se puede reciclar con deformación y no deformación \cite{Ramli2008}, \cite{Wang2019170}, \cite{Srigul2016}, \cite{Scavino2009794}.
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.6\textwidth]{FIG04.JPG}
+    \includegraphics[trim = {31mm 218mm 33mm 21mm},clip,scale=0.78]{Vg_fig05_01.pdf}
+    \includegraphics[trim = {31mm 166mm 10mm 65mm},clip,scale=0.78]{Vg_fig05_00.pdf}
+    \caption{Ilustración del procesamiento de las imágenes que se realizaran por Matlab \cite{Srigul2016}.}
+    \label{fig:mesh4}
+\end{figure}
+
+La configuración de las imágenes será con colores RGB y formato JPG. Se programará en Matlab para procesar las imágenes se dividirá en tres colores rojo, verde y azul con estas matrices se normalizarán los datos y se generara un histograma que representara la distribución del conjunto de datos que nos ayudara a visualizar la distribución y dispersión. Estos histogramas de imágenes se usarán para evaluar la extracción de características en las fotos. Para normalizar los datos se propone utilizar PCA debido que es una herramienta que permite procesar toda la información y disminuye el ruido que se pueda generar en el proceso de la fotografía \cite{Nawrocky2010}, \cite{Shahbudin2010}.
+
+Por lo menos se plantea dos diseños de experimentos en esta etapa para poder disminuir la variabilidad en los materiales, mano de obra, mediciones, medio ambiente máquinas y métodos que conforman al proceso. Se buscará que el sistema de medición sea preciso y exacto, repetible y estable en el tiempo. Se implementará un estudio de repetibilidad y reproducibilidad para evaluar el sistema de medición. Con los resultados obtenidos podríamos concluir si se necesita de una cámara de mayor resolución, si afecta el ángulo en el que se va a tomar la fotografía y la posición de la botella \cite{schmid2000guia}, \cite{imnc2008vocabulario}.
+
+\subsubsection{Diseño de experimentos para posición de la cámara fotográfica}
+
+Para poder definir la posición correcta entre la cámara y los envases de PET, se estudiará el efecto individual y de interacción, se consideran por lo menos dos factores para obtener la mayor obtención de características de las imágenes ver Figura \ref{proceso01}. Para ello se considerarán tres niveles por cada factor para el diseño de experimentos y descartar todas las combinaciones que pueden formarse con los niveles de los factores. Se considerarán como factor la distancia de la cámara, la posición del PET con etiqueta y sin etiqueta \cite{Scott1995156}, \cite{Masoumi2012}, \cite{House2011}. 
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG02.JPG}
+    \includegraphics[trim = {41mm 155mm 13mm 30mm},clip,scale=0.78]{Vg_fig_15.pdf}
+    \caption{Factores y variables en la posición de la cámara.}
+    \label{proceso01}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \caption{Planteamiento de un diseño de experimentos con tres niveles y por lo menos tres replicas.}
+    \label{table:1}
+    \begin{tabular}{c c c c c c}
+         \hline
+         \multicolumn{3}{r}{Réplicas} \\
+         Distancia & 1 & 2 & 3 & Respuesta & Varianza  \\
+         \hline
+         10 cm & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_1$ & $s_1$  \\
+         15 cm & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_2$ & $s_2$  \\
+         20 cm & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_3$ & $s_3$  \\
+         \hline
+    \end{tabular}
+\end{table}
+
+Por lo tanto, el diseño de experimentos consistirá en correr ocho condiciones de prueba en orden aleatorio, con cierta cantidad de réplicas, y en cada caso se registrará el valor de las variables de respuesta \cite{gutierrez2004analisis}.
+
+\subsubsection{Cadena de medida para el sistema de espectroscopia}
+
+La cadena de medida de longitud de onda estará compuesta por ver Figura \ref{D_cadena} foto diodo espectro visible, foto diodo IR, cámara fotográfica digital, filtros, amplificador, convertidos de señal analógica a digital, conversor de señal digital a analógica, y una matriz de compuestas lógicas programables \cite{schmid2000guia}, \cite{imnc2008vocabulario}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {1mm 190mm 40mm 34mm},clip,scale=0.68]{V_Fig2_tarea10.pdf}
+    \caption{Cadena de medida para posibles fuentes de incertidumbre.}
+    \label{D_cadena}
+\end{figure}
+
+\subsubsection{Configuración del sistema por espectroscopia para la identificación de PET color verde}
+
+En la siguiente etapa se considerará la medición de la espectroscopia para detectar la absorción de las diferentes longitudes de onda de luz en el PET ver Figura \ref{Espectro}. En la primera etapa de esta configuración se trabajará con dos sensores infrarrojos que detecten longitudes de onda en el rango de 800 nm y 1100 nm adecuado para diferenciar entre el PET transparente y el de color verde. 
+Para la obtención de los datos se instalará una luz estrobo. Se considerará plantear y realizar un conjunto de pruebas con el objetivo de generar datos que proporcionen evidencias objetivas sobre las condiciones óptimas del funcionamiento y detección de las longitudes de onda. Como factor se considerará la distancia de la luz estrobo con respecto al PET y el foto-diodo. El segundo factor es la cantidad de luz estrobo, este factor se puede controlar incrementando el número de diodos emisores de luz que se consideraran \cite{Rani2019}, \cite{THuthFehre1995}, \cite{Safavi20102216}.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.45\textwidth]{FIG05.JPG}
+    \includegraphics[trim = {31mm 211mm 10mm 21mm},clip,scale=0.78]{Vg_fig06.pdf}
+    \caption{Sistema de discriminación por medio de la detección de PET por su longitud de onda. }
+    \label{Espectro}
+\end{figure}
+
+\subsubsection {Diseño de experimentos para la posición e intensidad de luz} 
+
+Con el desarrollo del diseño de experimentos primero se considerará como una superficie horizontal, después de los datos obtenidos se cambiará a una superficie con curvatura ver Figura \ref{proceso02} \cite{gutierrez2004analisis}. 
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG02.JPG}
+    \includegraphics[trim = {41mm 155mm 13mm 28mm},clip,scale=0.78]{Vg_fig_16.pdf}
+    \caption{Factores y variables en el diseño de experimentos.}
+    \label{proceso02}
+\end{figure}    
+
+\begin{table}[h]
+    \centering
+    \caption{Planteamiento del diseño de experimentos.}
+    \label{table:1}
+    \begin{tabular}{c c c c c c}
+         \hline
+         \multicolumn{4}{r}{Réplicas} \\
+         Distancia & Intensidad & 1 & 2 & 3 & Respuesta  \\
+         \hline
+         10 cm & 5 Hz & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_1$  \\
+         15 cm & 10 Hz & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_2$  \\
+         20 cm & 20 Hz & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_3$  \\
+         \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection {Desarrollo de espectrofotometría para identificar materiales dentro de la botella}
+
+Se desarrollara un sistema que trabaje en el espectro visible para que por medio de la medición de la intensidad de luz se pueda identificar si existe líquido dentro de la botella de plástico ver Figura \ref{luxometro}. En esta etapa se desarrollara un luxómetro que se active al identificar una botella que no tenga deformación \cite{Rani2019}.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.45\textwidth]{FIG05.JPG}
+    \includegraphics[trim = {31mm 211mm 10mm 21mm},clip,scale=0.78]{Vg_fig_13.pdf}
+    \caption{Sistema de discriminación por medio de la detección de PET por su longitud de onda. }
+    \label{luxometro}
+\end{figure}
+
+\subsubsection {Diseño de experimentos para la espectrofotometría} 
+
+Se busca identificar la posición óptima para obtener lecturas que representen la cantidad de líquido dentro de las botellas dicha posición considerará la posición de la botella ver Figura \ref{proceso03} para ver los factores a considerar \cite{Rani2019}, \cite{gutierrez2004analisis}.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG02.JPG}
+    \includegraphics[trim = {41mm 155mm 13mm 28mm},clip,scale=0.78]{Vg_fig_17.pdf}
+    \caption{Factores y variables en el diseño de experimentos.}
+    \label{proceso03}
+\end{figure} 
+ 
+\begin{table}[h]
+    \centering
+    \caption{Planteamiento del diseño de experimentos para la posición del luxómetro.}
+    \label{table:1}
+    \begin{tabular}{c c c c c c}
+         \hline
+         \multicolumn{4}{r}{Réplicas} \\
+         Distancia & Líquido & 1 & 2 & 3 & Respuesta  \\
+         \hline
+         10 cm & 5 ml & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_1$  \\
+         15 cm & 10 ml & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_2$  \\
+         20 cm & 20 ml & $x_{ij}$ & $x_{ij}$ & $x_{ij}$ & $y_3$  \\
+         \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Desarrollo de un sistema de identificación con \textit{machine learning}}
+Para aproximar la solución y procesar el problema de clasificación que se esta planteando se consideraran diferentes herramientas estadísticas de aprendizaje automático para poder interpretar y caracterizar los datos como el análisis de componentes principales y regresión logística que al combinarlas incrementan la precisión de predicción de los datos \cite{Choubey2020}, \cite{Rich2020}, \cite{Ji2020483}. Para identificar la forma se plantea utilizar la transformada de \textit{Hough} como entrada para SVM debido a que al trabajar juntos en imágenes completas se logra una precisión de detección mayor al 94{\%} \cite{Prasad2012}, \cite{Vijayarajeswari2019800}, \cite{Matos201989}. 
+%descargar\cite{Ji2020483}
+
+\subsubsection{Regresión logística con PCA para la clasificación de las imágenes }
+
+%\subsection{Componentes principales utilizado como vectores de entradas para la clasificación de las botellas de plástico }
+
+Se utilizarán los datos de las imágenes de las botellas y de los datos de los sensores que representaran las características que ayudaran a discriminar las botellas. Para reducir la dimensión de los datos de n-dimensiones a k-dimensiones, obtenemos la matriz de covarianza. Conservando las características principales de las imágenes capturadas \cite{ArunKumar2016}.
+$$ X =
+\begin{pmatrix}
+x_{11} & \cdots & x_{1j} & \cdots & x_{1p}\\
+\vdots & \ddots & \vdots & \ddots & \vdots\\
+x_{i1} & \cdots & x_{ij} & \cdots & x_{ip}\\
+\vdots & \ddots & \vdots & \ddots & \vdots\\
+x_{n1} & \cdots & x_{n j} & \cdots & x_{n p}\\
+\end{pmatrix}
+$$ 
+Matriz de datos centrados
+$$
+\Bar{X} = X - 1\Bar{x^{'}} = HX
+$$
+La matriz simétrica $pxp$ de covarianzas muéstrales.
+
+$$ S =
+\begin{pmatrix}
+s_{11} &  s_{12} & \cdots & s_{1p}\\
+s_{21} &  s_{22} & \cdots & s_{21}\\
+\vdots & \vdots & \ddots & \vdots\\
+s_{p1} &  s_{p2} & \cdots & s_{p p}\\
+\end{pmatrix}
+$$ 
+Matriz de covarianzas
+$$
+S=\frac{1}{n}\Bar{X^{'}}\Bar{X}=\frac{1}{n}X^{'}H X
+$$
+Siendo
+$$
+s_{j j{'}}=\frac{1}{n}\sum_{i=1}^n \big( x_{i j} - \Bar{x_j} \big) \big( x_{i j^{'}} - \Bar{x_j^{'}} \big)  
+$$
+Además de la matriz de covarianzas interesa también la matriz de correlaciones:
+
+$$ R =
+\begin{pmatrix}
+1 &  s_{12} & \cdots & r_{1p}\\
+r_{21} & 1 & \cdots & r_{21}\\
+\vdots & \vdots & \ddots & \vdots\\
+r_{p1} &  r_{p2} & \cdots & 1\\
+\end{pmatrix}
+$$ 
+Donde $r_{ij}=corr(X_i,X_j )$ es el coeficiente de correlación (muestral) entre las variables $X_i$,$X_j$, que verifica:
+$$
+R=D^{-1}S D^{-1} , S = D R D
+$$
+Siendo $D$ la matriz diagonal con las desviaciones típicas de las variables. Los datos se procesarán en Matlab con las ecuaciones de arriba ya mencionadas.
+Se busca considerar tres componentes principales que representarían el 100{$ \%$} de la variación \cite{ArunKumar2016}.
+
+\begin{align*} 
+PC_1 &=  X_i + X_i + ,..., X_l  \\ 
+PC_2 &=  X_i + X_i + ,..., X_l \\
+PC_3 &=  X_i + X_i + ,..., X_l
+\end{align*}
+Una vez obtenidos los tres componentes principales se multiplica cada componente por los valores obtenidos en la matriz de datos de las imágenes estos datos se sumarán para cada componente y se obtienen las coordenadas para la interpretación de los PCA \cite{ArunKumar2016}.
+$$
+(Matriz de PCA)(Matriz de imagenes)=(Coordenadas de los factores)
+$$
+Con estos datos se realizará la sumatoria de cada columna para obtener las coordenadas en tres dimensiones debido a los tres componentes principales. El objetivo es que PCA disminuya el error al momento de clasificar entre las botellas transparentes de PET y las botellas de color verde. El siguiente paso que se propone es la correcta clasificación de los datos por medio de regresión logística \cite{Choubey2020}, \cite{Rich2020}, \cite{Ji2020483}.
+
+\subsubsection{Entrenamiento para la clasificación por medio de regresión logística}
+
+Se graficarán los datos obtenidos para observar su distribución y así diseñar la zona de decisión y confirmar si la entrada de datos por medio de PCA es correcto y los datos se comportan linealmente. Para encontrar el plano de características se implementará regresión logística. Las 100 imágenes que se obtendrían y los datos de los sensores se clasificarían y los valores obtenidos se ingresarías a una tabla que almacenara los datos con diferentes correlaciones \cite{Choubey2020}, \cite{Rich2020}, \cite{Ji2020483}.
+
+\begin{table}[h]
+    \centering
+    \caption{Discriminación de las botellas de plástico por medio de la extracción de sus características.}
+    \label{table:1}
+    \begin{tabularx}{0.6\textwidth} { 
+         >{\centering\arraybackslash}X 
+         >{\centering\arraybackslash}X  }
+        \hline
+        PET          &       NO-PET \\
+        \hline
+        $X_{1}$     $X_{2}$ & $x_{1}$  $x_{2}$  \\
+        ( \vdots ) ( \vdots ) & (\vdots)  (\vdots)  \\
+        $X_{n}$     $X_{n}$ & $x_{n}$  $x_{n}$  \\
+        \hline
+        \end{tabularx}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.6\textwidth]{FIG06.JPG}
+    \includegraphics[trim={25mm 73mm 10mm 73mm},clip,scale=.55]{Vg_fig07.pdf}
+    \caption{Datos graficados que permitirán visualizar la zona de decisión. }
+    \label{fig:mesh6}
+\end{figure}
+
+\subsubsection{Vectorización de los datos }
+
+Con el modelo de regresión logística múltiple uno-vs-todos para desarrollar un sistema que detecte y clasifique PET, no PET y PET contaminado. La programación se realizará por Matlab y se comparará con las ecuaciones mencionadas en esta la sección con el objetivo de comparar los resultados con las librerías pre cargadas en Matlab así como por la función de costo definida por: 
+
+\begin{equation}
+%$$
+J(\theta) = \frac{1}{m} \sum_{i=1}^{m} \bigg[ - y^{i} \log \Big( h_{\theta} (x^{i}) \Big) (1- y^i)\log\Big( 1- h_{\theta}(x^i)\Big)  \bigg] + \frac{\lambda}{2m}\sum_{j=1}^n \theta_j^2 
+%$$
+\end{equation}
+
+Correspondientemente, las derivadas parciales de la regresión logística regularizada de la función de costo para  $\theta_0$ es definida como: 
+
+$$\frac{\partial J}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^{m} \bigg[ \Big( h_{\theta} (x^{i}) - y^i \Big) x_j^i  \bigg]; para: j=0$$
+
+$$\frac{\partial J}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^{m} \bigg[ \Big( h_{\theta} (x^{i}) - y^i \Big) x_j^i  \bigg] + \Big(\frac{\lambda}{m} \theta_j \Big); para: j\geq1$$
+
+Estas dos ecuaciones son importantes para las últimas líneas del código para establecer las condiciones iniciales. Entrenamiento SVM
+
+\begin{equation}
+%$$
+\label{svm}
+\min_{\theta} = C\sum_{i=1}^{m} \bigg[ y^{i} \cos{t_1} \Big( \theta^T x^i \Big) + (1- y^i)\cos{t_0}\Big( \theta^T x^i\Big)  \bigg] + \frac{1}{2}\sum_{i=1}^n \theta_j^2 
+%$$
+\end{equation}
+Con SVM se espera obtener el plano de decisión para clasificar PET. Una vez que se allá analizado el espacio muestral y se halla detectado los resultados deseados para la clasificación empezaríamos a trabajar en el sistema mecánico y eléctrico \cite{Choubey2020}.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.6\textwidth]{FIG07.JPG}
+    \includegraphics[trim={25mm 144mm 10mm 33mm},clip,scale=.75]{Vg_Fig_08.pdf}
+    \caption{Procedimiento que se realizara para obtener los datos que permitan clasificar e identificar las botellas de PET. }
+    \label{fig:mesh7}
+\end{figure}
+
+\subsubsection{Identificación para el tamaño y forma de la botella}
+
+Para identificar la deformación de la botella se plantea utilizar la transformada de \textit{Hough} como entrada para SVM y se utilizara la ecuación (\ref{svm}) \cite{ArunKumar2016}, \cite{Pune2016}. Conviene distinguir que hasta este punto solamente se analizaría solo la interacción de dos sensores una cámara fotográfica. Por lo que para poder llegar a los objetivos y mantener la velocidad en la detección de tres botellas por segundo se incrementara el número de sensores \ref{D_cadena2} lo que ocasionaría un aumento en la incertidumbre \cite{Prasad2012}, \cite{Vijayarajeswari2019800}, \cite{Matos201989}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {1mm 190mm 40mm 34mm},clip,scale=0.68]{Vg_fig_26.pdf}
+    \caption{Cadena de medida para posibles fuentes de incertidumbre al aumentar el número de transductores (Elaboración propia).}
+    \label{D_cadena2}
+\end{figure}
+
+\subsection{Diseño mecánico y eléctrico del sistema de clasificación }
+
+Para alimentar el sistema de clasificación se propone un sistema mecánico que separe las botellas por medio de un sistema giratorio, para ilustrar la idea es muy parecido al sistema que tiene una lavadora vertical, con el motor por la parte de abajo con un tambor circular, el agitador sirve para que al momento de depositar el PET en el tambor el agitador lo impulse a la zona de salida misma que estará conectado a un tornillo de Arquímedes que llevara las botellas hasta el sistema de detección y clasificación \cite{gutierrez2004analisis}.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.3\textwidth]{FIG08.JPG}
+    \includegraphics[trim={25mm 62mm 10mm 32mm},clip,scale=.35]{Vg_fig_09.pdf}
+    \caption{Recipiente donde se depositará el PET que no está clasificado y su accionamiento es por un motor. }
+    \label{fig:mesh8}
+\end{figure}
+
+Una vez que se allá detectado el tipo de material por medio de un sistema de control que contará con tres motores los cuales se activaran dependiendo del material y por medio de gravedad se depositaran a un contenedor. En esta etapa se considerará que en condiciones óptimas solo una botella será analizada y clasificada. Si el diseño llegara a introducir más de una botella por el sistema de identificación y clasificación el tornillo de Arquímedes, tendría la capacidad de cambiar el sentido de giro y depositar la botella en el contenedor correcto.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG09.JPG}
+    \includegraphics[trim={15mm 113mm 10mm 51mm},clip,scale=.45]{Vg_fig_10.pdf}
+    \caption{El sistema llevará las botellas por el tornillo de Arquímedes y por medio de unas aberturas que se abrirán automáticamente clasificaran el PET. }
+    \label{fig:mesh9}
+\end{figure}
+
+Hasta este punto de la metodología se podrá cambiar el diseño e ir modificando el sistema de control para optimizar el porcentaje de clasificación, así como la velocidad de trabajo.
+
+\subsubsection {Diseño de experimentos con la interacción de todos los factores a controlar} 
+
+Se busca minimizar los factores de ruido que con la interacción de todos los factores anteriormente descritos se obtenga la velocidad máxima y mínima que no afecte la eficiencia en la clasificación ver Figura \ref{diseño04} \cite{gutierrez2004analisis}.
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=0.5\textwidth]{FIG02.JPG}
+    \includegraphics[trim = {31mm 145mm 13mm 20mm},clip,scale=0.75]{Vg_fig_18.pdf}
+    \caption{Factores y variables en el diseño de experimentos para la interacción de todo el sistema.}
+    \label{diseño04}
+\end{figure} 
+
+\subsection{Cronograma del plan de trabajo}
+
+El desarrollo del plan de trabajo se considerará la obtención de la beca CONACYT, los materiales que se requieren se compraran con la beca ver Figura \ref{crono}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {30mm 13mm 5mm 5mm},clip,scale=0.75]{Vg_fig_28.pdf}
+    \caption{Cronograma de investigación.}
+    \label{crono}
+\end{figure} 
+
+\begin{enumerate}
+    %\item Actividad (Aprobación del protocolo ver Tabla \ref{Crono00})
+    \item Actividad (Aprobación del protocolo)
+        \begin{enumerate}[label*=\arabic*.]
+            \item Delimitar e interpretar el estado del arte.
+            \item Formular la hipótesis y objetivos.
+            \item Definir la fundamentación teórica la metodología así como los resultados esperados y aprobación del protocolo ante el H. Consejo Universitario ver Anexo I.
+        \end{enumerate}
+    \item Actividad (Metodología para la evaluación con el sistema de medición)
+    %\item Actividad (Metodología para la evaluación con el sistema de medición ver Tabla \ref{Crono00} y \ref{Crono01})
+            \begin{enumerate}[label*=\arabic*.]
+            \item 	Detallar la programación para detectar la botella de PET
+            \item 	Evaluar la cámara fotográfica y sensores
+        \end{enumerate}
+    \item Actividad (Desarrollo del método R \& R con la cámara y sensores infrarrojos)
+    %\item Actividad (Desarrollo del método R \& R con la cámara y sensores infrarrojos ver Tabla \ref{Crono01} y \ref{Crono02})
+            \begin{enumerate}[label*=\arabic*.]
+            \item 	Planear el diseño para la cámara y los sensores
+            \item 	Definición del periodo de experimentación
+            \end{enumerate}
+    \item Actividad (Experimentación con los sensores)
+    %\item Actividad (Experimentación con los sensores ver Tabla \ref{Crono02} y \ref{Crono03})
+            \begin{enumerate}[label*=\arabic*.]
+            \item 	Fundamentar la propuesta del diseño 
+            \item 	Definir el periodo de experimentación y diseño
+            \end{enumerate}
+    \item Actividad (Diseño mecánico)
+    %\item Actividad (Diseño mecánico ver Tabla \ref{Crono03} y \ref{Crono04})
+            \begin{enumerate}[label*=\arabic*.]
+            \item 	Fundamentar la propuesta del diseño mecánico 
+            \item 	Detallar y simular el diseño mecánico
+            \end{enumerate}
+    \item Actividad (Escritura de artículos científicos en revistas JCR)
+    %\item Actividad (Análisis de resultados y comprobación ver Tabla \ref{Crono03} y \ref{Crono04})
+            \begin{enumerate}[label*=\arabic*.]
+            \item 	Proponer la obtención de financiamiento para el desarrollo y experimentación mecánica con la fundación Roberto Ruiz Obregón A.C.
+            \item 	Propuesta de artículo I: "Metodología para clasificar botellas de plástico con merma". 
+            \item 	Propuesta para una patente.
+    
+            \end{enumerate}
+    \item Actividad (Comprobación y experimentación con los resultados)
+            \begin{enumerate}[label*=\arabic*.]
+            \item 	Diseño de experimentos con la cámara 
+            \item 	Diseño de experimentos con los sensores
+            \end{enumerate}
+    \item Actividad (Estudio de la variabilidad y revisión de la literatura)
+            \begin{enumerate}[label*=\arabic*.]
+            \item Revisión de la literatura
+            \item Estudio del mensurando e incertidumbre del sistema 
+            \item 	Estudio del alcance así como hipótesis y objetivos.
+            \end{enumerate}
+    \item Actividad (Resultados esperados)
+            \begin{enumerate}[label*=\arabic*.]
+            \item Comprobación de los resultados obtenidos
+            \item Puesta en marcha del prototipo
+            \item Revisión y escritura de tesis 
+            \end{enumerate}        
+\end{enumerate}
+
+
+%\newpage
+\section{Resultados esperados}
+
+Para simplificar podríamos decir que con el proyecto propuesto se espera que mediante los principios básicos de clasificación que existen y con la metodología propuesta reducir el costo de construcción y adquisición para que micro empresas puedan acceder al mercado de la automatización incrementando su productividad a modo de conclusión se espera: 
+%(Canadian Plastics Industry Association, 2008).
+
+\begin{itemize}
+    \item Publicar dos artículos en revistas de JCR. 
+    \item Obtener financiamiento para el desarrollo y experimentación mecánica con la fundación Roberto Ruiz Obregón A.C.
+    \item Obtener la clasificación considerando tamaño, etiqueta, tapa y deformación de la botella. 
+    \item Obtener la extracción de características con histogramas RGB normalizadas con PCA.
+    \item Obtener una nueva metodología aplicando regresión logística, PCA, histogramas RGB, transformada \textit{Hough} y SVM.
+    \item Obtener una precisión de identificar por lo menos un 90$\%$.
+    \item Aplicar PCA y regresión logística con una precisión de mas del 95{\%}.
+    \item Implementar la transformada \textit{Hough} con SVM y obtener más de 95 {\%} para discriminar la deformación de las botellas de plástico.
+    \item Reducir el costo del sistema de detección con respecto a los sistemas que existen en el mercado.
+    \item  Eliminar la retroalimentación como el uso de una banda transportadora y reduzca el tiempo de clasificación.
+    \item Con la experimentación se reduzca la variación de los datos y los factores de ruido.
+    \item Que el diseño eléctrico no sea necesario implementar un sistema de precisión.
+    \item Con espectroscopia y la implementación de la espectrofotometría tenga un impacto tecnológico y social en los diferentes centros de acopio en el país.
+\end{itemize}
+
+\subsection{Factibilidad e impacto y social}
+Según ECOCE (Ecología y Compromiso Empresarial), México es líder mundial en acopio y reciclaje de PET al lograr un 62{\%} de reciclado, superando a países como Estados Unidos 31{\%}, Canadá 40{\%} y Brasil 42{\%}. Este porcentaje se incrementara si se hace más consciente a las personas en el reciclaje. 
+En el aspecto social, se puede ayudar a la creación de empleos regionales y mayor rentabilidad de los centros de acopio.
+
+\subsection{Aporte Tecnológico}
+ 
+Desarrollo de un sistema de clasificación con diseño asequible combinando espectroscopia, espectrofotometría, procesamiento de imágenes para mantener la velocidad de detección en botellas de PET que dentro de ellas contengan merma, sin afectar el tiempo de separación implementando software y hardware que interactuaran con un sistema mecánico.
+%Con la presente investigación se pretende desarrollar e implementar un sistema de clasificación con un menor costo y evitar la inspección manual en los centros de acopio. Diseñando software y hardware con un sistema mecánico que ayuda reducir el tiempo de separación de las botellas de plástico. 
+
+\subsection{Aporte Científico}
+%Metodología para caracterizar los factores que interactúan en la clasificación de plásticos con merma dentro de las botellas por medio de espectroscopia, espectrofotometría y procesamiento de imágenes.
+
+Metodología para desarrollar un sistema de clasificación combinando espectroscopia infrarroja, espectrofotometría, procesamiento de imágenes y \textit{machine learning} para incrementar la detección de merma en botellas PET sin depender de la capacidad de filtrado de sensores infrarrojos con un alcance en la longitud de onda de 450 nm a 2,000 nm en comparación con sistemas actuales.
+
+\subsection{Aporte Sustentable}
+En el aspecto económico, el crecimiento de las empresas que fungen como centros de acopio contribuye positivamente al Producto Interno Bruto (PIB) y a las contribuciones al Estado, por lo que aumenta la inversión en investigación, desarrollo e innovación. 
+En el aspecto ambiental, al reutilizar los materiales de plástico ayuda a la mitigación de efectos causados por las emisiones de gases que producen el cambio climático, además de una disminución de la concentración de partículas tóxicas en el aire, suelo y agua.
+%El impulso de materiales que son reciclables es un eje estratégico a nivel mundial que busca principalmente reducir el impacto climático y ayudar al medio ambiente. En el aspecto social, se puede ayudar a la creación de empleos regionales y mayor rentabilidad de los centros de acopio; En el aspecto económico, el crecimiento de las empresas que fungen como centros de acopio contribuye positivamente al Producto Interno Bruto (PIB) y a las contribuciones al Estado, aumenta la inversión en investigación, desarrollo e innovación. En el aspecto ambiental, al reutilizar los materiales de plástico ayuda a la mitigación de efectos causados por las emisiones de gases que producen el cambio climático, además de una disminución de la concentración de partículas tóxicas en el aire, suelo y agua.
+%\newpage
+
+\newpage
+\section{Abreviaturas y Acrónimos}
+
+\begin{itemize}
+    \item \textbf{PET}. ”\textit{Polyethylene Terephthalate}”
+    \item \textbf{HDPE}. ”\textit{High Density Polyethylene}”
+    \item \textbf{PVC}. ”\textit{Polyvinyl Chloride}”
+    \item \textbf{LDPE}. ”\textit{Low Density Polyethylene}”
+    \item \textbf{PP}. ”\textit{Polypropylene}”
+    \item \textbf{PS}. ”\textit{Polystyrene}”
+    \item \textbf{IMER}. Industria Mexicana de Reciclaje S.A. de C.V.
+    \item \textbf{PIB}. Producto Interno Bruto
+    \item \textbf{LDA}. "\textit{Linear discriminat analysis}"
+    \item \boldsymbol{$CO_2$}. Dióxido de carbono
+    \item \textbf{NIRS}. "\textit{Near infrared spectroscopy}"
+    \item \textbf{SVM}. "\textit{Support vector machine}"
+    \item \textbf{FPGA}. "\textit{field-programmable gate array}"
+    \item \textbf{RGB}. "\textit{Red Green Blue}"
+    \item \textbf{PCA}. "\textit{Principal component analysis}"
+    \item \textbf{JPA}. "\textit{Joint Photographic Experts Group}"
+\end{itemize}
+
+\newpage
+%\section*{Formato de Registro ante el Comité de Ética para la Investigación de la Facultad de Ingeniería de la Universidad Autónoma de Querétaro}
+\section{Anexo I}
+\addcontentsline{toc}{section}{Formato de Registro: Comité de ́ética para la investigación}
+
+%\centering
+\textbf{Formato de Registro: Comité de ética para la investigación}
+\vspace*{0.5cm}
+
+\justifying
+El Formato de Registro del Comité de Ética para la Investigación deberá ser llenado y sometido a revisión por todo aquel y aquella integrante de su comunidad académica, estudiantes de sus diversos programas educativos, docentes, investigadores, extensionistas  e investigadores asociados a la comunidad académica que lleven a cabo el proceso de registro de Protocolo de Investigación en la Facultad de Ingeniería de la Universidad Autónoma de Querétaro, previo al trabajo de investigación, de la recolección de los datos y del abordaje social en sus proyectos de intervención / investigación.  Una vez concluido el proceso de llenado del presente formato, éste será avalado por su Director(a) de Tesis / Trabajo de Investigación, y por la / el Coordinador(a) del Programa Educativo Correspondiente. De esta misma manera, si se responde afirmativamente (Si) a cualesquiera de las preguntas contempladas en el presente formato, deberán describir cómo se abordará en el trabajo de investigación este aspecto ético y deberán someter tanto su protocolo de investigación como el presente formato, a evaluación por parte del Comité de Ética para la Investigación de la Facultad de Ingeniería de la Universidad Autónoma de Querétaro, o Comités Institucionales afines. Los datos para envío para evaluación del protocolo de investigación en la Facultad de Ingeniería son: Dra. Aurora Femat Díaz, Presidenta del Comité de Ética Aplicada para la Investigación. 
+
+%(ricog@uaq.mx,  Edificio de Posgrado de la Facultad de Ingeniería Campi Cerro de las Campanas, Tel: 1921200 ext XXXX).  
+
+%\textbf{NOTA: Se deberá incluir una copia de este formato de registro firmado y con clave de aprobación en la Tesis / Trabajo de Investigación / Reporte de Investigación, previo al examen de grado correspondiente, o previo a la entrega del reporte final de investigación ante las instancias correspondientes.}
+%\textbf{\textit{Este formato deberá ser llenado, posteriormente a la lectura del manual del Comité de Ética para la Investigación de la Facultad de Ingeniería de la Universidad Autónoma de Querétaro.}}
+\vspace*{0.5cm}
+
+Nombre del Estudiante responsable: \textbf{Luis Alberto Ángeles Hurtado}
+\vspace*{0.5cm}
+
+Programa Educativo / Cuerpo Académico: \textbf{Doctorado en Ingeniería}  
+\vspace*{0.5cm}
+
+Correo electrónico del estudiante responsable: \textbf{langeles11 \MVAt alumnos.uaq.mx} 
+\vspace*{0.5cm}
+%\textbf{Si es estudiante, indicar;  }
+%\vspace*{0.5cm}
+
+Grado: \textbf{Maestro en Ingeniería de Calidad y Productividad} 
+\vspace*{0.5cm}
+
+Director(a) o Investigador(a) responsable: \textbf{Dr. Juvenal Rodríguez Reséndiz}
+\vspace*{0.5cm}
+
+El protocolo de investigación o proyecto de investigación \textbf{no cuenta} con financiamiento o patrocinadores.
+\vspace*{0.5cm}
+
+Título del Proyecto de Investigación: \textbf{Desarrollo de un sistema de clasificación para plásticos reciclables de alta detección y diseño asequible respecto a sistemas actuales.}
+\vspace*{0.5cm}
+
+%\textbf{Consideraciones éticas del proyecto / protocolo de investigación: ver Tabla \ref{Etica1}}
+
+\begin{table}[]
+    \centering
+    \caption{Consideraciones éticas del proyecto / protocolo de investigación:}
+    \begin{tabular}{ m{14cm}  m{1em} m{1em} }
+         \hline
+         Número de Pregunta:  & Sí & NO \\
+         \hline
+         \multirow{3}{33em}{¿Hay alguna posibilidad de que su investigación pueda causar daño a terceros (es decir personas y seres vivos no participantes en su proyecto)? } &  &\\
+                                            &  & \Crossedbox \\
+                                            &  &\\
+         \hline
+         \multirow{3}{35em}{Pregunta 2: ¿Su investigación requiere de información obtenida de seres humanos como fuente de información?} &  &\\
+                                            &  & \Crossedbox \\
+                                            &  &\\
+         \hline
+         \multirow{3}{35em}{Pregunta 3: ¿Su investigación involucra la participación de alguna comunidad o la disposición de servicios de las comunidades?} &  &\\
+                                            &  & \Crossedbox \\
+                                            &  &\\
+         \hline
+         \multirow{3}{35em}{Pregunta 4: ¿Si su investigación cuenta con patrocinio o financiamiento, hay posibilidad de que esto genere algún conflicto de interés?} &  &\\
+                                            &  & \Crossedbox \\
+                                            &  &\\
+         \hline
+         \multirow{3}{33em}{Pregunta 5: ¿Su investigación involucra la participación de especies en especies en alguna categoría de protección según la NOM-059-SEMARNAT (plantas/hongos y/o animales), animales de laboratorio u organismos genéticamente modificados?} &  &\\
+                                            &  & \Crossedbox \\
+                                            &  &\\
+         \hline
+         \multirow{3}{33em}{Pregunta 6: ¿Su investigación puede generar residuos tóxicos, residuos biológicos de alto riesgo, material radioactivo, desechos electrónicos o contaminación ambiental nociva a seres vivos? ver Tabla \ref{Etica2}} &  &\\
+                                            & \Crossedbox &  \\
+                                            &  &\\
+         \hline
+         \multirow{3}{34em}{Pregunta 7: ¿Su investigación involucra la producción y/o manipulación de materiales nanoestructurados?} &  &\\
+                                            &  & \Crossedbox
+                                            &  &\\
+         \hline
+         %Pregunta 2:  &  & \Crossedbox \\
+         %Pregunta 3:  &  & \Crossedbox \\
+         %Pregunta 4:  &  & \Crossedbox \\
+         %Pregunta 5:  &  & \Crossedbox \\
+         %Pregunta 6:  & \Crossedbox  &  \\
+         %Pregunta 7:  &  & \Crossedbox  
+    \end{tabular}
+    \label{Etica1}
+\end{table}
+
+
+\begin{table}[]
+    \centering
+    \caption{Complemento para complementar la información al ser positiva la respuesta en esta sección.}
+    \begin{tabular}{ m{14cm}  m{1em} m{1em} }
+        \hline
+        Sección 6: Marque la respuesta según corresponda. & Sí & No\\ 
+        \hline
+         \multirow{3}{35em}{6.1. ¿Su investigación puede generar residuos tóxicos? ¿Requiere algún proceso de almacenamiento y/o confinamiento y/o la contratación de recolectores de residuos tóxicos para su eliminación?} &  &\\
+                                                                &  & \Crossedbox \\ 
+                                                                &  &  \\ 
+                                                                %&  &  \\
+        \hline
+        \multirow{3}{35em}{6.2. ¿Su investigación puede generar residuos biológicos de alto riesgo? ¿Requiere algún proceso de incineración de material biológico de alto riesgo? ¿Requiere contemplar infraestructura, material y equipo para el almacenamiento y/o confinamiento y disposición de residuos biológicos de alto riesgo?} &  &\\
+                                                                &  & \Crossedbox \\ 
+                                                                &  &  \\ 
+                                                                &  &  \\
+        \hline
+        \multirow{3}{35em}{6.3. ¿Su investigación puede generar residuos de material radioactivo?} &  &\\
+                                                                &  & \Crossedbox \\ 
+                                                                %&  &  \\ 
+                                                                %&  &  \\
+        \hline
+        \multirow{3}{33em}{6.4. ¿Su investigación puede generar contaminación ambiental nociva a seres vivos o impacto ambiental?} &  &\\
+                                                                &  & \Crossedbox \\ 
+                                                                &  &  \\ 
+                                                                %&  &  \\
+        \hline
+        \multirow{3}{33em}{6.5. ¿Se requieren procedimientos de bioseguridad para el personal participante en el protocolo? ¿Se requiere capacitar al personal para el manejo, almacenamiento y disposición de residuos de la investigación?} &  &\\
+                                                                &  & \Crossedbox \\ 
+                                                                &  &  \\ 
+                                                                %&  &  \\
+        \hline
+    \end{tabular}
+    \label{Etica2}
+\end{table}
+\newpage
+\textbf{La experimentación se realizara en el laboratorio de automatización de la facultad de ingeniería. En la experimentación se trabajara con corriente directa entre 10 miliamperios y 1 amperio como máximo así como 3.3 voltios a 12 voltios como máximo. Se implementaran las medidas de seguridad de la NORMA Oficial Mexicana NOM-001-SEDE-2012, Instalaciones Eléctricas. 
+Los residuos plásticos que se utilizaran serán recolectados de la basura, por lo tanto, no se incrementa el residuo plástico. Por consiguiente lo que se llegue a generar de residuos plásticos y electrónicos se entregara a un centro de acopio de plásticos reciclables y para los desechos electrónicos a un centro de acopio que maneje desechos eléctricos para su procesamiento.}
+\newpage
+
+\textbf{Por este medio declaro mi compromiso de llevar a cabo mi investigación de tal manera que}
+
+\begin{itemize}
+    \item No exista objeción legal evidente a la naturaleza o al método de investigación; y 
+    \item La investigación no comprometa inadecuadamente a la comunidad académica, estudiantil o institucional universitaria; 
+    \item Se alcanzarán los objetivos planteados, y los resultados tendrán un alto grado de validez;
+    \item A través de la investigación, serán consideradas las limitaciones e interpretaciones alternativas;
+    \item Los resultados podrán estar sujetos a revisión de pares y a su publicación; y
+    \item Respetaré aspectos relacionados con derechos de autor y evitaré cualquier práctica que constituya plagio.
+\end{itemize}
+
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {25mm 140mm 20mm 25mm},clip,scale=1.1]{Vg_fig_29.pdf}
+    %\caption{Firmas de registro.}
+    %\label{etica}
+\end{figure} 
+%Firmas para Femat
+%#####################################
+%\textbf{Firmas de registro, revisión y aprobación: }
+%\begin{center}
+%    \begin{tabular}{  m{8cm}  m{6cm} m{3em}  } 
+%    \hline
+%    Registro & Nombre completo y firma & Fecha\\ 
+%    \hline
+%    \multirow{3}{25em}{Investigador(a) / Estudiante Responsable} &  &\\
+                                                                %&  &  \\ 
+%    & M. Luis Alberto Ángeles Hurtado &  \\
+%    \hline
+%\end{tabular}
+%\end{center}
+
+%\textbf{Esta solicitud de registro ha sido revisado y aprobado por: }
+%\begin{center}
+%    \begin{tabular}{  m{8cm}  m{6cm} m{3em}  } 
+%    \hline
+%     Registro & Nombre completo y firma & Fecha\\ 
+%    \hline
+%    \multirow{3}{20em}{Director(a) o Investigador(a) o Asesor(a) responsable de la investigación} &  &\\
+                                                            %    &  &  \\ 
+    %& Dr. Juvenal Rodríguez Reséndiz &  \\
+%    \hline
+%    \multirow{3}{20em}{Coordinador del Doctorado en Ingeniería} &  &\\
+                                                            %    &  &  \\ 
+ %   & Dr. Irineo Torres Pacheco &  \\
+%    \hline
+%    \multirow{3}{20em}{Presidente(a) del Comité de Ética para la Investigación de la Facultad de Ingeniería} &  &\\
+                                                            %    &  &  \\ 
+    %& Dra. Aurora Femat Díaz  &  \\
+%    \hline
+%\end{tabular}
+%\end{center}
+%#####################################
+
+\newpage
+
+\clearpage
+\bibliographystyle{unsrt}
+\addcontentsline{toc}{section}{Referencias}
+\bibliography{Bibliografia} 
+
+\end{document}
