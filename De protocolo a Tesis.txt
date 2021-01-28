@@ -81,7 +81,7 @@ urlcolor=black,
 \textsc{\LARGE Universidad Autónoma de Querétaro}\\[1 cm]
 \includegraphics[width=0.15\textwidth]{./uaqlogo}~\\[0.75cm]
 \textsc{\Large Facultad de Ingeniería \\ \large{Doctorado en Ingeniería}}\\[0.5 cm]
-\textsc{\large Protocolo de Investigación \\ (Agosto 2020 - Julio 2023)}\\[0.5cm]
+\textsc{\large Tesis de Investigación \\ (Agosto 2020 - Julio 2023)}\\[0.5cm]
 %\small{Maestría en Instrumentación y Control Automático \\ 
 
 % Title
@@ -112,7 +112,7 @@ Desarrollo de un sistema de clasificación para plásticos reciclables de alta d
 % Author and supervisor
 \large \textbf{Presenta:} Mtro. Luis Alberto Ángeles Hurtado\\\vspace*{0.5cm}
 \textbf{Director:} Dr. Juvenal Rodríguez Reséndiz$^{1}$\\\vspace*{0.5cm}
-%\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
+\textbf{Co Director:} Dr. Sebastian Salazar Colores$^{1}$\\\vspace*{0.5cm}
 \textbf{Secretario:} Dr. Roberto Valentín Carrillo Serrano$^{1}$\\\vspace*{0.5cm}
 \textbf{Vocal:} Dra. Hilda Romero Zepeda$^{1}$\\\vspace*{0.5cm}
 \raggedright
@@ -498,7 +498,109 @@ Un sistema que clasifica las botellas en tiempo real utilizando FPGA fue propues
          \end{tabular}
 \end{table}
 %###########################################
+%#############################
+\subsection{Definición del mensurando para la medición de la Iluminancia}
 
+Para este trabajo se considera al mensurando como la corriente eléctrica que pasa por un foto-diodo de silicio \cite{bpw21R}, la medición es de manera indirecta debido a que al variar la Iluminancia en el foto-diodo su resistencia cambia. Para que circule una corriente eléctrica I por un material, es necesario que se aplique un campo eléctrico o una diferencia de potencial V entre dos puntos del mismo y que en el material hayan cargas capaces de moverse, es decir que en su interior hayan cargas libres (electrones o iones). Esta situación se presenta en los metales, semiconductores, etc \cite{decapitulo}.
+
+Al variar la resistencia del foto-diodo aplicando V, la corriente I por lo general también cambiará, dependiendo de esta variación se puede calcular la Iluminancia ver Figura \ref{lux2}. Si la relación entre V e I es lineal, decimos que estamos en presencia de un material o componente óhmico y la relación que describe este comportamiento se conoce como ley de Ohm. Por lo tanto, como se ilustra en la Figura \ref{lux1} la escala es logarítmica vs logarítmica pero para fines prácticos se considerara lineal para el calculo de la incertidumbre.
+
+\begin{equation}
+    I = \frac{V}{R} 
+\end{equation}
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {15mm 205mm 100mm 35mm},clip,scale=0.9]{Vg_fig_29.pdf}
+    \caption{Comportamiento del diodo de silicio PN BPW21R. Corriente de corto circuito vs Iluminancia \cite{bpw21R}.}
+    \label{lux1}
+\end{figure}
+%#############################################
+
+\subsection{Magnitudes de influencia en la incertidumbre}
+
+Las magnitudes de influencia son las causas de la incertidumbre, también son asociadas a las propiedades del instrumento de medición, como la propiedad de la condición nominal de funcionamiento del instrumento, la estabilidad, la condición del límite de funcionamiento, la sensibilidad, resolución, la incertidumbre instrumental, el error máximo permitido, la exactitud, el sesgo instrumental, el tiempo de respuesta a un escalón entre otras propiedades \cite{imnc2008vocabulario}, para ilustrar mejor las magnitudes de influencia en el método del mensurando véase la Figura \ref{lux_arbol}. En el diagrama de árbol se representa la depuración de las posibles interacciones y relaciones entre las variables de influencia de variación. Véase Figura \ref{fIncer} donde se ilustran las principales fuentes de incertidumbre. 
+\vspace*{0.5cm}
+
+%#############################################
+\begin{figure}[h]
+    \centering
+    \includegraphics[trim = {110mm 195mm 20mm 61mm},clip,scale=0.9]{Vg_fig_30.pdf}
+    \caption{Foto-diodo en modo de operación de lectura de voltaje con un amplificador de voltaje \cite{bpw21R_tec}.}
+    \label{lux2}
+\end{figure}
+%#############################################
+
+\begin{figure}
+    \centering
+%#########################################
+    \begin{tikzpicture}[every node/.style={rectangle, fill=blue!6!white}]
+\node {Medición del voltaje y la resistencia eléctrica para estimar la corriente eléctrica} [sibling distance=8.5cm]
+child{node {Voltaje y resistencia del foto-diodo}[sibling distance=6.5cm]
+    child {node {Repetibilidad}[sibling distance=3.6cm]
+        child {node {Variación de Voltaje} [sibling distance=2cm]
+                child {node {R Fija}[sibling distance=0.9cm]
+                    child{node{10 \ohm}}
+            }
+            child {node {Capacitancia}[sibling distance=0.9cm]
+                child{node{Foto-Diodo}}
+            }
+        }
+        child {node {Resolución} [sibling distance=2cm]}
+    }
+    child{node{Voltaje en el foto-diodo}[sibling distance=3cm]
+        child{node {Ruido eléctrico} [sibling distance=2cm]
+            child {node {Voltio (-)}[sibling distance=0.9cm]
+                %child{node{Falla}}
+            }
+            child {node {Amper (-)}[sibling distance=0.9cm]
+                %child{node{Falla}}
+            }
+        }
+        child {node {Temperatura} [sibling distance=2cm]}
+    }
+};
+\end{tikzpicture}
+%#########################################    
+    \caption{Diagrama de árbol que muestra las interacciones en el método del mensurando}
+    \label{lux_arbol}
+\end{figure}
+%\caption{Diagrama de árbol para la depuración de las principales fuentes de incertidumbre}
+
+\begin{figure}[]
+    \centering
+    \includegraphics[trim = {21mm 135mm 13mm 25mm},clip,scale=0.68]{Vg_fig_31.pdf}
+    \caption{Diagrama del principio de causalidad donde se consideran las variables de influencia y magnitudes de entrada del proceso de medición.}
+    \label{fIncer}
+\end{figure}
+
+Para cuantificar las magnitudes de influencia y su dispersión se estima y gráfica los posibles resultados del espacio muestral véase Figura \ref{lux3}. Con los datos simulados y con las ecuaciones del modelo físico se puede observar que el sistema presentara variación. Para el método de evaluación se considero el tipo B con las hojas de datos del sensor (véase Tabla \ref{lux4}) se obtuvieron los valores nominales de las fuentes de variación por lo que se considera que tienen las mismas probabilidades de que ocurran en el rango de variación que puedan presentar como lo ilustra la Figura \ref{lux5}. Los valores de la incertidumbre estándar se considera una función de densidad de probabilidad uniforme para la fuente de voltaje, resolución del micro controlador con un ADC de 8 bits, la resistencia fija, capacitancia del foto-diodo a 5 V. Para la detección de líquidos dentro de las botellas se considera una incertidumbre requerida de $\pm 10$ lux.
+
+\begin{table}[]
+    \centering
+    \caption{Cuantificación asignación de valores a la variabilidad de cada fuente de incertidumbre \cite{bpw21R}}
+    \begin{tabular}{m{6cm}  m{4cm} m{2cm}}
+         \hline
+         Fuente de Incertidumbre & Incertidumbre estándar \\
+         \hline
+         Fuente de voltaje & 5 V \\
+         %\hline
+         Resistencia fija & \pm 5\% & $I=\frac{V}{R}$\\
+         Capacitancia & 400 pF \\
+         Resolución & 10 mV & Calibración\\
+         \hline
+    \end{tabular}
+    \label{lux4}
+\end{table}
+
+\begin{figure}[]
+    \centering
+    \includegraphics[trim = {1mm 1mm 6mm 75mm},clip,scale=0.35]{Rplot_res.pdf}
+    \caption{Distribución uniforme para la resolución de la conversión de analógico a digital.}
+    \label{lux5}
+\end{figure}
+%#############################
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Análisis de componentes principales}
@@ -1397,7 +1499,7 @@ Los residuos plásticos que se utilizaran serán recolectados de la basura, por 
 \newpage
 \begin{figure}[h]
     \centering
-    \includegraphics[trim = {25mm 140mm 20mm 25mm},clip,scale=1.1]{Vg_fig_29.pdf}
+    \includegraphics[trim = {25mm 168mm 20mm 25mm},clip,scale=1.1]{FIRMAS_etica.pdf}
     %\caption{Firmas de registro.}
     %\label{etica}
 \end{figure} 
