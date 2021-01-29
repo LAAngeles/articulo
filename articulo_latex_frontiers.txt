@@ -1,15 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Hola que tal
-% This is just an example/guide for you to refer to when submitting manuscripts to Frontiers; it is not mandatory to use Frontiers .cls files nor frontiers.tex  %
-% This will only generate the Manuscript; the final article will be typeset by Frontiers after acceptance.   
+% This is just an example/guide for the author to refer to when submitting manuscripts to Frontiers; it is not mandatory to use Frontiers .cls files nor frontiers.tex  %
+% This will only generate the Manuscript; Frontiers will typeset the final article after acceptance.   
 %                                              %
 %                                                                                                                                                         %
-% When submitting your files, remember to upload this *tex file, the pdf generated with it, the *bib file (if bibliography is not within the *tex) and all the figures.
+% When submitting the files, remember to upload this *tex file, the pdf generated with it, the *bib file (if the bibliography is not within the *tex), and all the figures.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Version 3.4 Generated 2018/06/15 %%%
-%%% You will need to have the following packages installed: datetime, fmtcount, etoolbox, fcprefix, which are normally inlcuded in WinEdt. %%%
-%%% In http://www.ctan.org/ you can find the packages and how to install them, if necessary. %%%
+%%% You will need to have the following packages installed: DateTime, fmtcount, etoolbox, fcprefix. WinEdt. %%%
+%%% In http://www.ctan.org/, you can find the packages and how to install them, if necessary. %%%
 %%%  NB logo1.jpg is required in the path in order to correctly compile front page header %%%
 
 \documentclass[utf8]{frontiersSCNS} % for Science, Engineering and Humanities and Social Sciences articles
@@ -32,7 +31,7 @@
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
 % If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
 \def\Address{$^{1}$Facultad de Ingeniería, Universidad Autónoma de Querétaro, Querétaro, México \\
-$^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX (only USA, Canada and Australia), Country X  }
+$^{2}$Laboratory X, Institute X, Department X, Organization X, City X, State XX (only USA, Canada, and Australia), Country X  }
 % The Corresponding Author should be marked with an asterisk
 % Provide the exact contact address (this time including street name and city zip code) and email of the corresponding author
 % \def\corrAuthor{Corresponding Author}
@@ -53,7 +52,7 @@ $^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX
 \address{} %This field will be automatically populated
 \correspondance{} %This field will be automatically populated
 
-\extraAuth{}% If there are more than 1 corresponding author, comment this line and uncomment the next one.
+\extraAuth{}% If there is more than one corresponding author, comment on this line and uncomment the next one.
 %\extraAuth{corresponding Author2 \\ Laboratory X2, Institute X2, Department X2, Organization X2, Street X2, City X2 , State XX2 (only USA, Canada and Australia), Zip Code2, X2 Country X2, email2@uni2.edu}
 
 
@@ -61,9 +60,9 @@ $^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX
 
 
 \begin{abstract}
-%%% Leave the Abstract empty if your article does not require one, please see the Summary Table for full details.
+%%% Leave the Abstract empty if your article does not require one; please see the Summary Table for full details.
 \section{}
-%For full guidelines regarding your manuscript please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines}{Author Guidelines}.
+%For full guidelines regarding your Manuscript, please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines}{Author Guidelines}.
 %As a primary goal, the abstract should render the general significance and conceptual advance of the work clearly accessible to a broad readership. References should not be cited in the abstract. Leave the Abstract empty if your article does not require one, please see \href{http://www.frontiersin.org/about/AuthorGuidelines#SummaryTable}{Summary Table} for details according to article type. 
 The set of parts of a system is essential for achieving the objectives in measurement systems. There is a great diversity of materials with different compositions; for this reason, people need to group them. %\citep{crisci1977clasificacion}.
 A classification system's objective is to group objects into classes based on the attributes they have in common. Therefore, the design of classification systems seeks an efficient detection of these attributes. For the classification of plastics, systems need to be able to distinguish between recyclable and non-recyclable plastics.
@@ -87,16 +86,16 @@ Commercially some companies manufacture and distribute sorting systems, see Tabl
 %-hasta donde esta el estado del arte
 
 Classification systems show a trend in methods using the principle of image processing that uses combinations of various techniques such as principal component analysis, spectroscopy \citep{Rani2019}, and Hough transforms \citep{Duda197211}, \citep{Prasad2012}. Another technique used to classify plastic bottles by extracting their characteristics in the image's intensity is the support vector machine (SVM) \citep{Nawrocky2010}. The author in \citep{Shahbudin2010} can also find an approximation of the containers with morphological operations to describe the image's structure or shape. The methods need to be developed in intelligent machines that classify the bottles in real-time; for example, a system was implemented using an FPGA in \citep{House2011}.
-Other systems are based on the use of neural networks in conjunction with infrared spectroscopy to efficiently identify plastics \citep{THuthFehre1995}. Each of the described methods uses different classification tools that provide advantages and disadvantages. See Table \ref{Comparacion}; therefore, they reference the trend in implementing a high-speed classification system. 
+Other systems are based on neural networks in conjunction with infrared spectroscopy to identify plastics efficiently \citep{THuthFehre1995}. Each of the described methods uses different classification tools that provide advantages and disadvantages. See Table \ref{Comparacion}; therefore, they reference the trend in implementing a high-speed classification system. 
 %-alusión al objetivo sin mencionar el método
 Each commercially available classification method and current methods have different characteristics, designs, and implementation costs \citep{HuiWang201975}, \citep{Association2008}.
 
 %\section{Article types}
 \section{Current sorting systems for plastic bottles}
 
-%For requirements for a specific article type, please refer to the Article Types on any Frontiers journal page. Please also refer to  \href{http://home.frontiersin.org/about/author-guidelines#Sections}{Author Guidelines} for further information on how to organize your manuscript in the required sections or their equivalents for your field
+%For requirements for a specific article type, please refer to the Article Types on any Frontiers journal page. Please also refer to  \href{http://home.frontiersin.org/about/author-guidelines#Sections}{Author Guidelines} for further information on how to organize your Manuscript in the required sections or their equivalents for your field.
 
-% For Original Research articles, please note that the Material and Methods section can be placed in any of the following ways: before Results, before Discussion or after Discussion.
+% For Original Research articles, please note that the Material and Methods section can be placed in any of the following ways: before Results, before Discussion, or after Discussion.
 
 The correct classification of different plastic resins maintains a high value in the market; for this reason, it is a research subject, and automatic methods for classifying plastic bottles have been proposed.
 Machine learning has been used in the last nine years, thus being a set of automatic learning classification algorithms based on statistical learning theory; this modality can be understood as algorithms that learn from the data entered by a person \citep{1527552} and are implemented in various applications.
@@ -111,7 +110,7 @@ Most of the techniques that prevail for the classification of plastics rely on t
 \section{Recent Trends to Improve Detection in Recyclable Plastics}
 %\subsection{Heading Levels}
 
-%There are 5 heading levels
+%There are five heading levels
 
 %\subsection{Level 2}
 %\subsubsection{Level 3}
@@ -126,21 +125,21 @@ Most of the techniques that prevail for the classification of plastics rely on t
 %\end{equation}
 
 %\subsection{Figures}
-%Frontiers requires figures to be submitted individually, in the same order as they are referred to in the manuscript. Figures will then be automatically embedded at the bottom of the submitted manuscript. Kindly ensure that each table and figure is mentioned in the text and in numerical order. Figures must be of sufficient resolution for publication \href{http://home.frontiersin.org/about/author-guidelines#ResolutionRequirements}{see here for examples and minimum requirements}. Figures which are not according to the guidelines will cause substantial delay during the production process. Please see \href{http://home.frontiersin.org/about/author-guidelines#GeneralStyleGuidelinesforFigures}{here} for full figure guidelines. Cite figures with subfigures as figure \ref{fig:2}B.
+%Frontiers requires figures to be submitted individually, in the same order as they are referred to in the Manuscript. Figures will then be automatically embedded at the bottom of the submitted Manuscript. Kindly ensure that each table and figure is mentioned in the text and numerical order. Figures must be of sufficient resolution for publication \href{http://home.frontiersin.org/about/author-guidelines#ResolutionRequirements}{see here for examples and minimum requirements}. Figures which are not according to the guidelines will cause substantial delay during the production process. Please see \href{http://home.frontiersin.org/about/author-guidelines#GeneralStyleGuidelinesforFigures}{here} for full figure guidelines. Cite figures with subfigures as figure \ref{fig:2}B.
 
 
 %\subsubsection{Permission to Reuse and Copyright}
-%Figures, tables, and images will be published under a Creative Commons CC-BY licence and permission must be obtained for use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). It is the responsibility of the authors to acquire the licenses, to follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
-%%Figures, tables, and images will be published under a Creative Commons CC-BY licence and permission must be obtained for use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). It is the responsibility of the authors to acquire the licenses, to follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
+%Figures, tables, and images will be published under a Creative Commons CC-BY license, and permission must be obtained for the use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). The authors' responsibility is to acquire the licenses, follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
+%%Figures, tables, and images will be published under a Creative Commons CC-BY license, and permission must be obtained for the use of copyrighted material from other sources (including re-published/adapted/modified/partial figures and images from the internet). The authors' responsibility is to acquire the licenses, follow any citation instructions requested by third-party rights holders, and cover any supplementary charges.
 
 %\subsection{Tables}
-%Tables should be inserted at the end of the manuscript. Please build your table directly in LaTeX.Tables provided as jpeg/tiff files will not be accepted. Please note that very large tables (covering several pages) cannot be included in the final PDF for reasons of space. These tables will be published as \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} on the online article page at the time of acceptance. The author will be notified during the typesetting of the final article if this is the case. 
-Recent research suggests new methods such as the principle of image processing see Figure \ref{NIR4} using combinations of various techniques such as principal component analysis, spectroscopy \citep{Rani2019}, and Hough transform \citep{Duda197211}. One of the limitations of this method is the conditions at the time of taking the picture, the variation in light, resolution, background, and the camera's distance to obtain an accuracy greater than 95 {$ \% $} \citep{Prasad2012}.
-Some of these systems are based on the multiple correlation method for PET and non-PET bottle classification. Photos are taken, and the correlation of each PET bottle's image is calculated from histograms of the colors red, green, and blue see Figure \ref{NIR3}. The test uses 200 images of plastic bottles, 100 images of PET bottles, and 100 images of bottles other than PET, with identification results 93.33 {$ \% $} \citep{Srigul2016}, in \citep{Ramli2008}, it is proposed to convert the images to grayscale. The image's main characteristics are extracted, ending with the Linear discriminant analysis method (LDA) obtaining a pressure of 97.5 {$ \% $}. These methods allow discriminating the bottles that have different colors \citep{Wang2019170}, \citep{Scavino2009794}.
+%Tables should be inserted at the end of the Manuscript. Please build your table directly in LaTeX.Tables provided as jpeg/tiff files will not be accepted. Please note that extensive tables (covering several pages) cannot be included in the final PDF for space reasons. These tables will be published as \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} on the online article page at the time of acceptance. The author will be notified during the typesetting of the final article if this is the case. 
+Recent research suggests new methods such as the principle of image processing see Figure \ref{NIR4} using combinations of various techniques such as principal component analysis, spectroscopy \citep{Rani2019}, and Hough transforms \citep{Duda197211}. One of the limitations of this method is the conditions when taking the picture, the variation in light, resolution, background, and the camera's distance to obtain an accuracy greater than 95 {$ \% $} \citep{Prasad2012}.
+Some of these systems are based on the multiple correlation method for PET and non-PET bottle classification. Photos are taken, and the correlation of each PET bottle's image is calculated from histograms of the colors red, green, and blue see Figure \ref{NIR3}. The test uses 200 images of plastic bottles, 100 images of PET bottles, and 100 images of bottles other than PET, with identification results 93.33 {$ \% $} \citep{Srigul2016}, in \citep{Ramli2008}, it is proposed to convert the images to grayscale. The image's main characteristics are extracted, ending with the Linear discriminant analysis method (LDA) obtaining a pressure of 97.5 {$ \% $}. These methods allow discriminating the bottles with different colors \citep{Wang2019170}, \citep{Scavino2009794}.
 Another technique used to classify plastic bottles is by extracting their characteristics in the image's intensity, and they are detected with a support vector machine. Its focus is on rotation, translation, and invariant scaling because it uses features derived from image histograms. The method is robust to the factors of bottle size, shape, label types, and deformation. The system achieves an accuracy above 96 {$ \% $} using grayscale images from the camera \citep{Nawrocky2010}.
-The researcher can also approximate the packages with morphological operations to describe the structure or shape of the image. Using the two-dimensional description of the silhouette of the plastic bottles, the detection of the edge of the silhouettes of the objects is developed by the process of erosion, as well as the process of extraction of characteristics of the vector using SVM and is used to classify the image of two groups. As a result, a performance of more than 90 {$ \% $} precision is obtained \citep{Shahbudin2010}.
+The researcher can also approximate the packages with morphological operations to describe the image's structure or shape. Using the two-dimensional description of the silhouette of the plastic bottles, the detection of the edge of the silhouettes of the objects is developed by the process of erosion, as well as the process of extraction of characteristics of the vector using SVM and is used to classify the image of two groups. As a result, a performance of more than 90 {$ \% $} precision is obtained \citep{Shahbudin2010}.
 %(Shahbudin et al., 2010)
-A system that classifies bottles in real-time using FPGA was proposed in \citep{House2011}. The method proposes to identify two types of materials: PET and tetra pack bottles at high speed in real-time, automatically locating the regions with the highest probability that contain these materials within the image and removing the image's background. A histogram is created for the extraction of image features and was used to classify the bottles using SVM. The method has 93 {$ \% $} recognition and is capable of speed. Other systems are based on neural networks in conjunction with infrared spectroscopy for efficient identification of plastics \citep{THuthFehre1995}. Each of the methods described uses machine learning in the same way; they provide advantages and disadvantages see Table \ref{Comparacion}.
+A system that classifies bottles in real-time using FPGA was proposed in \citep{House2011}. The method proposes identifying two types of materials: PET and tetra pack bottles at high speed in real-time, automatically locating the regions with the highest probability that contain these materials within the image and removing the image's background. A histogram is created for the extraction of image features and was used to classify the bottles using SVM. The method has 93 {$ \% $} recognition and is capable of speed. Other systems are based on neural networks in conjunction with infrared spectroscopy for efficient identification of plastics \citep{THuthFehre1995}. Each of the methods described uses machine learning in the same way; they provide advantages and disadvantages see Table \ref{Comparacion}.
 
 
 \section{Conclusiones}
@@ -148,20 +147,20 @@ A system that classifies bottles in real-time using FPGA was proposed in \citep{
 %\section{Nomenclature}
 
 %\subsection{Resource Identification Initiative}
-%To take part in the Resource Identification Initiative, please use the corresponding catalog number and RRID in your current manuscript. For more information about the project and for steps on how to search for an RRID, please click \href{http://www.frontiersin.org/files/pdf/letter_to_author.pdf}{here}.
+%To take part in the Resource Identification Initiative, please use the corresponding catalog number and RRID in your current Manuscript. For more information about the project and for steps on how to search for an RRID, please click \href{http://www.frontiersin.org/files/pdf/letter_to_author.pdf}{here}.
 
 %\subsection{Life Science Identifiers}
-%Life Science Identifiers (LSIDs) for ZOOBANK registered names or nomenclatural acts should be listed in the manuscript before the keywords. For more information on LSIDs please see \href{http://www.frontiersin.org/about/AuthorGuidelines#InclusionofZoologicalNomenclature}{Inclusion of Zoological Nomenclature} section of the guidelines.
+%Life Science Identifiers (LSIDs) for ZOOBANK registered names or nomenclatural acts should be listed in the Manuscript before the keywords. For more information on LSIDs, please see \href{http://www.frontiersin.org/about/AuthorGuidelines#InclusionofZoologicalNomenclature}{Inclusion of Zoological Nomenclature} section of the guidelines.
 
-We could say that there are currently two ways to classify the different types of plastics: individualized feeding systems that require the objects to be fed to a network of sensors that pass one by one, and massive feeding systems that require the flow of solids are spread out on a conveyor belt. These two systems require that the bottles pass through the measuring system more than once. Each of the classification methods under investigation has different capabilities and costs. Systems that detect bottle size and have the highest speeds use a more significant number of infrared sensors but do not notice the type of label, cap, waste inside the bottle. Systems that consider the kind of color of the bottle order them individually, which makes the system slower and uses infrared sensors. Others rely on the frequency of a strobe light to improve the detection of plastics. 
-When working with x-rays, the system obtained higher speeds, but it works efficiently only with PVC materials. The trend is inclined to systems that use the near-Infrared spectroscopy method. See Figure \ref{NIR1} because it can detect a great variety of plastics and limit the wavelength active region. Figure \ref{NIR2} shows that when considering the type of color, the wavelengths tend to be linear, making it more difficult to detect the type of plastic; hence, other methods that work together, such as image processing, solve this limiting.
+We could say that there are currently two ways to classify the different types of plastics: individualized feeding systems that require the objects to be fed to a network of sensors that pass one by one, and massive feeding systems that require the flow of solids are spread out on a conveyor belt. These two systems require that the bottles pass through the measuring system more than once. Each of the classification methods under investigation has different capabilities and costs. Systems that detect bottle size and have the highest speeds use a more significant number of infrared sensors but do not notice the type of label, cap, waste inside the bottle. Systems that consider the bottle's kind of color order them individually, which makes the system slower and uses infrared sensors. Others rely on the frequency of a strobe light to improve the detection of plastics. 
+When working with x-rays, the system obtained higher speeds, but it works efficiently only with PVC materials. The trend is inclined to systems that use the near-Infrared spectroscopy method. See Figure \ref{NIR1} because it can detect a great variety of plastics and limit the wavelength active region. Figure \ref{NIR2} shows that when considering the type of color, the wavelengths tend to be linear, making it more difficult to detect the type of plastic; hence, other methods work together, such as image processing, solve this limiting.
 
 \section{Additional Requirements}
 
-For additional requirements for specific article types and further information please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines#AdditionalRequirements}{Author Guidelines}.
+For additional requirements for specific article types and further information, please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines#AdditionalRequirements}{Author Guidelines}.
 
 \section*{Conflict of Interest Statement}
-%All financial, commercial or other relationships that might be perceived by the academic community as representing a potential conflict of interest must be disclosed. If no such relationship exists, authors will be asked to confirm the following statement: 
+%All financial, commercial, or other relationships that might be perceived by the academic community as representing a potential conflict of interest must be disclosed. If no such relationship exists, authors will be asked to confirm the following statement: 
 
 The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
 
@@ -170,19 +169,19 @@ The authors declare that the research was conducted in the absence of any commer
 The Author Contributions section is mandatory for all articles, including articles by sole authors. If an appropriate statement is not provided on submission, a standard one will be inserted during the production process. The Author Contributions statement must describe the contributions of individual authors referred to by their initials and, in doing so, all authors agree to be accountable for the content of the work. Please see  \href{http://home.frontiersin.org/about/author-guidelines#AuthorandContributors}{here} for full authorship criteria.
 
 %\section*{Funding}
-%Details of all funding sources should be provided, including grant numbers if applicable. Please ensure to add all necessary funding information, as after publication this is no longer possible.
+%Details of all funding sources should be provided, including grant numbers if applicable. Please ensure to add all necessary funding information, as, after publication, this is no longer possible.
 
 %\section*{Acknowledgments}
-%This is a short text to acknowledge the contributions of specific colleagues, institutions, or agencies that aided the efforts of the authors.
+%This is a short text to acknowledge the contributions of specific colleagues, institutions, or agencies that aided the authors' efforts.
 
 %\section*{Supplemental Data}
-% \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
+% \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission. If there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
 
 %\section*{Data Availability Statement}
 %The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF REPOSITORY] [LINK].
 % Please see the availability of data guidelines for more information, at https://www.frontiersin.org/about/author-guidelines#AvailabilityofData
 
-\bibliographystyle{frontiersinSCNS_ENG_HUMS} % for Science, Engineering and Humanities and Social Sciences articles, for Humanities and Social Sciences articles please include page numbers in the in-text citations
+\bibliographystyle{frontiersinSCNS_ENG_HUMS} % for Science, Engineering, and Humanities and Social Sciences articles, for Humanities and Social Sciences articles, please include page numbers in the in-text citations
 %\bibliographystyle{frontiersinHLTH&FPHY} % for Health, Physics and Mathematics articles
 \bibliography{test}
 
@@ -191,9 +190,9 @@ The Author Contributions section is mandatory for all articles, including articl
 
 \section*{Figure and tables captions}
 
-%%% Please be aware that for original research articles we only permit a combined number of 15 figures and tables, one figure with multiple subfigures will count as only one figure.
-%%% Use this if adding the figures directly in the mansucript, if so, please remember to also upload the files when submitting your article
-%%% There is no need for adding the file termination, as long as you indicate where the file is saved. In the examples below the files (logo1.eps and logos.eps) are in the Frontiers LaTeX folder
+%%% Please be aware that we only permit a combined number of 15 figures and tables for original research articles, one figure with multiple subfigures will count as only one figure.
+%%% Use this if adding the figures directly in the Manuscript, if so, please remember also to upload the files when submitting your article
+%%% There is no need for adding the file termination, as long as you indicate where the file is saved. In the examples below, the files (logo1.eps and logos.eps) are in the Frontiers LaTeX folder.
 %%% If using *.tif files convert them to .jpg or .png
 %%%  NB logo1.eps is required in the path in order to correctly compile front page header %%%
 
@@ -212,10 +211,10 @@ The Author Contributions section is mandatory for all articles, including articl
 %\caption{This is a figure with sub figures, \textbf{(A)} is one logo, \textbf{(B)} is a different logo.}\label{fig:2}
 %\end{figure}
 
-%%% If you are submitting a figure with subfigures please combine these into one image file with part labels integrated.
-%%% If you don't add the figures in the LaTeX files, please upload them when submitting the article.
+%%% If you are submitting a figure with subfigures, please combine these into one image file with part labels integrated.
+%%% If you do not add the LaTeX files figures, please upload them when submitting the article.
 %%% Frontiers will add the figures at the end of the provisional pdf automatically
-%%% The use of LaTeX coding to draw Diagrams/Figures/Structures should be avoided. They should be external callouts including graphics.
+%%% The use of LaTeX coding to draw Diagrams/Figures/Structures should be avoided. They should be external callouts, including graphics.
 
 %#############################################
 \begin{table}[h!]
