@@ -1,0 +1,824 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is just an example/guide for you to refer to when submitting manuscripts to Frontiers, it is not mandatory to use Frontiers .cls files nor frontiers.tex  %
+% This will only generate the Manuscript, the final article will be typeset by Frontiers after acceptance.   
+%                                              %
+%                                                                                                                                                         %
+% When submitting your files, remember to upload this *tex file, the pdf generated with it, the *bib file (if bibliography is not within the *tex) and all the figures.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Version 3.4 Generated 2018/06/15 %%%
+%%% You will need to have the following packages installed: datetime, fmtcount, etoolbox, fcprefix, which are normally inlcuded in WinEdt. %%%
+%%% In http://www.ctan.org/ you can find the packages and how to install them, if necessary. %%%
+%%%  NB logo1.jpg is required in the path in order to correctly compile front page header %%%
+
+\documentclass[utf8]{frontiersSCNS} % for Science, Engineering and Humanities and Social Sciences articles
+%\documentclass[utf8]{frontiersHLTH} % for Health articles
+%\documentclass[utf8]{frontiersFPHY} % for Physics and Applied Mathematics and Statistics articles
+
+%\setcitestyle{square} % for Physics and Applied Mathematics and Statistics articles
+\usepackage{url,hyperref,lineno,microtype,subcaption}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{multirow}
+
+\linenumbers
+
+
+% Leave a blank line between paragraphs instead of using \\
+
+
+\def\keyFont{\fontsize{8}{11}\helveticabold }
+\def\firstAuthorLast{Sample {et~al.}} %use et al only if is more than 1 author
+\def\Authors{LA Ángeles-Hurtado\,$^{1,*}$, Co-Author\,$^{2}$ and Co-Author\,$^{1,2}$}
+% Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
+% If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
+\def\Address{$^{1}$Laboratory X, Institute X, Department X, Organization X, City X , State XX (only USA, Canada and Australia), Country X \\
+$^{2}$Laboratory X, Institute X, Department X, Organization X, City X , State XX (only USA, Canada and Australia), Country X  }
+% The Corresponding Author should be marked with an asterisk
+% Provide the exact contact address (this time including street name and city zip code) and email of the corresponding author
+\def\corrAuthor{Corresponding Author}
+
+\def\corrEmail{email@uni.edu}
+
+
+
+
+\begin{document}
+\onecolumn
+\firstpage{1}
+
+% \title[Running Title]{Sistemas de clasificación para polímeros reciclables que puedan ser desarrollados en Querétaro-México} 
+\title[Running Title]{Sistemas en el manejo y en la clasificación de PET que sean viables para ser desarrollados en centros de acopio en México} 
+
+\author[\firstAuthorLast ]{\Authors} %This field will be automatically populated
+\address{} %This field will be automatically populated
+\correspondance{} %This field will be automatically populated
+
+\extraAuth{}% If there are more than 1 corresponding author, comment this line and uncomment the next one.
+%\extraAuth{corresponding Author2 \\ Laboratory X2, Institute X2, Department X2, Organization X2, Street X2, City X2 , State XX2 (only USA, Canada and Australia), Zip Code2, X2 Country X2, email2@uni2.edu}
+
+
+\maketitle
+
+
+\begin{abstract}
+%%% Leave the Abstract empty if your article does not require one, please see the Summary Table for full details.
+% Los polímeros post-consumo requieren de acciones viables de transferencia de valor al consumidor final, para disminuir el impacto ambiental.
+\section{}
+Este documento aborda una revisión de los métodos y sistemas de clasificación de plásticos reciclables y su tendencia de modo que se busca proporcionar una descripción general de los métodos rentables para diseñar y desarrollar un sistema de clasificación asequible en México desde el ámbito académico. El polyethylene terephthalate es un ejemplo en México en la economía circular más notable. En México y el mundo se están desarrollando iniciativas para impulsar la cultura del reciclaje y así reducir la generación de residuos, estas iniciativas buscan visibilizar la labor de miles de personas y promover la generación de empleos y el impulso de negocios, a través de incentivar esquemas efectivos de separación, recolección, clasificación, reutilización y reciclaje, de la mano de consumidores, acopiadores y recolectores. La cadena de reciclaje brinda ingreso económico a más de 35 mil mexicanos. El gobierno mexicano se ha pronunciado respecto al manejo de residuos como una prioridad nacional por la pandemia de COVID-19 que incremento los residuos solidos urbanos entre un 3.3-16.5\% adicional a lo generado en condiciones normales.
+
+%For full guidelines regarding your manuscript please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines}{Author Guidelines}.
+%As a primary goal, the abstract should render the general significance and conceptual advance of the work clearly accessible to a broad readership. References should not be cited in the abstract. Leave the Abstract empty if your article does not require one, please see \href{http://www.frontiersin.org/about/AuthorGuidelines#SummaryTable}{Summary Table} for details according to article type. 
+Los factores que afectan la infraestructura de reciclaje son la cantidad de desechos en el flujo de desechos, las tecnologías de reciclaje disponibles, las regulaciones gubernamentales y la economía de los productos EOL.
+Se puede afirmar que el conjunto de partes de un sistema es fundamental para que se alcancen los objetivos en los sistemas de medición. En el mundo existe una gran diversidad de materiales con diferentes composiciones, por esta razón, las personas tienen la necesidad de agruparlos. %\citep{crisci1977clasificacion}.
+El objetivo en un sistema de clasificación es el agrupamiento de objetos en clases, con base en sus atributos que poseen en común. Por consiguiente el diseño de sistemas de clasificación buscan una detección de dichos atributos eficientemente. Para la clasificación de plásticos se necesita que los sistemas puedan distinguir entre plásticos reciclables y no reciclables.
+Al agrupar las diferentes resinas de plásticos en tiempo real se requiere contar con elementos que detecten los eventos que caracterizan a cada plástico, la obtención proviene de transductores, sensores y se interpretan con modelos matemáticos. La adecuada armonía entre los elementos proporcionan velocidades iguales o mayores a tres botellas por segundo. %\citep{crisci1983introduccion}.
+% En este trabajo se aborda una breve descripción de los sistemas de clasificación para plásticos reciclables y la tendencia que tienen para que la velocidad de detección se incremente.
+Este documento aborda una breve descripción de los sistemas de clasificación de plásticos reciclables y su tendencia al aumento de la velocidad de detección de modo que se busca proporcionar una descripción general de qué métodos son rentables para diseñar y desarrollar un sistema de clasificación asequible en México.
+\tiny
+ \keyFont{ \section{Keywords:} Plásticos reciclables, sistema de clasificación, machine learning, procesamiento de imágenes, spectroscopy} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
+\end{abstract}
+
+% La eliminación viable polímeros post-consumo se puede definir para este paper como las acciones políticas, económicas, sociales y tecnológicas necesarias para controlar y abastecer las demandas de las diferentes industrias que requieren el uso de polímeros reciclables.
+\section{Introduction}
+%-impacto económico de la actividad 
+De acuerdo con las Naciones Unidas la población mundial alcanzó los 7.7 billones a mediados del año 2019, debido a este aumento las Naciones Unidas estiman que la población mundial alcance por lo menos 8.5 billones en 2030, 9.7 billones en 2050 y 10.9 billones en 2100 \citep{United2019}. El crecimiento de la población a nivel mundial contribuye a la explotación de recursos naturales. Un estudio en Corea muestra la importancia que tienen las ciudades al reciclar los desechos domésticos y establecer políticas económicas circulares para evitar el fuerte impacto en la contaminación \citep{Jung2021}. El proceso de clasificación para materiales reciclables es continuo y ayuda a desarrollar economías de todo el mundo, por lo que hacer eficientes los procesos de traslado, clasificación, almacenamiento, así como de su procesamiento contribuyen al desarrollo económico y cuidado del medio ambiente \citep{Wen2021}. Los plásticos de desecho se utilizan para fabricar productos plásticos de bajo valor como juguetes, bolsas, entre otros y contribuyen en un 28\% de los plásticos reciclados en China \citep{Qu2019}. Aunque muchos beneficios positivos se han derivado de la industrialización de los materiales reciclables también han traído consecuencias no deseadas, debido a que son grandes fuentes de contaminación en las ciudades y en los mares \citep{Shen2020}. La tasa de reciclaje de plástico es de alrededor 9\% a nivel mundial \citep{Wen2021}. La tasa de reciclaje varia dependiendo de la región y en los últimos años se ha incrementado el uso de plásticos de uso domestico \citep{Qu2019}, por ejemplo, la pandemia COVID-19 a nivel mundial incremento el uso de plásticos de un solo uso, y redujo el reciclaje de plásticos a consecuencia de los cierres de actividades no esenciales \citep{Ardusso2021}. Por la pandemia en México, se estimó un incremento en la generación total de residuos entre 3.3-16.5\% adicional a lo generado en condiciones normales \citep{INECC2021}. Una revisión en la gestión de los residuos sólidos urbanos en China concluyeron que el desperdicio de alimentos domina los Residuos sólidos urbanos y muestran que la mayor proporción de desperdicio es en los alimentos con un 61.2\% (54.2–65.9\%, 95\% CI), los polímeros 9.8\% (7.2–14.0\%, 95\% CI), y el papel representa el 9.6\% (6.7–12.3\%, 95\% CI) \citep{Gu2017}. Diversas organizaciones y países se han fijado como meta para los próximos diez años reducir los plásticos de un solo uso y aumentar las toneladas recicladas \citep{Kumagai2020}.
+% 
+% 
+% 1
+% En todo el mundo se producen al año 60 millones de toneladas métricas polyethylene terephthalate, 20 millones de toneladas métricas son para la producción de botellas lo que equivale a que se vendan un millón cada minuto y se estima que el consumo anual llega a half a trillion by 2021.
+% 
+% 
+\section{Polímeros presentes en diversos campos de la industria}
+Cada año se producen en todo el mundo 300 millones de toneladas métricas de plástico, y dependiendo del país se estima que entre el 9\% y el 10\% se recicla, el 10\% se quema y el 80\% se desecha o no se le da un segundo uso \citep{Lundell2020}. El crecimiento de la producción de plástico en todo el mundo alcanzó los 280 millones de toneladas en 2011, 322 millones de toneladas en 2015 y se estimo que para 2020 ronde entre los 400 a 414 millones de toneladas, dicha estimación es sin considerar el impacto del COVID-19 \citep{Sahin2018}, \citep{Grigore2017}. Más del 80\% de los plásticos en Europa están compuestos por polyethylene terephthalate (PET), polystyrene (PS), polyethylene (PE), polyurethane, polyvinyl chloride (PVC), polypropylene (PP) y otros. Los plásticos son utilizados en diversos campos de la industria por sus diversas propiedades que les permiten ser utilizados en combinación con otros materiales y están presentes en materiales de embalaje, agricultura, industria automotriz, construcción de edificios, etc \citep{Thakur2018}. Los polímeros termoplásticos como el poly(methyl methacrylate) (PMMA), polyetheretherketone  (PEEK) y polyimide (PI), se utilizan ampliamente en los campos de la industria aeroespacial, la ingeniería óptica, industria de la ingeniería biológica, etc, \citep{Yan2021}. En la industria de la electrónica la presencia de polímeros es principalmente a base de styrene como el (PS), acrylonitrile butadiene styrene (ABS) y high-impact polystyrene (HIPS). Los automóviles tienen hasta 27 tipos diferentes de plásticos \citep{Buekens2014} pero el ABS y el PP son los dos plásticos que más se presentan en la industria automotriz \citep{Camacho2001}, mientras que en \citep{Kumagai2020} se reportan que se fabrican más de 150 resinas y 230 tipos de aditivos. Cabe resaltar que están aumentando los desarrollos de reciclaje de plásticos a partir de componentes electrónicos, tal es el caso de \citep{Grigorescu2020} que genera  compuestos termoplásticos a base de polipropileno reciclado y placas de circuito impreso de desecho. En \citep{Jaidev2021} utilizan los teclados de las computadoras para formular una mezcla y fomentar el reciclaje en desechos electrónicos aplicando una metodología para mejorar las propiedades de los polímeros y volver a la cadena de suministro. En el reciclaje de residuos sólidos plásticos existen métodos para los materiales electrónicos cuando terminan su ciclo de vida y representan una corriente de termoplásticos de ingeniería que se pueden reciclar, además en la mayoría de los desechos electrónicos están mezclados con metales y representan más de un billón de libras de metales \citep{qu2006viable}. Las resinas recuperadas pueden sustituir a las resinas vírgenes en diversas aplicaciones. Por lo tanto, vale la pena examinar las tecnologías disponibles para producir resinas post-consumo, así como herramientas de identificación de plástico y procesos de separación de plástico.
+% En este documento, la primera mitad describe las tendencias en la cantidad de desechos electrónicos, los programas de reciclaje existentes, y métodos de recolección. La segunda mitad describe varios métodos disponibles para recuperar materiales. de la basura electrónica. En particular, varias tecnologías de reciclaje para el vidrio, los plásticos y los metales que se encuentran en Se discuten los desechos electrónicos. Para el vidrio, las tecnologías de reciclaje de vidrio a vidrio y vidrio a plomo son presentado. Para plásticos, reciclaje químico (materia prima), reciclaje mecánico y reciclaje térmico se analizan los métodos. Procesos de recuperación de cobre, plomo y metales preciosos como plata, oro, se revisan platino y paladio. Estos procesos se describen y comparan sobre la base de tecnologías, recursos y sistemas de entrada y salida de materiales disponibles.
+% A Research Needs Assessment for Waste Plastics Recycling
+% Plastics wastes can be handled by using following methods:  (a) land-filling, (b) incineration, (c) chemical recycling and (d) mechanical recycling \citep{Thakur2018}. 
+% 
+%
+\subsection{La brecha entre países sin infraestructura para procesar sus desechos solidos}
+Los países más industrializados con sistemas avanzados de gestión de residuos están lejos de poder recolectar y reciclar adecuadamente los polímeros desechables. Es por eso que en la ultima década una de sus acciones habían sido enviar sus desechos a países de Asia para clasificarlos, limpiarlos y procesarlos. Una de las acciones que tuvo consecuencias importantes fue que China prohibió la importación de 24 tipos de desechos sólidos, incluidos los desechos plásticos, por lo que algunos países y regiones asiáticos experimentaron aumentos significativos en las importaciones de desechos plásticos de 2016 a 2018 de igual manera los países de Asia están comenzando a limitar las importaciones de desechos plásticos de otros países \citep{Liang2021}, \citep{Wen2021}. La prohibición llega inmediatamente después de que China anuncie que su mega-vertedero, el más grande del país, está completo 25 años antes de lo previsto. El vertedero de Jiangcungou en la provincia de Shaanxi tiene el tamaño de 100 campos de fútbol y fue construido para recibir 2,500 toneladas de desechos por día. En cambio, el relleno sanitario recibió 10,000 toneladas de desechos por día \citep{Lundell2020}. Esto implica que los países que exportaban sus desechos deben de tomar medidas necesarias para recolectar y reciclar adecuadamente los polímeros desechables. México al ser un país en desarrollo requiere sumar esfuerzos para afrontar esta problemática de residuos plásticos. Existe una gran brecha entre países cuando se trata de sistemas de tratamiento y de avance técnico en la gestión de desechos plásticos, es decir, la eliminación de desechos en los países en desarrollo tienen un costo ambiental más alto \citep{Qu2019}. En general las tecnologías actuales de recuperación no incluyen el tratamiento previo de los residuos, cada tecnología varia y depende del material que se este tratando debido a que estos pueden necesitar diversos tratamientos previos para separar y purificar los desechos. El nivel de depuración que se puede lograr mediante tecnologías de pretratamiento afecta directamente al potencial de recuperación de los residuos \citep{van2018}. Existen investigaciones que están encaminadas a encontrar mejores formas de convivir con los polímeros, una opción es remplazarlos o disminuir su uso \citep{Ren2015}. Las tendencias actuales buscan empezar a valorizar el uso de materias primas nuevas y sostenibles como la biomasa \citep{Langsdorf2021} así como técnicas en degradación y biodegradation \citep{Wang2019}, \citep{Grigore2017}. De tal modo que las próximas décadas la clasificación y tratamiento de los polímeros seguirán siendo temas de interés para desarrollar sistemas tecnológicos que ayuden a disminuir la contaminación de los polímeros.
+% 
+% 
+% Las prohibiciones por parte de China se pueden entender por causa de su mega-vertedero de Jiangcungou en la provincia de Shaanxi que recibía 10,000 toneladas de desechos por día y por esa razón se lleno 25 años antes de lo estimado.  
+% 
+% 
+En el reciclaje de residuos plásticos sólidos, existen métodos para los materiales electrónicos cuando terminan su ciclo de vida y con la posibilidad de que se pueden reciclar.
+% 
+% 
+\subsection{La importancia de la clasificación de los polímeros en México}
+En México separar los materiales ferrosos, no ferrosos así como papel, cartón de los polímeros entre otros materiales de los desechos mezclados requiere una gran cantidad de mano de obra; por lo tanto, la adecuada clasificación de los polímeros en países en desarrollo como México representa una actividad económica para personas físicas y morales que contribuyen en la recolección, almacenamiento, traslado y procesamiento de los diferentes materiales reciclables \citep{IMCC2019}, \citep{INEGI2020}, \citep{Qu2019}. En México se generan más de 44 millones de toneladas anuales de residuos, y se espera que la cifra se incremente a 65 millones para el año 2030. En México solo el 5\% se recicla o valoriza lo que equivaldría a unas 2.2 millones de toneladas anuales \citep{SEMARNAT2019}. La prohibición de China en las importaciones de plásticos provoca una escasez de materiales reciclados, derivando en el aumento en los precios de los productos a lo largo de la cadena de suministro. La dependencia de materiales reciclados provenientes de desechos extranjeros en diversos países en el mundo incluyendo México podrían llevar a que dichos países opten por cambiar a materias primas o desechos domésticos \citep{Qu2019}. En México a partir del primero de enero del 2021 por medio de la Secretaría de Medio Ambiente y Recursos Naturales se restringen la importación y exportación de residuos plásticos por la Enmienda de Plásticos del Convenio de Basilea. Lo anterior en concordancia con las políticas comerciales implementadas en los últimos años por varios países para restringir la introducción de los desechos plásticos \citep{Semarnat2021}. Por lo tanto países de América latina en desarrollo como México requieren de sistemas que brinden soluciones para trasladar, clasificar y procesar los residuos solidos después de su vida útil \citep{Villegas2021}. En las siguientes secciones se abordaran las tecnologías existentes para procesar y clasificar polímeros que están presentes en diversos campos de la industria y terminando con una conclusión asiendo alusión a que sistemas podrían ser implementados en México si se quiere desarrollar tecnología con diseños asequibles que le permita gestionar mejor sus desechos plásticos.
+% En este documento, la primera mitad describe las tendencias en la cantidad de desechos electrónicos, los programas de reciclaje existentes y los métodos de recolección. La segunda mitad describe varios métodos disponibles para recuperar materiales de desechos electrónicos. Estos procesos se describen y comparan sobre la base de las tecnologías, los recursos y los sistemas de entrada y salida de materiales disponibles. Al igual que con el reciclaje de otros productos, el establecimiento de una infraestructura adecuada es esencial para la implementación exitosa del reciclaje de desechos electrónicos.
+% 
+%
+\section{Métodos para la manipulación de residuos sólidos plásticos}
+Según un informe del Banco Mundial publicado en 2012, la generación de residuos sólidos urbanos en todo el mundo alcanzó los 1.3 billones de toneladas por año y la generación de residuos sólidos urbanos en 2025 y 2050 se espera que aumente a 2.2 billones de toneladas por año y 4.2 billones de toneladas por año, respectivamente \citep{Fazeli2016}. Cada país debe desarrollar políticas publicas en el área de la manipulación de los desechos plásticos. Los métodos y desarrollos deben adaptarse y evolucionar por región, tal es el caso de los vertederos en México que pueden ser oficiales o clandestinos en los que se tiran los polímeros junto con desechos orgánicos. Existen métodos para manipular los desechos plásticos como la incineración, pero que tienen afectaciones directas al medio ambiente debido a que forman cenizas nocivas y dióxido de carbono \citep{Sharma2020}, otro ejemplo es en los tejidos de fibra de PET que ingresan a la biosfera a través de la incineración y vertederos \citep{Chu2021}, otro método es el reciclaje químico en el que los residuos plásticos se convierten en materias primas químicas e incluso combustibles, así como los métodos de reciclaje mecánico que se utiliza para formar el producto con las mismas características de una resina virgen \citep{Thakur2018} y el método por desmontaje de carcasas electrónicas \citep{qu2006viable}. Las tasas de reciclaje disminuyen con una baja densidad de la población, en las comunidades rurales y ocurre debido a la distancia de los centros de reciclaje lo que contribuye a que el reciclaje no contribuya a una economía circular \citep{Kreiger2013}.
+% 
+% 
+\subsection{Vertederos en México}
+A nivel mundial anualmente, al rededor de 150 millones de toneladas de plásticos terminan en vertederos \citep{Ragaert2017}. Los vertederos abiertos son veintitrés veces más peligroso para el medio ambiente que el dióxido de carbono $CO_2$ \citep{Chowdhury2021}, las botellas de PET que están en vertederos liberan y dispersan a la hidrosfera, la pedosfera y la atmósfera más de 1,108 toneladas de antimonio \citep{Chu2021}. Se estima que el gas de vertedero representa más de la mitad de las emisiones de gases de efecto invernadero, sin embargo, sigue siendo una forma popular del manejo de desechos sólidos en todo el mundo \citep{Majdinasab2017}. Una botella PET tardan alrededor de 500 años en descomponerse en los vertederos, en cambio una botella en el océano se descompondrá en micro-plásticos que durarán 500 años \citep{Lundell2020}. Los municipios en México tienen a su cargo las funciones de manejo integral de residuos sólidos urbanos, véase la Tabla \ref{Manipulacion2020}, que consisten en la recolección, traslado, tratamiento, y su disposición final pero carecen de proyectos que garanticen una gestión integral de los residuos sólidos urbanos \citep{RSU2020}. Por lo anterior, en México existen esfuerzos para identificar zonas potenciales para la ubicación de vertederos \citep{Saldaa2019} a pesar del impacto ambiental que conllevan, por otro lado también existen esfuerzos para diseñar sistemas semiautomáticos en la reutilización de materiales reciclables como el vidrio, material que no es tan valorado \citep{Guerrero2021}. En México en el año 2017 se generaban diariamente 102,895 toneladas de residuos, de los cuales se recolectaron el 83.93\% y se trasladan a sitios de disposición final el 78.54\%, reciclando únicamente el 9.63\% de los residuos generados, a diferencia de países como Suiza, Países Bajos, Alemania, Bélgica, Suecia, Austria y Dinamarca; donde la disposición final de los residuos es de menos del 5\% en rellenos sanitarios \citep{RSU2017}. Europa a mostrado un aumento en el reciclaje y en la recuperación de energía, lo que ha provocado que menos desperdicios se tiren en los vertederos \citep{Ragaert2017}. Para tener un impacto en el medio ambiente es necesario mejorar la clasificación de los desechos que llegan a los vertederos por ejemplo en \citep{Turner2021Lead} se propone que la basura se clasifique como peligros dependiendo de las concentraciones de plomo que tengan principalmente en plásticos que ya fueron reciclados para evitar que estos contaminen otros materiales y recursos naturales como el aire, el suelo y el agua.\\
+% 
+% 
+\subsection{Incineración}
+% https://www.nationalgeographic.es/medio-ambiente/2019/10/bali-lucha-por-limpiar-plastico-de-sus-hermosas-playas
+Las plantas incineradoras modernas hablando del punto de vista económico son muy rentables porque pueden funcionar continuamente todo el año con solo una o dos paradas programadas \citep{Buekens2014}. La incineración de residuos plásticos mixtos tiene grandes consecuencias en el medio ambiente porque libera sustancias tóxicas en el aire como las dioxinas, un contaminante ambiental grave y persistente \citep{Grigore2017}, \citep{Jeswani2021}. La incineración, se clasifica en dos categorías principales, el método de combustión y gasificación \citep{Al2009}, la industria de la incineración en la que se queman desechos de plástico se utiliza para generar energía eléctrica, ya que se acepta como una fuente de energía de bajo costo y un método adecuado de eliminación de desechos debido a que no es necesario hacer una previa clasificación del material \citep{Sahin2018}, \citep{Sadat2011}. Los polímeros tienen un poder calorífico superior al carbón, una tonelada de plásticos representa a 1.3 toneladas de carbón \citep{Kang2005}. En 2013 de las 78 millones de toneladas producidas para embalaje hechas de plástico el 14\% se utilizo para la incineración, Japón reporto en 2018 más de 5 millones de toneladas de desechos plásticos domésticos y se utilizaron para generar energía \citep{Kumagai2020}. En los Estados Unidos, solo se incinera el 12.5\% de los desechos sólidos urbanos. Se estima que la industria crecerá a una tasa anual del 5\%, generado por los aumentos de desechos solidos, pero debido a que el uso de la incineración varía ampliamente en todo el mundo la estimación puede variar. En Europa, hay alrededor de 231 incineradoras en funcionamiento, y a partir de 2016 el 41.6\% de los desechos plásticos se incineran. China tiene 300 plantas operativas y otras 103 se están construyendo o planificando \citep{ciel2019}. En \citep{Morris2005} se realizo un estudio comparando el reciclaje residencial con la recolección y deposición de esos mismos materiales en una instalación de combustión de residuos a energía utilizada para generar electricidad para la venta en la red energética regional así como con el gas que generan los vertederos, y demostraron que el reciclaje de materiales reciclables ahorra más energía que los vertederos y la incineración. El reciclaje de botellas de plástico tiene más ventajas a pesar del uso de combustibles y energía que implica transportarlos, clasificarlos, almacenarlos y limpiarlos \citep{Hull2020}, \citep{Grigore2017}.
+% 
+%
+\subsection{Reciclaje Mecánico}
+El reciclaje mecánico convencional es el proceso físico-mecánico de recuperación de residuos sólidos plásticos que por medios mecánicos se pueden fabricar productos plásticos. Cuanto más complejos y contaminados son los residuos, a menudo contaminados con partículas de alimentos, es más difícil reciclarlos mecánicamente \citep{Ragaert2017}. La separación, el lavado y la preparación de los residuos son esenciales para producir productos finales de alta calidad utilizando el reciclaje mecánico \citep{Al2009}. Tal es el caso en el desmontaje de los componentes de plástico en la electrónica que mejora la pureza y el valor de los plásticos de ingeniería reciclados \citep{qu2006viable}. El reciclaje mecánico utiliza el plástico el cual se recolecta, se separa, se limpia, tritura, pelletization y entra a ciclos de procesamiento de conversión e inyección luego se vuelve a procesar y se mezcla para producir un nuevo componente que puede o no ser el mismo que su uso original pero que no cambia la composición química del material \citep{Hamad2013}, \citep{Sadat2011}, \citep{Grigore2017}, \citep{Jeswani2021}. Los polímeros reciclables cambian sus propiedades por los tratamientos y sustancias a las que están expuestos tal es el caso de los agentes humectantes que demostraron cambiar la flotabilidad de los materiales poliméricos \citep{Wang2014}. Una complicación en el procesamiento industrial implica una serie de tratamientos mecánicos que en piezas de automóviles reciclables su envejecimiento afecta la hydrophobicity y si se utilizan sistemas de flotación puede verse afectado aun más \citep{Fraunholcz2004}. Aunque los residuos termoplásticos pueden perder aproximadamente entre el 70 y el 80\% de su valor original, pueden recuperar sus propiedades originales utilizando los aditivos adecuados \citep{Al2009}. Debido al bajo costo del reciclaje mecánico, la mayoría de las fibras de PET de desecho se reciclan de esta manera. Es importante recalcar que tanto el reciclaje mecánico y la incineración al procesar el PET liberan alrededor de 784,284 toneladas de antimonio a la atmósfera \citep{Chu2021}. De igual manera depositar desechos al vertedero o procesarlos mediante el reciclaje mecánico también genera un impacto negativo al ambiente. \\
+% https://cairplas.org.ar/reciclado-mecanico/
+% 
+%
+\subsection{Reciclaje Químico}
+El reciclaje químico utiliza procesos de tecnología avanzada que convierten materiales plásticos. El reciclado químico es exclusivo de los plásticos aunque diversas investigaciones utilizan el reciclaje químico para aplicarlo en biomasas y consiste en la despolimerización de los polímeros en monómeros descomponiendo las moléculas de los plásticos en materias primas que se pueden utilizar \citep{Hamad2013}, generalmente en líquidos o gases, que son adecuados para su uso como materia prima para la producción de nuevos productos petroquímicos y plásticos \citep{Al2009}. Existen doce reacciones químicas que se utilizan para la descomposición de polímeros de los cuales las técnicas que ya se comercializan son la glucólisis y la metanólisis pero para cuestiones de investigación en degradación destacan la pirólisis y la gasificación \cite{Grigore2017}, \citep{Wang2014} \cite{Buekens2014}, así mismo, la pirólisis es la tecnología más atractiva \citep{Sahin2018}, \citep{Kumagai2020}. En la la pirólisis los plásticos se trituran y se derriten posteriormente para que se pueden refinar y convertirlos en diésel así como otros productos petroquímicos \citep{Horvat1999}, un estudio en \citep{Jeswani2021} sugiere que la pirólisis tiene hasta un 50\% menos impacto en el cambio climático comparado con el reciclaje mecánico, la recuperación de energía y la producción de recursos fósiles vírgenes. La creación de estos nuevos plásticos utilizan menos oxígeno en comparación con la gasificación. En el caso de la quimiólisis, se puede convertir nuevamente a monómeros y volver a polimerizar los residuos de PET pero requiere de una previa selección de los materiales y de alta calidad, es aplicable a ciertos polímeros de condensación como los poliésteres, poliuretanos, poliamidas y poliacetales este método implicaría un mayor costo \citep{Ragaert2017}, \citep{Lin2011}. Otra forma de convertir los residuos en energía es por el método de la gasificación que derrite los plásticos con oxígeno y vapor a temperatura entre los 1200-1500 \°C y no genera toxinas como dioxinas ni furanos  \citep{Ragaert2017}. A pesar de estos beneficios las plantas de gasificación no son competitivas al compararlos con los precios bajos del gas natural. El reciclaje químico se trata de una alternativa para el reciclado que elimina algunas de las limitaciones del reciclado mecánico y la incineración, pero con la limitante que el reciclaje químico tiene mayores costos y requisitos para su implementación \citep{Hamad2013}, \citep{Grigore2017}. Si se toma en cuanta el impacto ambiental en la implementación de este método en el reciclaje de PET, libera menos de 25 toneladas de antimonio a la atmósfera. A modo de conclusión la cantidad de tejido PET reciclado mediante reciclaje mecánico es de 7,264,360 toneladas, la incineración de PET es de 2,636,459 toneladas en cuanto a la cantidad de PET que se recicló químicamente fue la más baja con 228,106 toneladas \citep{Chu2021}. 
+% https://www.interempresas.net/Plastico/Articulos/5628-El-reciclado-quimico-otra-alternativa-menos-conocida.html
+% 
+% 
+\subsection{Reciclaje de plásticos por desmontaje de electrónicos}
+Mediante un comunicado de prensa por la Secretaría de Medio Ambiente y Recursos Naturales de México informo que anualmente en México se produce alrededor de 1.1 millones de toneladas de residuos electrónicos y eléctricos y se estima para el 2026 un crecimiento del 17\%. En 2019, la producción mundial de desechos electrónicos alcanzó 53.6 millones de toneladas. Los desechos electrónicos son ricos en metales tóxicos y otros contaminantes. Los aparatos electrónicos usados contienen mercurio, plomo, cadmio y bifenilos policlorados. Por otro lado, también contienen materiales como el oro, paladio, cobre, bronce, aluminio y plásticos. Además, varios dispositivos electrónicos obsoletos, que son limpios y funcionales, pueden reutilizarse si son identificados y clasificados por expertos \citep{Kang2005}. Los desechos electrónicos crecen a una tasa anual de aproximadamente de 2 millones de toneladas. Solo el 17,4\% de los desechos electrónicos del mundo se recicló y el 82,6\% se dejó sin tratar o se procesó de manera informal \citep{Nithya2021}. Millones de productos electrónicos al final de su vida útil representan más de un millón de toneladas de termoplásticos de ingeniería \citep{qu2006viable}. Los equipos electrónicos recolectados se pueden dividir en dos categorías, reutilizables o reciclables \citep{Kang2005}. Las industrias de gestión de residuos, equipos eléctricos y electrónicos y las industrias de la construcción son pioneras en la implementación de la economía circular \citep{Mhatre2021}. Los dos tipos principales de resinas plásticas que se utilizan en electrónica son los termoestables y los termoplásticos. Los termoplásticos se utilizan en una amplia variedad de aplicaciones dentro de las computadoras y otros dispositivos electrónicos. Cuando se procesan y se granulan, estos termoplásticos de ingeniería generalmente se venden en dólares por libra, en comparación con los centavos por libra de los plásticos de calidad para botellas y contenedores \citep{Kang2005}. Hay más de diez tipos de plásticos que se encuentran en la electrónica EOL. Los dos plásticos más utilizados en la industria electrónica son HIPS (56\% en peso), y el ABS (20\% en peso) \citep{qu2006viable}, \citep{Kang2005}, \citep{Arola1999}, \citep{Grigorescu2019}. Mientras que los plásticos poliolefínicos son reciclables y representan la mitad del total de plásticos como el HDPE, LDPE y el PP \citep{Kumagai2020}.
+% 
+% 
+\section{Tecnologías para la clasificación de polímeros}
+% \subsection{Processes for recycling plastics from electronics}
+Existen diversas tecnologías disponibles para procesar y clasificar los polímeros incluyendo el desmontaje de plásticos en productos electrónicos \citep{Williams2006}. El proceso de reciclaje tiene varias etapas y una de esas etapas se le denomina la pre-clasificación y se realiza principalmente en centros de acopio en México. La mayoría de los centros de reciclaje de productos electrónicos así como de diversos materiales eligen la clasificación manual y el desmontaje manual, en México estos centros de reciclaje carecen incluso de herramientas eléctricas para realizar esta actividad. En los centros de acopio se encuentran con la dificultad de no poder identificar que tipo de plástico es, por lo que aplican diversas pruebas para identificarlos como quemar el plástico en \citep{Grigorescu2019} muestran resultados y técnicas de como identificar plásticos al considerar el color de flama, la intensidad de la flama, olor, color del humo así como el tipo de ceniza. Es ampliamente conocido que los trabajos que se realizan manualmente se traducen en costos elevados, esto significa que para países en desarrollo como México representa una baja rentabilidad y como consecuencia la economía circular crece lentamente y no se ve reflejado un impacto en la región.\\
+%
+%
+\subsection{Plastics identification technologies}
+Para la identificación de los plásticos existen tecnologías y métodos manuales visualmente por sus códigos, y otros que analizan sus propiedades físicas y químicas como su densidad, solubilidad, rigidez, flexibilidad, análisis térmico, incinerándolo, identificación óptica con trazadores, Eddy current separation, por espectroscopia, surface free energy, rugosidad de la superficie y su estructura química. Para identificar las propiedades físicas de los polímeros se puede implementar técnicas no destructivas para analizar las superficies mediante el estudio de los espectros y se puede automatizar la separación utilizando la espectroscopia infrarroja, la espectroscopia de fluorescencia de rayos X, y la espectroscopia Raman \citep{Allen1999}, \citep{Williams2006}, \citep{Ahmad2004}, \citep{Belyamani2021}, \citep{Grigorescu2019}, \citep{Wang2019}, \citep{Buekens2014}, \citep{Shameem2017}, \citep{Turner2021Lead}, \citep{Ragaert2017}. Para lo cual si se quiere automatizar este proceso de pre-clasificación para centros de acopio en México dicha identificación de plásticos se debe de realizar en piezas individuales lo que se traduce en una inspección del 100\% y en el mejor de los casos utilizando sistemas automatizados en el que se introduce una mezcla de piezas utilizando la separación mecánica. Una característica sobresaliente que se debe de considerar antes de elegir con que espectroscopia trabajar es identificar la aplicación y necesidades debido a que cada una de las técnicas tiene ventajas y limitantes, por ejemplo en la espectroscopia de fluorescencia de rayos X es muy utilizada por sus ventajas de separar los plásticos de cloruro de polivinilo ``PVC'' de los plásticos PET con una alta precisión pero no se recomienda con otros plásticos \citep{qu2006viable}, \citep{Carroll1994}, \citep{Sadat2011}.
+% Plastics identification may be conducted on single parts or on a mixture of parts during bulk mechanical separation. X-ray fluorescence spectroscopy, Infrared spectrospopy, and Raman spectroscopy. X-ray fluorescence spectroscopy can sort polyvinyl chloride (PVC) plastics from PET plastics with an accuracy of 99.3\% to 99.5\% [21] is not applicable to other polymers [21],[49].
+En cambio la espectroscopia infrarroja se ha posicionado como una técnica para identificar los principales plásticos reciclables y su implementación radica en la identificación que ocurre en los polímeros cuando se presenta una pérdida en la intensidad de la radiación al atravesar los plásticos y en la propiedad de los plásticos que tienen al reflejar la luz. Para la identificación de los plásticos reciclables principalmente se utilizan dos rangos de infrarrojos, el infrarrojo cercano ``NIR'' y el infrarrojo medio ``MIR'' \citep{Rani2019}, \citep{Florestan1994}, \citep{Arola1999}, \citep{Grigorescu2019}.
+% Infrared spectroscopy has proven popular as a means to identify plastics in both absorption and reflectance modes. Two infrared ranges, near infrared (NIR) and mid-infrared (MIR), have been used for plastics identification.
+La espectroscopia ``NIR'' identifica de manera confiable cinco tipos de plásticos post-consumo en comparación con la espectroscopia ``MIR'' la cual es sensible a las condiciones de la superficie del plástico, lo que implica una limitante en la identificación en botellas post-consumo, por que una gran mayoría de botellas pueden tener diferentes condiciones en la superficie que impedirían que la espectroscopia ``MIR'' sea una buena opción para implementarse \citep{Florestan1994}. La espectroscopia ``NIR'' es capaz de identificar rápidamente el ``PET'', ``PVC'', ``PE'', ``PS'' y ``PP'' \citep{Camacho2001}, pero para identificar plásticos de color oscuro como los que se presentan en la industria automotriz no es recomendable \citep{qu2006viable}, \citep{Sustar2014}.
+% Sommer reports the use of NIR spectroscopy for identifying five types of post-consumer plastics: PET, PVC, polyethlene (PE), polystyrene (PS), and polypropylene (PP) [49]. NIR spectroscopy capable of identiflying plastics quickly allows online and inline identification [12], buy it cannot identify dark colored plastics [21],[49]. MIR spectroscopy is able to distinguish a variety of plastics with close chemical structures regardless of their colors [17], [21]. However, due to its sensitivity to the surface state of the object identified, MIR spectroscopy cannot reliably identify plastics with different surface conditions.
+Mientras que la espectroscopia Raman es una técnica que identifica de manera confiable plásticos sobre la base de sus firmas de vibración. Bajo condiciones adecuadas y utilizando un láser de baja potencia la espectroscopia Raman puede identificar plásticos de color oscuro. También cuenta con la capacidad de que en menos de un segundo identifica plásticos con superficies rugosas, polvos plásticos e incluso relleno mineral así como plásticos de color natural y de manera confiable entre plásticos vecinos \citep{Allen1999}, \citep{Florestan1994}, \citep{Kumar2000}. A pesar de que la espectroscopia Raman tiene multiples ventajas se requiere controlar diferentes factores para que se automatice en un entorno industrial.
+% Raman spectroscopy is a promising technique to reliably identigy a wide range of plastic types on the basis of their vibration signatures. It features discriminative capability between neighbor plastics, and an identification time of less than one second for natural color plastics [1],[17],[21]. Unlike MIR spectroscopy, Raman spectroscopy is able to identify plastics with rough surfaces, plastic powders, and some mineral filler [17][21]. Raman spectroscopy may be udes to identify dark colored plastics if a low-power laser is used for a longer identification time [29].
+% Concurrent Technologies Corporation ha desarrollado bibliotecas para el análisis espectroscópico Raman y la clasificación de materiales de desecho de plástico electrónicos post-consumo [56].
+% Concurrent Technologies Corporation has developed libraries for Raman spectroscopic analysis and sorting of post-consumer electronic plastic waste materials [56].
+% Ambas formas de espectroscopia infrarroja y espectroscopia Raman requieren métodos quimiométricos para clasificar imágenes espectroquímicas. 
+Todas las tecnologías anteriores se pueden aplicar para identificar piezas de plástico desmontadas en aparatos electrodomésticos, así como también para clasificar la pureza de plásticos post-consumo.
+% Los dos procesos que incluyen la identificación espectrográfica dan como resultado una mayor pureza de los plásticos de salida [34]. Proceso típico de reciclaje a granel frente al proceso propuesto con desmontaje selectivo de piezas de plástico e identificación mediante espectroscopia Raman [42].
+% The two processes which inclide spectrographic identification result in higher purity of output plastics [34]. Typical bulk recycling process versus their proposed process with selective plastic part disassembly and identification by Raman spectroscopy [42].
+% Una alternativa para cubrir las limitantes de las técnicas por espectros es utilizar un láser infrarrojo combinado con el impulso de la termografía para identificar veintidós plásticos en función de sus propiedades térmicas y ópticas inherentes [50]. En su enfoque, un rayo láser $ CO_2 $ de alta energía calienta la superficie de los plásticos para causar diferentes temperaturas máximas, gradientes de temperatura y distribuciones de calor para diferentes tipos de plásticos. Esta técnica necesita para que la identificación sea de una manera rápida y a nivel industrial que los plásticos tengan una temperatura elevada para que el láser pueda calentar la superficie a una mayor velocidad.
+% They suggest infrared laser impuse thermography to identify 22 plastics based on their inherent thermal and optical properties [50]. In their approach, a high-energetic $CO_2$ laser beam heats the surface of the plastics to cause different maximum temperatures, temperature gradients, and heat distributions for different types of plastics.
+% 
+% 
+\subsection{Mechamical plastic Separation Technologies}
+Para la automatización en la separación de los materiales las técnicas mecánicas pueden ser basados en la densidad, solubilidad, de forma visual, clasificación óptica, clasificación por aire, hidrociclón, método de flotación, separación de flotador-sumidero, separación de espuma-flotación, flame treatment and flotation y la separación electrostática como una alternativa rentable utilizando un proceso triboelectrostatic \citep{Williams2006}, \citep{Sadat2011}, \citep{Park2007}, \citep{Benabderrahmane2020}, \citep{Boukhoulda2013}, \citep{Pascoe2003}, \citep{Wang2019}, \citep{Kang2005}. Existen procesos diferentes de separadores electrostáticos de caída libre bajo diferentes distribuciones de cargas de partículas, que se pueden acoplar a las necesidades y material con el que se trabaje \citep{Wei2003}, \citep{Benabderrahmane2020}.
+% Mechanical plastic separation techniques include air classification, hydrocycloning, float-sink separation, froth-flotation separation, and electrostatic separation.
+Es recomendable combinar los métodos de clasificación mecánica para incrementar la eficiencia como por ejemplo la clasificación del aire y el hidrociclón que separan las partículas más ligeras de las más pesadas utilizando aire y agua. La eficiencia de la separación dependen de la diferencia de densidad y de la uniformidad del tamaño de las partículas, el mismo efecto ocurre con los sistemas de flotación en general \citep{Super1993}, \citep{Fraunholcz2004}, \citep{Shent1999}, \citep{Grigorescu2019}.
+% Air classification and hydrocycloning separate lighter particles from heavier ones by using air and water, respectively, as the fluid medium. The advantages of both methods include high throughput, los maintenance, and low operating cost. However, they depend for separation efficiency on the density difference of mixed particles and the uniformity of particle sizes [9],[55]. For example. the density difference between PVC and PET is too small for separation by air classification or hydrocycloning [45].
+% Existen procesos diferentes de separadores electrostáticos de caída libre bajo diferentes distribuciones de cargas de partículas, tasas de alimentación y precios de productos \cite{Wei2003}, \cite{Benabderrahmane2020}.
+% Wei compare several different processes of free-fall electrostatic separators under difeerent distributions of the particle charges, feed rates, and product prices, and develop a simple guide for selecting and appropriate process [59].
+% 
+% 
+\section{La infraestructura y las opciones tecnológicas para México}
+% Los canales de logística inversa incluyen recolección municipal, instalaciones de recuperación de material, procesadores de plásticos y fabricantes, y realizan las funciones de recolección, clasificación, almacenamiento, transporte, trituración, densificación, procesamiento / filtración y desfabricación [22], [35], [38], [48]. 
+% The reverse logistics channels include municipal pickup, material recovery facilities, plastics processors, and manufacturers, and perform the collection, sorting, storage, transport, shredding, densification, processing/filtration, and demanufacturing functions [22], [35], [38], [48].
+El desarrollo e implementación de tecnologías con un enfoque en la clasificación y producción de resinas post-consumo puras a partir de desechos plásticos ya sea que provengan de los hogares, la industria, vertederos y electrónica son de gran importancia para mantener la economía circular y para devolver materiales al sistema. El material reciclable que esta disponible para su procesamiento depende de factores que varían por diversos factores como la estación del año así como por la calidad, el costo de clasificación y regeneración \citep{Sadat2011}. La clasificación manual de plásticos y las herramientas de desmontaje para carcasas electrónicas para separar metales y materiales que contaminen los plásticos son las técnicas más utilizadas por su bajo costo y requiere de una gran cantidad de mano de obra. La diversidad de productos electrónicos y plásticos que reciben los centros de reciclaje es un obstáculo importante para el desmontaje automatizado de componentes de plástico así como su clasificación de botellas post-consumo \citep{qu2006viable}. Por lo tanto, se necesitan tecnologías de identificación precisas para determinar el tipo de plástico de cada pieza de plástico.
+% 
+% 
+\subsection{Infraestructura en el manejo de residuos}
+En México se estableció una guía que presenta la iconografía para ocho residuos diferentes que se agrupan en dos clasificaciones: primaria (orgánico e inorgánico) y secundaria (papel, plástico, metal, vidrio, madera, y tela) \citep{SEMARNAT2017}. México desde el 2008 a través de la Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT) elaboró un programa para establecer una política ambiental de residuos, que fomente la prevención y gestión integral de los residuos a través de acciones para la prevención, separación, reutilización y reciclado. A pesar de estos esfuerzos no esta claro si el programa dio algún resultado. En los 32 estados de México en el año 2010 se reportaron al rededor de 1,440 centros de acopio en los que se puede reciclar, aceite automotriz, aceite vegetal, llantas, electrodomésticos, envases multi-capas (tetrapak),	envolturas de aluminio,	libros, madera, metales, material de demolición, papel, cartón, parafina, cera, pilas, baterías, acumuladores, plásticos, residuos electrónicos, tóner, residuos especiales, residuos orgánicos, residuos sanitarios, vidrio entre otros. En la Tabla \ref{tab:my03} se destaca los estados donde la infraestructura ayuda a reciclar plásticos \citep{SEMARNAT2010}. En México existe poca infraestructura para procesos adecuados de reciclaje. Existen diversas alternativas que México puede seguir para minimizar el impacto de la falta de infraestructura copiando modelos de otros países y con políticas que beneficien a la población como por ejemplo en \citep{Nagurney2005} se propuso un algoritmo para el análisis y cálculo de soluciones tomando como factores desechos electrónicos, procesadores, recicladores y consumidores para revertir los problemas de la red de la cadena de suministro de la gestión y el reciclaje de desechos electrónicos que puede servir como referencia para ser implementada en México \citep{Nagurney2005}. También existen investigaciones en desarrollar metodologías que faciliten el aprendizaje de estudiantes de ingeniería para desarrollar habilidades en el diseño en bucles de control, dichos esfuerzos son necesarios para formar capital humano que a partir de nuevas metodologías aporten ideas de automatización incluso enfocadas a soluciones de desechos plásticos \citep{Torres2020}, en la Tabla \ref{tab:my04} se describen algunos métodos que se pueden desarrollar a nivel académico para contribuir con el desarrollo tecnológico de México.
+% 
+% 
+\subsection{Opciones tecnológicas para desarrollar sistemas de clasificación de botellas PET post-consumo en México}
+% near infrared spectroscopy was used to investigate whole part sorting unisg spectroscopic methods and reads the sample in 10 ms via a laser plasma emission spectrometer, operated at speeds of 1 ft/sec and 2 ft/sec providing sorting throughputs up to 5,000 lbs/hr. \cite{Arola1999}.
+% Integrating both range image and intensity image information for faster shape recognition is investigated in \cite{Williams2006}.
+% Krowinkel and Dalmijn evaluate the separation process of shredded EOL televisions using mechanical recycling techniques without prior disassembly. Their process includes magnetic separation, size separation, air shaking separation, wet shaking separation, eddy current separation, and electrostatic separation. Their results demostrate that the high levels of contaminants in the plastic materials recovered by the bulk process lowers the resale price [28].
+El 17 de mayo del 2021 por un comunicado de prensa por la Industria Mexicana de Coca-Cola reporto que generan más de 2,900 empleos directos y arriba de 35 mil indirectos, dentro de la cadena de reciclaje. La gran cantidad de botellas de plástico que se generan en el mundo requieren de sistemas que detecten las propiedades de los envases y descarten otros materiales a una alta velocidad. Existen tecnologías automatizadas de clasificación de botellas de plástico, estas tecnologías no son aplicables a la mayoría de los plásticos, por la variedad de tamaños, formas, revestimientos, pintura de los plásticos, el grosor, y la opacidad de los plásticos que dificultan el uso de técnicas para la clasificación \citep{Kang2005}. Para la clasificación de botellas de plástico ciertas tecnologías trituran las botellas para empezar a clasificar dos tipos de material, el sistema por medio de la fricción genera que los materiales tengan cargas negativas y positivas posteriormente para separándolas por un campo eléctrico \citep{Hamad2013}, también se pueden separar por su densidad del plástico aunque tiene varias implicaciones no viables por que los polímeros tiene densidades muy parecidas \citep{Al2009}.
+Comercialmente existen empresas que fabrican y distribuyen sistemas de clasificación, ver Tabla \ref{Sistemas}, como el sistema de \textit{BottleSort} que detecta cualquier material que no cumpla con un tamaño en específico. El sistema remueve contaminantes en su primera etapa, después un sistema neumático se activa para separar las botellas y colocarlas en una banda transportadora de alta velocidad. La banda transportadora lleva las botellas a una unidad de detección de 16 rayos infrarrojos y procesan más de 5,000 lecturas por segundo. La clasificación de las resinas se hace en menos de 5 milisegundos. Después de la identificación, la botella se transporta hasta alcanzar la ubicación donde se coloca en un contenedor, la botella es expulsada por aire. Este sistema es capaz de identificar el PET transparente del PET verde \citep{Milgrom1994}, \citep{Bruno2000}. El sistema \textit{Poly-Sort}, es similar a \textit{BottleSort}, comienza separando las botellas en orden individualmente. En este caso las botellas pasan por un sistema de vibración que remueve contaminantes, con sensores \textit{near}-infrarrojos y se hace la lectura de cada botella con una velocidad de quince veces por segundo, en menos de 19 milisegundos. Una cámara de color y una luz estroboscópica permite la identificación del color. Si un material no es identificado es llevado a un contenedor al final de la banda \citep{Bruno2000}, \citep{Association2008}.
+Otro sistema automático para la separación de resinas de plástico es \textit{Near infrared refrectance spectroscopy} este método de identificación se compone de dos filtros y es capaz de distinguir entre PET, HDPE, PVC, PP y PS \citep{Scott1995156}. Los filtros permiten distinguir entre las etiquetas y tapas, pero no es adecuado para la identificación de colores oscuros. El más grande problema con el método de los dos filtros es limitar la región de longitud de onda de la luz, así como la adquisición de los datos que se obtienen por medio de dos foto diodos \textit{Indium-Gallium-Arsenide} \citep{Masoumi2012}.
+Otra opción de clasificación radica en el campo del reflejo y transmisión de rayos-x, es similar al método de \textit{infrared spectroscopic}. La separación consiste en el ingreso de plástico y por medio de ondas se estudia la respuesta del objeto. En este caso la transmisión y reflexión considera el espectro de los rayos-x. Este método es muy recomendado si se quiere detectar ``PVC''. Del mismo modo el sistema ``VS-2'' tiene una capacidad de 200 análisis por segundo y clasifica de dos a tres botellas por segundo \citep{Bruno2000}, \citep{Foundation2015}.  
+La mayoría de las técnicas que prevalecen para la clasificación de plásticos confían en el método de \textit{Near-Infrared spectroscopy} debido a que cada tipo de plástico tiene una longitud de onda que es absorbida en sus espectros, los cuales pueden ser analizados para determinar el tipo de plástico \citep{House2011}, \citep{Safavi20102216}.
+% -----------------------------------------------
+% En la Figura \ref{Ejemplo} se muestra el proceso completo de clasificación con un sistema de retroalimentación \citep{Association2008} existen diversos diseños de sistemas que difieren del que se muestra.
+% -----------------------------------------------
+%-hasta donde esta el estado del arte
+Los sistemas de clasificación muestran una tendencia en los métodos que utilizan el principio de procesamiento de imágenes que utiliza combinaciones de varias técnicas como el análisis de componentes principales, espectroscopia \citep{Rani2019} y transformada \textit{Hough} \citep{Duda197211}, \citep{Prasad2012}. Otra técnica usada para clasificar botellas de plástico es por la extracción de sus características en la intensidad de la imagen y \textit{support vector machine} (SVM) una de las principales técnicas de clasificación utilizada en diversas aplicaciones de clasificación \citep{Nawrocky2010}, \citep{Sanchez2021}. También se puede encontrar una aproximación de los envases con operaciones morfológicas para describir la estructura o forma de la imagen \citep{Shahbudin2010}. Así como la implementación de un conjunto de algoritmos de clasificación basado en la teoría del aprendizaje estadístico mejor conocido como \textit{Machine learning}, esta modalidad se puede entender como algoritmos que aprenden de los datos ingresados por una persona \citep{1527552} y son implementados en diversas aplicaciones. Los sistemas desarrollados en maquinas inteligentes que clasifiquen las botellas en tiempo real son utilizados por sus beneficios, por ejemplo se implemento un sistema utilizando un ``FPGA'' en \citep{House2011}. Otros sistemas combinan el uso de redes neuronales con la espectroscopia infrarroja en la identificación de PET, HDPE, LDPE, PVC, PP y PS \citep{Allen1999}, \citep{Shameem2017}, \citep{THuthFehre1995}. Cada uno de los métodos descritos  utilizan diferentes herramientas de clasificación mismas que proporcionan ventajas y desventajas, ver Tabla \ref{Comparacion}, por lo tanto, nos dan una referencia de la tendencia en la implementación de un sistema de alta velocidad de clasificación. 
+%-alusión al objetivo sin mencionar el método
+Cada uno de los métodos de clasificación que existen comercialmente y los métodos actuales tienen diferentes características, diseños y costos de implementación \citep{HuiWang201975}, \citep{Association2008}. Para un desarrollo asequible en la clasificación de plásticos que se pudieran implementar en centros de acopio en México se debe de considerar un enfoque que pueda incluir la combinación del reciclaje mecánico, y los otros tipos de reciclaje buscando un equilibrio en las opciones de gestión, en el caso de México, difiere según los recursos del estado, la tecnología y los suministros disponibles en las diferentes regiones del país.
+% 
+% 
+\section{Tendencias recientes para mejorar la detección de botellas PET post-consumo}
+% new analytical inspection  hyperspectral imaging HSI para separar polyethylene and polypropylene adopting an innovative process, the magnetic density separation (MDS). Results showed that HSI sensing techniques allow to identify both polyolefins and contaminants \cite{Serranti2011}.
+% In the domestic market, over 150 and 230 types of resins and additives have been manufavtured, respectively and the introduction of 2 Mt of bio-based plastic by 2030. Thus, the combination of resins and additives is uncountable, and several types of plastic products are often combinedly wasted at the recycling stage, which cannot be fully recycled by only mechanical recycling. \cite{Kumagai2020}.
+% 
+% 
+Las investigaciones recientes plantean nuevos métodos como el principio del procesamiento de imágenes, utilizando combinaciones de varias técnicas como análisis de componentes principales, espectroscopia NIR, Raman \citep{Rani2019}, \citep{Serranti2011}, \citep{Shameem2017} y transformada \textit{Hough} \citep{Duda197211}, una de las limitantes de este método son las condiciones al momento de tomar la fotografía, la variación en la luz, resolución, fondo y la distancia de la cámara para obtener una precisión mayor a 95\% \citep{Prasad2012}. También se utiliza espectroscopia y ``PCA'' con el principio de la clasificación óptica, y puede distinguir los plásticos a través del color \citep{Wang2019}, \citep{Serranti2011}.
+Algunos de estos sistemas se basan en el método de múltiple correlación para la clasificación de botellas de PET y no PET, se toman fotos y la correlación de cada imagen de la botella de PET se calcula a partir de histogramas de los colores rojo, verde y azul de cada botella. La prueba utiliza 200 imágenes de botellas de plástico, 100 imágenes de botellas de PET y 100 imágenes de botellas diferentes al PET, con resultados de identificación  93.33{$\%$} \citep{Srigul2016}, en \citep{Ramli2008} se plantea convertir las imágenes a escala de grises, después se extraen las características principales de la imagen terminando con el método de \textit{Linear discriminat analysis}, (LDA)  obteniendo una presión de 97.5\%. Estos métodos permiten discriminar las botellas que tienen diferente color \citep{Wang2019170}, \citep{Scavino2009794}. La implementación de dichos sistemas es necesario considerar los factores del medio ambiente en \citep{Salazar2019} se se propone un algoritmo de restauración para reducir los efectos de la contaminación ambiental en el procesamiento de imágenes. 
+Otra técnica usada para clasificar botellas de plástico es por extracción de sus características en la intensidad de la imagen y se detectan con \textit{support vector machine}. Su enfoque es en la rotación, traslado y la escala invariable debido a que utiliza características derivadas de los histogramas de imagen. El método es robusto para los factores de tamaño de la botella, forma, tipos de etiqueta y deformación. El sistema logra una precisión por encima del 96\% utilizando imágenes a escala gris de la cámara \citep{Nawrocky2010}.
+También se puede encontrar una aproximación de los envases con operaciones morfológicas para describir la estructura o forma de la imagen, utilizando la descripción de dos dimensiones de la silueta de las botellas de plástico, la detección del borde de las siluetas de los objetos se desarrolla por el proceso de erosión, así como el proceso de extracción de características del vector utilizando ``SVM'' y se emplea para clasificar la imagen de dos grupos. Como resultado se obtiene un desempeño de más del 90\% de precisión \citep{Shahbudin2010}.
+Un sistema que clasifica las botellas en tiempo real utilizando FPGA fue propuesto en \citep{House2011}. El método propone identificar dos tipos de materias, el PET y botellas de \textit{tetrapack} a una alta velocidad en tiempo real, automáticamente localiza las regiones de mayor probabilidad que contenga estos materiales dentro de la imagen y remueve el fondo de la imagen. Se crea un histograma para la extracción de las características de la imagen y fue usado para clasificar las botellas usando ``SVM''. Reportan que el método tiene un 93\% de reconocimiento y es capaz de trabajar con velocidad. Otros sistemas se basan en el uso de redes neuronales en conjunto con espectroscopia infrarroja para una eficiente identificación de los plásticos \citep{THuthFehre1995}, \citep{Shameem2017}. Cada uno de los métodos descritos  utilizan \textit{machine learning} del mismo modo proporcionan ventajas y desventajas, ver Tabla \ref{Comparacion}.
+% 
+% 
+\section{Análisis y Conclusiones}
+México enfrenta grandes retos en el manejo de desechos solidos así como en la clasificación automatizada que se dificulta por la variedad de contaminantes que pueden causar una identificación errónea. Los plásticos diferentes se empalman o se adhieren. Otra limitante son los recubrimientos y diseños con geometrías que difieren por mucho de las convencionales. México requiere desarrollar sistemas que permitan ser más rentables a los centros de acopio y centros de separación para incrementar la tasa de reciclaje. 
+% Automated whole part sorting is compromised by a variety of contaminants that can cause misidentification. Dissimilar plastics are often attached or bonded together. Coatings, pigments, and unusual part geometries can also lead to limitations in spectrometer consistency and performance.
+% 
+% Entre las técnicas formales de reciclaje, la biohidrometalurgia parece ser la más prometedora en comparación con la pirometalurgia y la hidrometalurgia, porque la biohidrometalurgia supera limitaciones como el bajo rendimiento, el alto costo de capital, los productos químicos tóxicos, la liberación de gases tóxicos y la generación secundaria de desechos. Los desafíos incluyen el desprecio de los consumidores por la eliminación de desechos electrónicos, el déficit de empresas de reciclaje y las barreras tecnológicas \citep{Nithya2021}.
+% #############################################
+% Los factores clave en el reciclaje de desechos electrónicos son la recolección, clasificación y recuperación, reciclaje y eliminación.
+Para concluir podríamos decir que actualmente existen dos maneras de clasificar los diferentes tipos de plásticos: sistemas de alimentación individualizados que requieren que los objetos se alimenten a un sistema de sensores que pasen uno por uno, y sistemas de alimentación masiva que requieren que el flujo de solidos se extienda en una banda transportadora. Estos dos sistemas requieren que las botellas pasen más de una ocasión por el sistema de medición. Cada uno de los métodos de clasificación que se investigan tienen diferentes capacidades y costos mismos que se puedan modificar para centros de acopio en México. Los sistemas que detecta tamaño de la botella y que tienen las mayores velocidades utilizan un mayor número de sensores infrarrojos pero no detectan el tipo de etiqueta, tapa, merma dentro de la botella. Los sistemas que si consideran el tipo de color de la botella las ordenan individualmente lo que hace que el sistema sea más lento y utilizan sensores infrarrojos. Otros dependen de la frecuencia de una luz estrobo para mejorar la detección de los plásticos. Al trabajar con rayos-x se obtiene mayor velocidades pero solo es recomendado para materiales como el PVC. La tendencia se inclina en los sistemas que utilizan el método de Near-Infrared spectroscopy y Raman debido a que tienen la capacidad de detectar una gran variedad de plásticos, son capaces de limitar la región de trabajo de la longitud de onda. Para desarrollar un sistema de clasificación con un diseño asequible para centros de acopio es recomendable combinar la espectroscopia otros métodos que trabajen en conjunto como el procesamiento de imágenes para resolver limitantes.
+% 
+% 
+\section{Additional Requirements}
+For additional requirements for specific article types and further information please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines#AdditionalRequirements}{Author Guidelines}.
+
+\section*{Conflict of Interest Statement}
+%All financial, commercial or other relationships that might be perceived by the academic community as representing a potential conflict of interest must be disclosed. If no such relationship exists, authors will be asked to confirm the following statement: 
+
+The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
+
+\section*{Author Contributions}
+
+The Author Contributions section is mandatory for all articles, including articles by sole authors. If an appropriate statement is not provided on submission, a standard one will be inserted during the production process. The Author Contributions statement must describe the contributions of individual authors referred to by their initials and, in doing so, all authors agree to be accountable for the content of the work. Please see  \href{http://home.frontiersin.org/about/author-guidelines#AuthorandContributors}{here} for full authorship criteria.
+
+%\section*{Funding}
+%Details of all funding sources should be provided, including grant numbers if applicable. Please ensure to add all necessary funding information, as after publication this is no longer possible.
+
+%\section*{Acknowledgments}
+%This is a short text to acknowledge the contributions of specific colleagues, institutions, or agencies that aided the efforts of the authors.
+
+%\section*{Supplemental Data}
+% \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
+
+%\section*{Data Availability Statement}
+%The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF REPOSITORY] [LINK].
+% Please see the availability of data guidelines for more information, at https://www.frontiersin.org/about/author-guidelines#AvailabilityofData
+
+\bibliographystyle{unsrt}
+% \bibliographystyle{frontiersinSCNS_ENG_HUMS} % for Science, Engineering and Humanities and Social Sciences articles, for Humanities and Social Sciences articles please include page numbers in the in-text citations
+%\bibliographystyle{frontiersinHLTH&FPHY} % for Health, Physics and Mathematics articles
+\bibliography{test}
+
+%%% Make sure to upload the bib file along with the tex file and PDF
+%%% Please see the test.bib file for some examples of references
+
+\section*{Figure and tables captions}
+
+%%% Please be aware that for original research articles we only permit a combined number of 15 figures and tables, one figure with multiple subfigures will count as only one figure.
+%%% Use this if adding the figures directly in the mansucript, if so, please remember to also upload the files when submitting your article
+%%% There is no need for adding the file termination, as long as you indicate where the file is saved. In the examples below the files (logo1.eps and logos.eps) are in the Frontiers LaTeX folder
+%%% If using *.tif files convert them to .jpg or .png
+%%%  NB logo1.eps is required in the path in order to correctly compile front page header %%%
+% 
+% 
+%#############################################
+% 
+%%%%% 
+\subsubsection{Tabla 1}
+\begin{table}[h]
+    \centering
+    \caption{DIAGNÓSTICO BÁSICO PARA LA GESTIÓN INTEGRAL DE LOS RESIDUOS, Mayo 2020}
+    \begin{tabular}{p{2.1cm}p{3.8cm}p{2.1cm}p{3.8cm}p{3.6cm}}
+    \hline
+    \multicolumn{5}{c}{Situación de México en la generación y manejo de los residuos}\\
+        \hline
+        % encabezado
+        Manipulación de residuos& Ubicación & Cantidad & Infraestructura& Recolección \\
+        % fin del encabezado
+        \hline
+        Existen 2,203 vertederos en México & 
+            Ubicados en 1,722 municipios, de prácticamente todas las entidades federativas, a excepción de la Ciudad de México &
+                Reciben en promedio 86,353.7 toneladas/día de residuos &
+                    1,053 sitios (47.80\%) no cuentan con infraestructura básica para la protección del ambiente. En 417 sitios (18.93\%) se tiene control de los residuos que ingresan. & 
+                        100,751 toneladas/día, para una cobertura a nivel nacional del 83.87\%. \\
+        \hline
+        Existen 127 instalaciones de transferencia de residuos &
+            Ubicadas en 112 municipios de 23 entidades federativas 49.61\% en municipios con población superior a 100,000 habitantes&
+                Se estima que reciben 3,886 toneladas/día& 
+                    El 4.5\% de los municipios cuentan con estaciones de transferencia. El 50\% están ubicadas en municipios con población mayor a 100,000 habitantes& 
+                        En 71 únicamente se transfieren los residuos de los vehículos, en 56 se realizan, la compactación de residuos, y la elección de residuos reciclables\\
+        \hline
+        Existen 1,060 centros de acopio del gobierno&
+            Se ubican en 63 municipios en localidades pequeñas de 19 entidades federativas mientras que 11 no reportan tener&     
+                Reciben en promedio 38,431  toneladas/día& 
+                    Soló 173 son centros de acopio, en 128 de estos se entrega alguna retribución a los ciudadanos que entregan los residuos reciclables& 
+                        Reciben el material tanto al público en general como de pepenadores \\
+        \hline
+        \multirow{5}{2.1}{Existen 47 plantas de tratamiento} &
+            \multirow{5}{3.8cm}{Se ubican en 62 municipios la recolección se realiza el mismo día empleando vehículos con compartimientos. En 22 municipios se utiliza otro método de recolección no especificado} &
+                \multirow{5}{2.1}{Reciben 8,944.49 toneladas/día y recuperan 277.835 toneladas/día de materiales reciclables}&
+                    Existen 25 plantas de separación o reciclaje donde ingresan residuos inorgánicos&
+                        Reciben 3,218.51 toneladas/día \\
+        \cline{4-5}
+        &
+            &
+                &
+                    En 19 plantas de compostaje ingresaron en su mayoría residuos orgánicos y residuos de poda&
+                        Reciben 2,062.39 t/día de residuos orgánicos, con una producción de composta de 269 t/día\\
+        \cline{4-5}
+        &
+            &
+                &
+                    Existen 5 plantas de digestión anaerobia &
+                        Con capacidad de 3 t/día de residuos de nopal y  30 t/día, de residuos de restaurantes, mercados, rastros, etc\\
+        \cline{4-5}
+        &
+            &
+                &
+                    Existen 4 plantas de trituración y 13 plantas de compactación&
+                        -\\
+        \hline
+    \end{tabular}
+    \label{Manipulacion2020}
+\end{table}
+% 
+% 
+%#############################################
+% tabla dos
+% 
+Residuos sólidos urbanos son los generados en las casas habitación, de los productos que consumen y de sus envases, embalajes o empaques; los residuos que provienen de cualquier otra actividad dentro de establecimientos o en la vía pública que genere residuos con características domiciliarias, y los resultantes de la limpieza de las vías y lugares públicos, siempre que no sean considerados por esta Ley como residuos de otra índole.
+%#############################################
+% 
+% 
+\subsubsection{Tabla 2}
+\begin{table}[h]
+    \centering
+    \caption{Manejo de residuos solidos urbanos en México}
+    \begin{tabular}{p{1.6cm}p{3cm}p{4.5cm}p{4.5cm}p{2cm}}
+    \hline
+    \multicolumn{5}{c}{Alternativas en México para el manejo de los residuos plásticos post-consumo.}\\
+        \hline
+        % encabezado
+        Método& Descripción &Capacidad& Limitaciones& Referencias \\
+        % fin del encabezado
+        \hline
+        Vertederos &
+              Es un conducto por el que se arrojan a un depósito situado a nivel inferior basuras, desechos solidos, etc. &
+                Depende el país y sus políticas en el manejo de desechos solidos. En México reciben un promedio de 86,357.7 toneladas/día de residuos. & 
+                    Los vertederos son grandes fuentes de contaminación incluso 23 veces más peligroso para el medio ambiente que el dióxido de carbono. &
+                        \citep{Chowdhury2021}, \citep{Majdinasab2017}, \citep{RSU2020}. \\
+        \hline
+        Incineración & 
+            Es la quema de desechos solidos reduciéndolo a cenizas. & 
+                En Europa y China se esta incrementando la capacidad de la incineración como método alternativo a los vertederos.& 
+                    Libera antimonio a la atmósfera entre otros contaminantes. En México este método no es bien visto en sus políticas de medio ambiente. & 
+                        \citep{Al2009}, \citep{Sahin2018}, \citep{ciel2019}, \citep{Morris2005}, \citep{Hull2020}, \citep{Chu2021}, \citep{ciel2019}. \\
+        \hline
+    \end{tabular}
+    \label{tab:my02}
+\end{table}
+% 
+% 
+%#############################################
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=10cm]{logo1}% This is a *.eps file
+%\end{center}
+%\caption{ Enter the caption for your figure here.  Repeat as  necessary for each of your figures}\label{fig:1}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[width=15cm]{logos}
+%\end{center}
+%\caption{This is a figure with sub figures, \textbf{(A)} is one logo, \textbf{(B)} is a different logo.}\label{fig:2}
+%\end{figure}
+
+%%% If you are submitting a figure with subfigures please combine these into one image file with part labels integrated.
+%%% If you don't add the figures in the LaTeX files, please upload them when submitting the article.
+%%% Frontiers will add the figures at the end of the provisional pdf automatically
+%%% The use of LaTeX coding to draw Diagrams/Figures/Structures should be avoided. They should be external callouts including graphics.
+
+% ############################################
+%#############################################
+% 
+% 
+\subsubsection{Tabla 3}
+\begin{table}[h]
+    \centering
+    \caption{Infraestructura de los principales estados de México donde se puede reciclar plástico y electrónica.}
+    \begin{tabular}{p{4.5cm}p{1cm}p{1cm}p{1cm}p{1.5cm}}
+    % \begin{tabular}{p{2.1cm}p{2.1cm}p{4.8cm}p{4.8cm}p{1.8cm}}
+    \hline
+    \multicolumn{5}{c}{Centros de acopio para reciclar plástico}\\
+        \hline
+        % encabezado
+        Entidad & Freq &Cum. Freq &\% & \% Cum.\\
+        % fin del encabezado
+        \hline
+        Jalisco& 
+            31&
+                31& 
+                    15.5& 
+                        15.5 \\
+        \hline
+        Nuevo Leon&
+            23&
+                54& 
+                    11.5& 
+                        27\\
+        \hline
+        CDMX& 
+            18&
+                72& 
+                    9& 
+                     36\\
+        \hline
+        Puebla& 
+            14& 
+                86& 
+                    7& 
+                        43\\
+        \hline
+        Queretaro& 
+            12& 
+                98& 
+                    6& 
+                        49\\ 
+        \hline
+        Estado de Mexico& 
+            10& 
+                108& 
+                    5& 
+                        54\\
+        \hline
+        Tamaulipas& 
+            8& 
+                116& 
+                    4& 
+                        58\\
+        \hline
+        San Luis Potosi& 
+            8& 
+                124& 
+                    4& 
+                        62\\
+        \hline
+        Michoacan& 
+            8& 
+                132& 
+                    4& 
+                        66\\
+        \hline
+        Baja California& 
+            7& 
+                139& 
+                    3.5& 
+                        69.5 \\
+        \hline
+        Morelos& 
+            6& 
+                145& 
+                    3& 
+                        72.5 \\
+        \hline
+        Tlaxcala& 
+            5& 
+                150& 
+                    2.5& 
+                        75 \\
+        \hline
+        Veracruz& 
+            4& 
+                154& 
+                    2& 
+                        77\\
+        \hline
+        Tabasco& 
+            4& 
+                158& 
+                    2.0& 
+                        79\\
+        \hline
+        Guanajuato& 
+            4& 
+                162& 
+                    2& 
+                        81 \\
+        \hline
+        Coahuila& 
+            4& 
+                166& 
+                    2& 
+                        83 \\
+        \hline
+        Chiapas& 
+            4& 
+                170& 
+                    2& 
+                        85 \\
+        \hline
+        Sonora& 
+            3& 
+                173& 
+                    1.5& 
+                       86.5 \\
+        \hline
+        Sinaloa& 
+            3& 
+                176& 
+                    1.5& 
+                        88 \\
+        \hline
+        Oaxaca& 
+            3& 
+                179& 
+                    1.5& 
+                        89.5 \\
+        \hline
+        Guerrero& 
+            3& 
+                182& 
+                    1.5& 
+                        91.0 \\
+        \hline
+        Durango& 
+            3& 
+                185& 
+                    1.5& 
+                        92.5 \\
+        \hline
+        Chihuahua& 
+            3& 
+                188& 
+                    1.5& 
+                        94 \\
+        \hline
+        Yucatan& 
+            2& 
+                190& 
+                    1& 
+                       95\\
+        \hline
+        Quintana Roo& 
+            2& 
+                192& 
+                    1& 
+                       96\\
+        \hline
+        Hidalgo& 
+            2& 
+                194& 
+                    1& 
+                       97\\
+        \hline
+        Colima& 
+            2& 
+                196& 
+                   1& 
+                        98\\
+        \hline
+        Campeche& 
+            2& 
+                198& 
+                   1& 
+                        99\\
+        \hline
+        Zacatecas& 
+            1& 
+                199& 
+                    0.5& 
+                        99.5\\
+        \hline
+        Baja California Sur& 
+            1& 
+                200& 
+                    0.5& 
+                        100\\
+        \hline
+        Nayarit& 
+            0& 
+                200& 
+                    0& 
+                        100\\
+        \hline
+        Aguascalientes& 
+            0& 
+                200& 
+                    0& 
+                      100 \\
+        \hline
+    \end{tabular}
+    \label{tab:my03}
+\end{table}
+% 
+% 
+%#############################################
+%#############################################
+% ############################################
+%#############################################
+% 
+% 
+
+\subsubsection{Tabla 4}
+\begin{table}[h]
+    \centering
+    \caption{Resumen de los métodos y las opciones tecnológicas existentes en el manejo de desechos plásticos post-consumo.}
+    \begin{tabular}{p{2.1cm}p{2.1cm}p{4.8cm}p{4.8cm}p{1.8cm}}
+    \hline
+    \multicolumn{5}{c}{Opciones tecnológicas para la clasificación de materiales reciclables.}\\
+        \hline
+        % encabezado
+        Tecnología & Descripción& Capacidad& Limitaciones& Referencias \\
+        % fin del encabezado
+        \hline
+        \multirow{3}{2.1cm}{Sorting and disassembly tools processes} & 
+            Clasificación manual &
+                Es eficaz para una variedad de materiales mezclados. Diversos componentes se pueden recuperar, revender y reutilizar & 
+                    Requiere de mucha mano de obra y es muy tardado la clasificación manual& 
+                        \citep{Hamad2013}, \citep{qu2006viable}, \citep{Kang2005}, \cite{Sadat2011}, \cite{Williams2006}, \cite{Grigorescu2019}, \cite{Ragaert2017} \\
+            \cline{2-5}
+            &
+                Mezclar plásticos y cargarlos eléctricamente &
+                    Se requiere que los materiales previamente estén triturados y con cargas positivas y negativas & 
+                        El tamaño de los materiales debe rondar entre los 4 a 5mm. & 
+                        \citep{Hamad2013}, \citep{qu2006viable}, \citep{Kang2005}\\
+            \cline{2-5}
+            & 
+                Por densidad del material &
+                    Varios tipos de materiales se clasifican en un liquido y por su densidad se identifican & 
+                        La mayoría de los plásticos tienen una densidad muy parecida & 
+                            \citep{Al2009}, \cite{Grigorescu2020}
+                        \\
+        \hline
+        Plastics identification & 
+            Selective flotation process & 
+                Surface treatment of plastics having similar densities (PVC and PET), withsubsequent froth flotation using nonionic surfactants& 
+                    These treatments often influence the wettability of the plastics treated. \cite{Fraunholcz2004}, size and shape of plastic particles affecting flotation separation.& 
+                        \cite{Sadat2011}, \cite{Shen2001}, \cite{Shen2002}, \cite{Shent1999} \\
+        \hline
+        Plastics identification & 
+            froth flotation & 
+                 is appropriate for mixtures of heavier-than-water plastics& 
+                    Requieres the particles be well wetted like friction washing, and cutting mill to avoid misplacement, but the particles lose a great deal of the natural hydrophobicity making the mixture unsuitable for separation by froth flotation.& 
+                        \cite{Fraunholcz2004} \\
+        \hline
+        Mechanical plastics separation & 
+            Liquid-fluidized bed classification& 
+                Gravimetric separation in water as a fluidizing medium through a selective thermal particle density modification induced by step changes in the fluidizing water temperature& 
+                    4& 
+                        \cite{Sadat2011} \\ 
+        \hline
+        Chemical plastics separation & 
+            Triboelectrostatic separation& 
+                Electrostatic separation by charging of plastics, with subsequent segregation of materials through an electric field& 
+                    4& 
+                        \cite{Park2007}, \cite{Atroune2015}, \cite{Benabderrahmane2020}, \cite{Boukhoulda2013}, \cite{Dodbiba2003} \\ 
+        \hline
+        Espectroscopia & 
+            Raman& 
+                Detecta mejor el HDPE y LDPE en comparación con NIR& 
+                    Mayor inversión de implementación d highly selective method, giving information even on the mineral fillers present in plastics, black/dark plastics& 
+                        \cite{Allen1999}, \cite{Florestan1994}, \cite{Kumar2000}, \cite{Shameem2017}\\ 
+        \hline
+        Espectroscopia & 
+            NIR& 
+                Detecta en menos de un segundo, Muchos estudios utilizan la espectroscopia infrarroja para el control de calidad y el análisis de calidad en la producción de polímeros.& 
+                    gran cantidad de bandas superpuestas lo que dificulta la interpretación& 
+                        \cite{Camacho2001}\\ 
+        \hline
+        Espectroscopia & 
+            FTMIR& 
+               recognize most usual polymers.& 
+                     a high sensitivity to the surface state and a weak (noisy) reflectance signal for CH bonds& 
+                        \cite{Florestan1994}\\ 
+        \hline
+    \end{tabular}
+    \label{tab:my04}
+\end{table}
+% 
+% 
+%#############################################
+%#############################################
+% \begin{table}[h!]
+%     \centering
+%     \caption{Símbolos para identificar el tipo de plástico reciclado \citep{Ramli2008}.}
+%     \label{Sımbolos}
+%     \begin{center}
+%     \begin{tabular}{ c c c c c c c }
+%         \hline
+%         \includegraphics[trim = {31mm 225mm 165mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} & 
+%         \includegraphics[trim = {52mm 225mm 142mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} & 
+%         \includegraphics[trim = {74mm 225mm 120mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} &
+%         \includegraphics[trim = {96mm 225mm 98mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} &
+%         \includegraphics[trim = {118mm 225mm 76mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} &
+%         \includegraphics[trim = {140mm 225mm 54mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} &
+%         \includegraphics[trim = {162mm 225mm 32mm 31mm},clip,scale=0.78]{Vg_fig01.pdf} \\
+%             PET & HDPE & PVC & LDPE & PP & PS & OTROS \\ 
+            
+%     \end{tabular}
+%     \begin{tabular}{l c c c c c c}
+%         PET:\textit{Polyethylene Terephthalate} & & & & & & HDPE: \textit{High Density Polyethylene}\\
+%         PVC:\textit{Polyvinyl Chloride} & & & & & & LDPE: \textit{Low Density Polyethylene}\\
+%         PP:\textit{Polypropylene} & & & & & & PS: \textit{Polystyrene}\\
+%         \hline
+%     \end{tabular}
+%     \end{center}
+    
+% \end{table}
+%#######################################
+%#######################################
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[trim = {6mm 150mm 20mm 14mm},clip,scale=0.9]{Vg_fig_11.pdf}
+%     \caption{Ejemplo de un diagrama de flujo del proceso de clasificación de botellas de plástico \citep{Association2008}.}
+%     \label{Ejemplo}
+% \end{figure}
+%#######################################
+%#######################################
+% \begin{figure}[h!]
+%     \centering
+%     %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+%     \includegraphics[trim = {107mm 174mm 10mm 54mm},clip,scale=.9]{Vg_fig_25.pdf}
+%     \caption{Espectroscopia para identificar cinco clases diferentes de plásticos \citep{Masoumi2012}.}
+%     \label{NIR5}
+% \end{figure}
+%#######################################
+%#######################################
+
+\subsubsection{Tabla 5}
+\begin{table}[h]
+    %\centering
+    \caption{Sistemas comerciales para la clasificación de diferentes tipos de plásticos reciclables. }
+    \label{Sistemas}
+    \begin{tabular}{p{1.6cm} p{13.8cm}}
+         \hline
+           Sistema & Ventajas \\  
+         \hline
+           1 & Considera el tamaño de la botella, remueve contaminantes, trabaja con 16 sensores de rayos infrarrojos, clasificación en 5 milisegundos, identifica color, utiliza un sistema neumático expulsando las botellas. \\
+           \hline
+           2 & Utiliza una cámara de color, separa las botellas en orden individual, remueve contaminantes, velocidad de detección de 15 veces por segundo e identificación de 19 milisegundos, identifica tipos de colores en las botellas. \\
+          \hline
+          3 &Alta detección al utilizar el reflejo de rayos x y de sensores infrarrojos por medio de espectroscopia este método es recomendado para detectar PCV. Analiza de 200 veces por segundo, separa 2 a 3 botellas por segundo. \\
+         \hline
+    \end{tabular}
+    \begin{tabular}{l}
+            1 - \textit{BottleSort}, 2- \textit{Poly-Sort}, 3- \textit{Near infrared spectroscopic} y VS-2 \\
+         \end{tabular}
+\end{table}
+%#######################################
+
+%#######################################
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[trim = {14mm 208mm 34mm 16mm},clip,scale=.8]{Vg_fig_24.pdf}
+%     \caption{Cámara fotográfica para la detección de botellas de color \citep{Wang2019170}.}
+%     \label{NIR4}
+% \end{figure}
+%#######################################
+%#######################################
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[trim = {10mm 214mm 105mm 20mm},clip,scale=0.8]{Vg_fig_23.pdf}
+%     \caption{Histograma con datos normalizados para identificar PET \citep{Srigul2016}.}
+%     \label{NIR3}
+% \end{figure}
+%#######################################
+%#######################################
+
+\subsubsection{Tabla 6}
+\begin{table}[h]
+    %\centering
+    \caption{Comparación de los  métodos actuales para la identificación de botellas de plástico utilizando varias técnicas de \textit{machine learning}. }
+    \label{Comparacion}
+    \begin{tabular}{ p{2.1cm} p{6.1 cm} p{5 cm} p{2.2 cm}}
+         \hline
+           Método & Ventajas & Desventajas & \\  
+         \hline
+           1 & 
+            Precisión del 93.33{\%}, identifica la deformación y color. & 
+                Se necesita de más de una cámara para incrementar la velocidad. & 
+                    \citep{Ramli2008}, \citep{Srigul2016}, \citep{Wang2019170}, \citep{Scavino2009794}, \citep{Nawrocky2010}, \citep{Shahbudin2010}.\\
+        \hline
+           2 & 
+            Rápida detección y precisión del 95{\%} distingue deformación y color. 
+                & No identifica colores oscuros. 
+                    & \citep{Scott1995156}, \citep{Masoumi2012}, \citep{House2011}, \citep{Safavi20102216}, \citep{Rani2019}, \citep{THuthFehre1995}. \\
+          
+        \hline  
+          3 & 
+            Precisión mayor al 95{\%}, identifica color, bajo costo de armado.  & 
+                Calibración en la cámara, variación en luz, resolución, distancia, baja capacidad para identificar deformación. & 
+                    \citep{Wang2019170}, \citep{House2011}, \citep{Prasad2012}, \citep{HuiWang201975}, \citep{Ozkan201529}. \\
+         \hline
+    \end{tabular}
+    \begin{tabular}{l}
+            1 - Método por histograma RGB, 2- \textit{Near infrared refrectance spectroscopy}\\  3- Principio de procesamiento de imágenes \\
+         \end{tabular}
+\end{table}
+%########################################
+%#############################################
+% \begin{figure}[h!]
+%     \centering
+%     %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+%     \includegraphics[trim = {24mm 150mm 98mm 98mm},clip,scale=1.1]{Vg_fig_22.pdf}
+%     \caption{Cinco clases de plástico utilizando espectroscopia \cite{Rani2019}.}
+%     \label{NIR1}
+% \end{figure}
+%#############################################
+
+%#############################################
+% \begin{figure}[h!]
+%     \centering
+%     %\includegraphics[width=0.5\textwidth]{FIG01.JPG}
+%     \includegraphics[trim = {20mm 50mm 20mm 165mm},clip,scale=0.7]{Vg_fig_21.pdf}
+%     \caption{Representación del espectro infrarrojo considerando el color de la botella \cite{Rani2019}.}
+%     \label{NIR2}
+% \end{figure}
+%#############################################
+
+
+\end{document}
