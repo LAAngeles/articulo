@@ -31,7 +31,9 @@
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
 % If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
 \def\Address{$^{1}$Facultad de Ingeniería, Universidad Autónoma de Querétaro, Querétaro, México\\
-$^{2}$Red de investigación OAC optimización, automatización y control, Querétaro, México}
+$^{2}$Red de investigación OAC optimización, automatización y control, Querétaro, México\\
+$^{3}$Centro de Investigación en Óptica (CIO), León, México\\
+$^{4}$Ingeniería Mecatrónica, Universidad Politecnica de Chiapas, Chiapas, Mexico}
 % The Corresponding Author should be marked with an asterisk
 % Provide the exact contact address (this time including street name and city zip code) and email of the corresponding author
 % \def\corrAuthor{Corresponding Author: Facultad de Ingeniería, Universidad Autónoma de Querétaro, Cerro de las Campanas S/N, Las Campanas, Santiago de Querétaro 76010, México}
