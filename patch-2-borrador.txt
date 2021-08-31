@@ -27,7 +27,7 @@
 
 \def\keyFont{\fontsize{8}{11}\helveticabold }
 \def\firstAuthorLast{L.A. Ángeles-Hurtado {et~al.}} %use et al only if is more than 1 author
-\def\Authors{L.A. Ángeles-Hurtado\dag\,$^{1}$, Juvenal Rodríguez-Reséndiz\dag\,$^{1,2,*}$}
+\def\Authors{L.A. Ángeles-Hurtado\dag\,$^{1}$, Juvenal Rodríguez-Reséndiz\dag\,$^{1,2,*}$, Sebastián Salazar-Colores\dag\,$^{3}$, Hugo Torres-Salinas\dag\,$^{1}$, P. Y. Sevilla-Camacho\dag\,$^{4}$}
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
 % If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
 \def\Address{$^{1}$Facultad de Ingeniería, Universidad Autónoma de Querétaro, Querétaro, México\\
