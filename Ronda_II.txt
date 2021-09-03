@@ -292,7 +292,7 @@ It can also reliably identify rough-surfaced plastics, plastic powders, and even
 Although Raman spectroscopy has multiple advantages, it is necessary to control different factors to be automated in an industrial environment. 
 Various investigations focused on previous technologies that can be developed to identify various forms of plastic parts that require disassembly in household appliances.
 
-\subsection{Mechamical plastic Separation Technologies}
+\subsection{Mechanical plastic separation technologies}
 
 For automation in the separation of materials, mechanical techniques can be based on density, solubility, visual, optical classification, air classification, hydro cyclone, flotation method, float-sump separation, foam-flotation separation, flame treatment and flotation, and electrostatic separation as a cost-effective alternative using a Tribo electrostatic process \citep{Williams2006}, \citep{Sadat2011}, \citep{Park2007}, \citep{Benabderrahmane2020}, \citep{Boukhoulda2013}, \citep{Pascoe2003}, \citep{Wang2019}, \citep{Kang2005}. 
 There are processes of free-fall electrostatic separators under other particle charge distributions, which can be coupled to the needs and material with which one works \citep{Wei2003}, \citep{Benabderrahmane2020}. 
