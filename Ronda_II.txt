@@ -17,6 +17,7 @@
 
 %\setcitestyle{square} % for Physics and Applied Mathematics and Statistics articles
 \usepackage{url,hyperref,lineno,microtype,subcaption}
+\usepackage[utf8]{inputenc} 
 \usepackage[onehalfspacing]{setspace}
 
 \linenumbers
@@ -27,11 +28,13 @@
 
 \def\keyFont{\fontsize{8}{11}\helveticabold }
 \def\firstAuthorLast{L.A. Ángeles-Hurtado {et~al.}} %use et al only if is more than 1 author
-\def\Authors{L.A. Ángeles-Hurtado\dag\,$^{1}$, Juvenal Rodríguez-Reséndiz\dag\,$^{1,2,*}$}
+\def\Authors{L.A. Ángeles-Hurtado\dag\,$^{1}$, Juvenal Rodríguez-Reséndiz\dag\,$^{1,2,*}$, Sebastián Salazar-Colores\dag\,$^{3}$, Hugo Torres-Salinas\dag\,$^{1}$, P. Y. Sevilla-Camacho\dag\,$^{4}$}
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
 % If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
 \def\Address{$^{1}$Facultad de Ingeniería, Universidad Autónoma de Querétaro, Querétaro, México\\
-$^{2}$Red de investigación OAC optimización, automatización y control, Querétaro, México}
+$^{2}$Red de investigación OAC optimización, automatización y control, Querétaro, México\\
+$^{3}$Centro de Investigación en Óptica (CIO), León, México\\
+$^{4}$Ingeniería Mecatrónica, Universidad Politecnica de Chiapas, Chiapas, Mexico}
 % The Corresponding Author should be marked with an asterisk
 % Provide the exact contact address (this time including street name and city zip code) and email of the corresponding author
 % \def\corrAuthor{Corresponding Author: Facultad de Ingeniería, Universidad Autónoma de Querétaro, Cerro de las Campanas S/N, Las Campanas, Santiago de Querétaro 76010, México}
@@ -46,7 +49,7 @@ $^{2}$Red de investigación OAC optimización, automatización y control, Queré
 \onecolumn
 \firstpage{1}
 
-\title[Disposal of post-consumer PET]{Viable disposal of post-consumer polyethylene terephthalate in Mexico: a review} 
+\title[Disposal of post-consumer polymers]{Viable disposal of post-consumer polymers in Mexico: a review} 
 
 \author[\firstAuthorLast ]{\Authors} %This field will be automatically populated
 \address{} %This field will be automatically populated
@@ -62,17 +65,18 @@ $^{2}$Red de investigación OAC optimización, automatización y control, Queré
 \begin{abstract}
 
 \section{}
-This article addresses the methods and systems in the management of urban solid waste. 
-It focuses on post-consumer recycled plastic bottles to provide an overview of cost-effective strategies for designing and developing an affordable sorting system in Mexico from the academic field
-The Mexican government has spoken of waste management as a national priority due to the COVID-19 pandemic, which increased urban solid waste between 3.3\% and 16.5\% in addition to what was generated under normal conditions. 
-In Mexico and the world, initiatives are being developed to promote the culture of recycling and thus reduce the generation of waste. 
-These initiatives seek to make the work of thousands of people visible and encourage job creation and promote businesses through incentive schemes for effective separation, collection, classification, reuse, and recycling, in the hands of consumers, collectors, and collectors. 
-The recycling chain provides economic income to more than 35 thousand Mexicans. 
-Polyethylene terephthalate is an example in Mexico of the most notable circular economy. 
-Mexico needs to develop classification systems with an affordable design for collection centers. 
-Based on this study, it is recommended to combine spectroscopy with other methods that work together, such as image processing, to solve the limitations of mechanical systems.
+Post-consumer polymers require viable actions to transfer value to the final consumer to reduce environmental impact. 
+Worldwide, initiatives are being developed to promote the culture of recycling and thus reduce waste generation. 
+These initiatives seek to make the work of thousands of people visible, encourage job creation, and promote businesses through incentive schemes for effective separation, collection, classification, reuse, and recycling, in the hands of consumers, collectors, and scavenges. 
+It is necessary to emphasize that Mexico needs to develop techniques to increase the productivity of collection centers for recyclable materials and to face the challenges that recycling implies. 
+For these reasons, the Mexican government has spoken of waste management as a national priority due to the  COVID-19 pandemic, which increased urban solid waste between 3.3 \% and 16.5 \% in addition to what was generated under normal conditions. 
+Also, the recycling chain provides economic income to more than 35 thousand Mexicans. 
+Polyethylene terephthalate (PET) is an example of the most notable circular economy in Mexico because 60 \% of PET bottles are recycled. 
+Therefore, this article addresses the methods and systems in the management of urban solid waste
+It focuses on post-consumer recycled plastic bottles to provide an overview of cost-effective strategies for designing and developing an affordable sorting system in Mexico from the academic field. 
+In addition, to simplify the solution that we propose, it is recommended to combine optical techniques such as infrared spectroscopy and Raman spectroscopy with others methods that work together, such as computer vision, to develop affordable systems that address the limitations of mechanical systems.
 \tiny
- \keyFont{ \section{Keywords:} Recycled plastic bottles, Polyethylene terephthalate, infrastructure in Mexico} 
+ \keyFont{ \section{Keywords:} Infrastructure in Mexico, PET, Pollution, Recycled plastic bottles} 
 
 \end{abstract}
 
