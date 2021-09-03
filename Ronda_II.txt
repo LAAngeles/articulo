@@ -302,12 +302,11 @@ The efficiency of the separation depends on the difference in density and the un
 \section{Infrastructure and technological options for Mexico}
 
 The development and implementation of technologies focusing on the classification and production of pure post-consumer resins from plastic waste, whether it comes from homes, industry, landfills, and electronics, are of great importance to maintain the circular economy and return materials to the system. 
-The recyclable material available for processing depends on factors that vary by various factors such as the season of the year and the quality, the cost of sorting, and regeneration \citep{Sadat2011}. 
+The recyclable material available for processing depends on factors that vary by different factors such as the season of the year and the quality, the cost of sorting, and regeneration \citep{Sadat2011}. 
 Manual plastics sorting and electronic housing disassembly tools to separate metals and materials that contaminate plastics are the most widely used techniques due to their low cost and a large amount of labor. 
-The diversity of electronic products and plastic products is constantly changing, and infrastructure is required in each country to meet this challenge. 
+The diversity of electronic and plastic products is constantly changing, and infrastructure is required in each country to meet this challenge. 
 Recycling centers and separation centers face this problem every day. 
 Therefore, precise identification technologies are needed to determine the type of plastic in different plastic products.
-
 
 \subsection{Infrastructure in waste management}
 
