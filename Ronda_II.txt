@@ -312,13 +312,15 @@ Therefore, precise identification technologies are needed to determine the type 
 
 In Mexico, a guide was established that presents the iconography for eight different wastes grouped into two classifications: primary (organic and inorganic) and secondary (paper, plastic, metal, glass, wood, and fabric) \citep{SEMARNAT2017}. 
 Since 2008, through the SEMARNAT, Mexico developed a program to establish an environmental policy for waste, promoting the prevention and comprehensive management of waste through prevention, separation, reuse, and recycling. 
-Despite these efforts, it is not clear whether the program produced any results
+Despite these efforts, it is unclear whether the program produced any results for implementing viable waste disposal. 
 In the 32 states of Mexico in 2010, around 1,440 collection centers were reported in which automotive oil, vegetable oil, tires, electrical appliances, multi-layer containers (tetrapak), aluminum wrappers, books, wood, metals, demolition material, paper, cardboard, paraffin, wax, batteries, batteries, accumulators, plastics, electronic waste, toner, particular waste, organic waste, sanitary waste, glass among others. 
-Table \ref{tab:my03} highlights the states where the infrastructure helps to recycle plastics \citep{SEMARNAT2010}. 
+Table \ref{tab:my03} shows the number of recycling centers for plastic and electronic waste in the various states of Mexico \citep{SEMARNAT2010}. 
 In Mexico, there is little infrastructure for adequate recycling processes. 
 There are various alternatives that Mexico can follow to minimize the impact of the lack of infrastructure by copying models from other countries and with policies that benefit the population. 
 For example, in \citep{Nagurney2005}, an algorithm was proposed to analyze and calculate solutions taking electronic waste factors as processors, recyclers, and consumers to reverse the problems of the supply chain network for the management and recycling of electronic waste that can serve as a reference to be implemented in Mexico \citep{Nagurney2005}. 
-There is also research in developing methodologies that facilitate the learning of engineering students to develop skills in control loop design, and such efforts are necessary to train human capital that from new methods provide automation ideas even focused on plastic waste solutions \citep{Torres2020}, Table \ref{tab:my04} describes some methods that can be developed at an academic level to contribute to the technological development of Mexico.
+There is also research in developing methodologies that facilitate engineering students' learning to develop skills in a control loop design. 
+Such efforts are necessary to train human capital that provides automation ideas from new methods even focused on plastic waste solutions \citep{Torres2020}.
+Table \ref{tab:my04} describes some methods that can be generated at an academic level to contribute to the technological development of Mexico.
 
 \subsection{Technological options to develop post-consumer PET bottle classification systems in Mexico}
 
