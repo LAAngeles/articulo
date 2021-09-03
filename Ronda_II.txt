@@ -223,19 +223,22 @@ In the same way, depositing waste to the landfill or processing it through mecha
 \subsection{Chemical Recycling}
 
 Chemical recycling uses advanced technology processes that convert plastic materials. 
-Chemical recycling is exclusive to plastics, although various investigations use chemical recycling to apply it to biomass and consist of the depolymerization of polymers into monomers, decomposing the molecules of plastics into raw materials that can be used \citep{Hamad2013}, generally in liquids or gases, which They are suitable for use as a raw material for the production of new petrochemicals and plastics \citep{Al2009}
-Twelve chemical reactions are used to decompose polymers
+Chemical recycling is exclusive to plastics, although various investigations use it to apply it to biomass. 
+Chemical recycling consists of the depolymerization of polymers into monomers, decomposing the molecules of plastics into raw materials \ citep{Hamad2013} that can be used generally in liquids or gases, which are suitable for use as raw material for the production of new petrochemicals and plastics \ citep{Al2009}.
+Twelve chemical reactions are used to decompose polymers. 
 The already commercialized techniques are glycolysis and methanolysis, but for degradation research questions, pyrolysis and gasification stand out \cite{Grigore2017}, \citep{Wang2014} \cite{Buekens2014}. 
 Likewise, pyrolysis is the most attractive technology \citep{Sahin2018}, \citep{Kumagai2020}. 
-In pyrolysis, plastics are crushed and subsequently melted to be refined and converted into diesel, and other petrochemical products \citep{Horvat1999}, a study in \citep{Jeswani2021} suggests that pyrolysis has up to 50\% less impact on climate change compared to energy recovery, mechanical recycling, and the production of virgin fossil resources. 
-The creation of these new plastics used less oxygen compared to gasification. 
-In chemolysis, the PET waste can be converted back to monomers and polymerized again, but it requires a prior selection of materials and high quality. 
-It applies to specific condensation polymers such as polyesters, polyurethanes, polyamides, and polyacetals; this method would imply a higher cost \citep{Ragaert2017}, \citep{Lin2011}. 
+In pyrolysis, plastics are crushed and subsequently melted to be refined and converted into diesel, and other petrochemical products \citep{Horvat1999}. 
+A study in \citep{Jeswani2021} suggests that pyrolysis has up to 50 \% less impact on climate change compared to energy recovery, mechanical recycling, and the production of virgin fossil resources. 
+The creation of these new plastics used less oxygen than gasification. 
+In chemolysis, the PET waste can be converted to monomers and polymerized again, but it requires a prior selection of materials and high quality. 
+It applies to specific condensation polymers such as polyesters, polyurethanes, polyamides, and polyacetals. 
+This method would imply a higher cost \citep{Ragaert2017}, \citep{Lin2011}
 Another way of converting waste into energy is by the gasification method that melts plastics with oxygen and steam at temperatures between 1200-1500 \°C. 
 It does not generate toxins such as dioxins or furans \citep{Ragaert2017}. 
 Despite these benefits, gasification plants are not competitive when compared to the low prices of natural gas. 
 Chemical recycling is an alternative to recycling that eliminates some of the limitations of mechanical recycling and incineration, but with the restriction that chemical recycling has higher costs and requirements for its implementation \citep{Hamad2013}, \citep{Grigore2017}. 
-If the environmental impact of the implementation of this method in PET recycling is taken into account, it releases less than 25 tons of antimony into the atmosphere. 
+If the environmental impact of implementing this method in PET recycling is taken into account, it releases less than 25 tons of antimony into the atmosphere. 
 By way of conclusion, the amount of PET tissue recycled through mechanical recycling is 7,264,360 tons, the incineration of PET is 2,636,459 tons, and the amount of PET that was chemically recycled was the lowest with 228,106 tons \citep{Chu2021}.
 
 \subsection{Recycling of plastics by disassembling electronics}
