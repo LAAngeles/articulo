@@ -273,20 +273,23 @@ This means that for developing countries like Mexico, it represents low profitab
 
 \subsection{Plastics identification technologies}
 
-For the identification of plastics, there are technologies and manual methods visually by their codes and others that analyze their physical and chemical properties such as their density, solubility, rigidity, flexibility, thermal analysis, incineration, optical identification with tracers, eddy current separation, for spectroscopy, surface free energy, surface roughness, and its chemical structure. 
-To identify the physical properties of polymers, non-destructive techniques can be implemented to analyze surfaces by studying spectra, and separation can be automated using infrared spectroscopy, X-ray fluorescence spectroscopy, and Raman spectroscopy \citep{Allen1999}, \citep{Williams2006}, \citep{Ahmad2004}, \citep{Belyamani2021}, \citep{Grigorescu2019}, \citep{Wang2019}, \citep{Buekens2014}, \citep{Shameem2017}, \citep{Turner2021Lead}, \citep{Ragaert2017}. 
-For which, automate this pre-classification process for collection centers in Mexico, said identification of plastics must be carried out in individual pieces, which translates into a 100\% inspection and in the best of cases using systems automated systems in which a mixture of parts is introduced using mechanical separation. 
+For the identification of plastics, there are technologies and methods. 
+Manual identification methods are carried out by detecting their codes. 
+Others analyze their physical and chemical properties such as their density, solubility, rigidity, flexibility, thermal analysis, incineration, optical identification with tracers, eddy current separation, spectroscopy, surface free energy, surface roughness, and its chemical structure. 
+To identify the physical properties of polymers, non-destructive techniques can be implemented to analyze surfaces by studying spectra. 
+Separation can be automated using infrared spectroscopy, X-ray fluorescence spectroscopy, and Raman spectroscopy \citep{Allen1999}, \citep{Williams2006}, \citep{Ahmad2004}, \citep{Belyamani2021}, \citep{Grigorescu2019}, \citep{Wang2019}, \citep{Buekens2014}, \citep{Shameem2017}, \citep{Turner2021Lead}, \citep{Ragaert2017}.  
 An outstanding feature that should be considered before choosing which spectroscopy to work with is identifying the application and needs because each technique has advantages and limitations. 
-For example, X-ray fluorescence spectroscopy is widely used for its benefits of separating PET from PVC with high precision but not recommended with other plastics \citep{qu2006viable}, \citep{Carroll1994}, \citep{Sadat2011}. 
+For example, X-ray fluorescence spectroscopy is widely used for the benefits of separating PET from PVC with high precision but not recommended with other plastics \citep{qu2006viable}, \citep{Carroll1994}, \citep{Sadat2011}. 
 On the other hand, infrared spectroscopy has positioned itself to identify the leading recyclable plastics. 
 Its implementation lies in the identification that occurs in polymers when there is a loss in radiation intensity when passing through plastics and the plastics' properties that reflect light. 
 Two infrared ranges are mainly used to identify recyclable plastics, the near-infrared NIR and the mid-infrared MIR \citep{Rani2019}, \citep{Florestan1994}, \citep{Arola1999}, \citep{Grigorescu2019}. 
-NIR spectroscopy reliably identifies five types of post-consumer plastics compared to MIR spectroscopy which is sensitive to the surface conditions of the plastic, which implies a limitation in the identification in post-consumer bottles because one The vast majority of bottles may have different surface conditions that would prevent MIR spectroscopy from being an excellent option to implement \citep{Florestan1994}. 
+NIR spectroscopy reliably identifies five types of post-consumer plastics compared to MIR spectroscopy which is sensitive to the surface conditions of the plastic, which implies a limitation in the identification in post-consumer bottles. 
+The vast majority of bottles may have different surface conditions that would prevent MIR spectroscopy from being an excellent option to implement \citep{Florestan1994}. 
 NIR spectroscopy can quickly identify PET, PVC, PE, PS, and PP \citep{Camacho2001}, but placing dark-colored plastics such as those found in the automotive industry is not recommended \citep{qu2006viable}, \citep{Sustar2014}.
 In contrast, Raman spectroscopy is a technique that reliably identifies plastics based on their vibration signatures. 
 Under the right conditions and using a low-power laser, Raman spectroscopy can identify dark-colored plastics. 
-It also has the ability to reliably identify rough-surfaced plastics, plastic powders, and even mineral fillers, as well as naturally colored plastics in less than a second between neighboring plastics \citep{Allen1999}, \citep{Florestan1994}, \citep{Kumar2000}. 
-Despite the fact that Raman spectroscopy has multiple advantages, it is necessary to control different factors so that it is automated in an industrial environment. 
+It can also reliably identify rough-surfaced plastics, plastic powders, and even mineral fillers, as well as naturally colored plastics in less than a second between neighboring plastics \citep{Allen1999}, \citep{Florestan1994}, \citep{Kumar2000}. 
+Although Raman spectroscopy has multiple advantages, it is necessary to control different factors to be automated in an industrial environment. 
 Various investigations focused on previous technologies that can be developed to identify various forms of plastic parts that require disassembly in household appliances.
 
 \subsection{Mechamical plastic Separation Technologies}
