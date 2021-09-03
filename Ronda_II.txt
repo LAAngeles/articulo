@@ -264,9 +264,10 @@ Polyolefin plastics are recyclable and represent half of all plastics such as HD
 
 Various technologies are available to process and classify polymers, including disassembling plastics into electronic products \citep{Williams2006}. 
 The recycling process has several stages, and one of these stages is called pre-classification and is carried out mainly in collection centers in Mexico. 
-Most of the recycling centers for electronic products and various materials choose manual classification and manual disassembly. 
+Most of the recycling centers for electronic products and various materials choose the manual classification and manual disassembly. 
 In Mexico, these recycling centers even lack power tools to carry out this activity. 
-In the collection centers, they find it challenging to identify what type of plastic it is, so they apply various tests to determine how to burn the plastic in \citep{Grigorescu2019}, show results and techniques of how to identify plastics by considering the color of the flame, the intensity of the flame, smell, color of the smoke as well as the type of ash. 
+The collection centers find it challenging to identify what type of plastic it is, so they apply various tests to determine how to burn the plastic. 
+In \citep{Grigorescu2019}, show results and techniques of how to identify plastics by considering the color of the flame, the intensity of the flame, smell, color of the smoke, as well as the type of ash. 
 It is widely known that jobs that are carried out manually translate into high costs. 
 This means that for developing countries like Mexico, it represents low profitability, and as a consequence, the circular economy grows slowly, and an impact is not reflected in the region.
 
