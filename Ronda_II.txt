@@ -125,8 +125,22 @@ In addition, most electronic waste is mixed with metals that have a high value f
 
 \subsection{The gap between countries without infrastructure to process their solid waste}
 
-Most industrial countries with advanced waste management systems are far from adequately collecting and recycling disposable polymers. That is why in the last decade, one of their actions has been to send their waste to Asian countries to classify, clean, and process it. One of the essential consequences was that China banned importing 24 types of solid waste, including plastic waste. Some Asian countries and regions experienced significant increases in imports of plastic waste from 2016 to 2018. Asian countries are beginning to limit imports of plastic waste from other countries \citep{Liang2021}, \citep{Wen2021}. The prohibitions by China can be understood because of its mega-landfill of Jiangcungou in Shaanxi province that received 10,000 tons of waste per day. For that reason, it was filled 25 years earlier than estimated \citep{Lundell2020}. There is a large gap between countries regarding treatment systems and technical advances in plastic waste management; that is, waste disposal in developing countries has a higher environmental cost. This implies that the countries that exported their waste must take the necessary measures to collect and properly recycle disposable polymers.
-Mexico, being a developing country, requires joining efforts to face this problem of plastic waste \citep{Qu2019}. In general, the current recovery technologies do not include the previous treatment of the waste. Each technology varies and depends on the material being treated because these may need different previous treatments to separate and purify the waste. The level of scrubbing that can be achieved through pretreatment technologies directly affects the potential for waste recovery \citep{van2018}. There is research that is aimed at finding better ways to live with polymers, and one option is to replace them or reduce their use \citep{Ren2015}. Current trends seek to begin to value the use of new and sustainable raw materials such as biomass \citep{Langsdorf2021} and degradation and biodegradation techniques \citep{Wang2019}, \citep{Grigore2017}. In such a way that in the following decades, the classification and treatment of polymers will continue to be topics of interest to develop technological systems that help reduce the contamination of polymers.
+Most industrial countries with advanced waste management systems are far from adequately collecting and recycling disposable polymers. 
+That is why in the last decade, one of their actions has been to send their waste to Asian countries to classify, clean, and process it. 
+One of the essential consequences was that China banned importing 24 types of solid waste, including plastic waste. 
+Some Asian countries and regions experienced significant increases in imports of plastic waste from 2016 to 2018. 
+Asian countries are beginning to limit imports of plastic waste from other countries \citep{Liang2021}, \citep{Wen2021}. 
+The prohibitions by China can be understood because of its mega-landfill of Jiangcungou in Shaanxi province that received 10,000 tons of waste per day. 
+For that reason, it was filled 25 years earlier than estimated \citep{Lundell2020}. 
+There is a large gap between countries regarding treatment systems and technical advances in plastic waste management; that is, waste disposal in developing countries has a higher environmental cost. 
+This implies that the countries that exported their waste must take the necessary measures to collect and properly recycle disposable polymers.
+Mexico, being a developing country, requires joining efforts to face this problem of plastic waste \citep{Qu2019}. 
+In general, the current recovery technologies do not include the previous treatment of the waste. 
+Each technology varies and depends on the material being treated because these may need different previous treatments to separate and purify the waste. 
+The level of scrubbing that can be achieved through pretreatment technologies directly affects the potential for waste recovery \citep{van2018}. 
+There is research that is aimed at finding better ways to live with polymers, and one option is to replace them or reduce their use \citep{Ren2015}. 
+Current trends seek to begin to value the use of new and sustainable raw materials such as biomass \citep{Langsdorf2021} and degradation and biodegradation techniques \citep{Wang2019}, \citep{Grigore2017}. 
+In such a way that in the following decades, the classification and treatment of polymers will continue to be topics of interest to develop technological systems that help reduce the contamination of polymers.
 
 \subsection{Importance of the classification of polymers in Mexico}
 
