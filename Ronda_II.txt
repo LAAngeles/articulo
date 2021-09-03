@@ -81,22 +81,30 @@ In addition, to simplify the solution that we propose, it is recommended to comb
 \end{abstract}
 
 \section{Introduction}
-
-According to the United Nations, the world population reached 7.7 billion in mid-year 2019; due to this increase, the United Nations estimates that the world population will get at least 8.5 billion in 2030 and 9.7 billion in 2050 \citep{United2019}. 
-Population growth worldwide contributes to the exploitation of natural resources. 
-A study in Korea shows the importance of cities in recycling household waste and establishing circular economic policies to avoid the substantial impact on pollution \citep{Jung2021}. 
-The classification process for recyclable materials most to be. 
-It helps develop economies around the world, so making efficient the methods of transfer, classification, storage, and their processing contribute to economic development and care for the environment \citep{Wen2021}. 
-28\% of recycled plastics are used in China. 
-Waste plastics are used to make different plastic products considered low value, like bags, and toys \citep{Qu2019}. 
-Although many positive benefits have been derived from the industrialization of recyclable materials, they have also brought unwanted consequences because they are excellent sources of pollution in cities and the seas \citep{Shen2020}
-The plastic recycling rate is around 9\% worldwide \citep{Wen2021}. 
-The recycling rate varies depending on the region, and in recent years the use of plastics for domestic use has increased \citep{Qu2019}
-For example, the COVID-19 pandemic worldwide increased the use of single-use plastics and reduced the recycling of plastics due to closures of non-essential activities \citep{Ardusso2021}
-A review of urban solid waste management in China concluded that food waste dominates urban solid waste and shows that the highest proportion of waste is in food with 61.2\%, polymers 9.8\%, and paper represents 9.6\% \citep{Gu2017}. 
-Around the world, 60 million metric tons of polyethylene terephthalate are produced per year, 20 million metric tons are for the production of bottles, which is equivalent to one million sold every minute, and it is estimated that annual consumption reaches half a trillion by 2021 \citep{Lundell2020}. 
+The viable disposal of post-consumer polymers can be defined for this paper as the political, economic, social, and technological actions necessary to control and supply the demands of the different industries that require the use of recyclable polymers. 
+Recycling is a continuous process and helps develop economies around the world. 
+Generating new contributions to make the operations of transfer, classification, storage more efficient produces economic development and care for the environment \citep{Wen2021}. 
+As the world population increases, also the viable disposal of post-consumer polymers should increase. 
+According to data of the United Nations, the world population reached 7.7 billion in mid-2019 and estimates that the world population will be at least 8.5 billion by 2030 and 9.7 billion by 2050 \citep{United2019}. 
+Thus, world population growth contributes to the exploitation of natural resources and environmental pollution. 
+Notwithstanding, waste plastics recycling is used to make different plastic products considered low-value, like bags and toys \citep{Qu2019}. 
+The plastic recycling rate is around 9 \% worldwide \citep{Wen2021}, but it varies by region. 
+However, many benefits have been derived from the industrialization of recyclable materials, such as the generation of jobs and the reduction of energy to process them. 
+They have also brought unwanted consequences such as creating new plastic products that are increasingly difficult to classify. 
+In recent years, the use of plastics for domestic purposes has increased to the extent that China banned the entry of plastics for recycling \citep{Qu2019}. 
+In addition, recyclable polymers are excellent sources of pollution in cities and seas \citep{Shen2020}. 
+Secondly, as stated in \citep{Jung2021}, it is critical to recycle household waste and to establish circular economy policies to avoid the substantial impact on pollution. 
+A review of urban solid waste management in China concluded that food waste dominates urban solid waste and shows that the highest proportion of waste is in food with 61.2 \%, polymers 9.8 \%, and paper 9.6 \% \citep{Gu2017}. 
+Furthermore, around the world, 60 million metric tons of PET are produced per year. 
+Twenty million metric tons are to produce bottles, which is equivalent to one million sold every minute. 
+It is estimated that annual consumption will reach half a trillion by 2021 \citep{Lundell2020}. 
 In the Mexican industry, recycling plastic bottles directly employs around 98 thousand people and generates more than one million indirect jobs \citep{IMCC2019}. 
-Various organizations and countries have set a goal for the next ten years to reduce single-use plastics and increase the number of tons recycled \citep{Kumagai2020}.
+Thirty-five thousand Mexicans are benefited from the collection and stockpiling
+Also, atypical phenomena just as the COVID-19 worldwide pandemic increased the use of single-use plastics and reduced the recycling of plastics due to closures of non-essential activities \citep{Ardusso2021}. 
+Various organizations and countries have set a goal for the next ten years to reduce single-use plastics and increase the number of tons recycled \citep{Kumagai2020}. 
+The correct classification of recovered resins can maintain properties very similar to virgin resins, so there are various applications in which developers can manipulate them for quality products. 
+Therefore, it is worth examining available technologies and trends for producing post-consumer resins, as well as plastics identification tools and plastics separation processes. 
+The following sections will address the existing technologies to process and classify polymers present in various fields of the industry and end with a conclusion referring to which systems could be implemented in Mexico to develop technology with affordable designs that allow managing better plastic waste.
 
 \section{The importance of polymers in the industry}
 
