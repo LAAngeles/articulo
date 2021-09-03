@@ -146,15 +146,15 @@ In such a way that in the following decades, the classification and treatment of
 
 \subsection{Importance of polymers classification}
 
-In Mexico, separating ferrous and non-ferrous materials as well as paper, cardboard from polymers, among other materials from mixed waste, requires a large amount of labor; Therefore, the proper classification of polymers in developing countries such as Mexico represents an economic activity for individuals and corporations that contribute to the collection, storage, transfer and processing of different recyclable materials \citep{IMCC2019}, \citep{INEGI2020}, \citep{Qu2019}. 
-In Mexico, more than 44 million tons of waste are generated annually, and the figure is expected to increase to 65 million by 2030. 
-In Mexico, only 5\% is recycled or recovered, equivalent to about 2.2 million tons yearly \citep{SEMARNAT2019}. 
-China's ban on plastics imports causes a shortage of recycled materials, leading to higher prices for products throughout the supply chain. 
+In Mexico, separating ferrous, non-ferrous materials and paper, cardboard from polymers, among other materials from mixed waste, requires a large amount of labor. 
+Therefore, the proper classification of polymers in developing countries represents an economic activity for individuals and corporations that contribute to the collection, storage, transfer, and processing of different recyclable materials \citep{IMCC2019}, \citep{INEGI2020}, \citep{Qu2019}. 
+More than 44 million tons of waste are generated annually, and the figure is expected to increase to 65 million by 2030. 
+In Mexico, only 5 \% is recycled or recovered, equivalent to about 2.2 million tons yearly \citep{SEMARNAT2019}. 
+China's ban on plastics imports causes a shortage of recycled materials, leading to higher product prices throughout the supply chain. 
 The dependence on recycled materials from foreign waste in various countries globally, including Mexico, could lead these countries to switch to raw materials or household waste \citep{Qu2019}. 
 In Mexico, as of January 1st, 2021, through the Ministry of Environment and Natural Resources, the import and export of plastic waste are restricted by the Plastics Amendment of the Basel Convention. 
 The preceding is by the trade policies implemented in recent years by several countries to curtail the introduction of plastic waste \citep{Semarnat2021}. 
-Therefore, Latin American developing countries such as Mexico require systems that provide solutions to move, classify and process solid waste after its useful life \citep{Villegas2021}. 
-The following sections will address the existing technologies to process and classify polymers present in various fields of the industry and end with a conclusion referring to which systems could be implemented in Mexico to develop technology with affordable designs that allow managing better plastic waste.
+Therefore, Latin American developing countries require systems that provide solutions to move, classify and process solid waste after its useful life \citep{Villegas2021}. 
 
 \section{Methods for handling solid plastic waste}
 
