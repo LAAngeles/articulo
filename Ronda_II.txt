@@ -208,16 +208,16 @@ Table \ref{tab:my02} summarizes the incineration and landfill method and the env
 
 \subsection{Mechanical Recycling}
 
-Conventional mechanical recycling is the physical-mechanical process of recovery of solid plastic waste that can be mechanically manufactured plastic products
-The more complex and contaminated the waste is, often contaminated with food particles, the more difficult it is to recycle it mechanically \citep{Ragaert2017}. 
+Conventional mechanical recycling is the physical-mechanical process of recovering solid plastic waste that can be mechanically manufactured.
+The more complex and polluted the waste is, often contaminated with food particles, the more difficult it is to recycle it mechanically \citep{Ragaert2017}. 
 The separation, washing, and waste preparation are essential to produce high-quality end products using mechanical recycling \citep{Al2009}. 
 Such is the case of the disassembly of plastic components in electronics that with a suitable classification, the purity of the resins can be improved, and the value of the recycled resins increases \citep{qu2006viable}. 
-Mechanical recycling uses plastic which is collected, separated, cleaned, crushed, pelletized and enters conversion and injection processing cycles, then re-processed and mixed to produce a new component, but without modifying the chemical composition of the material \citep{Hamad2013}, \citep{Sadat2011}, \citep{Grigore2017}, \citep{Jeswani2021}. 
+Mechanical recycling uses plastic which is collected, separated, cleaned, crushed, pelletized, and enters conversion and injection processing cycles, then re-processed and mixed to produce a new component, but without modifying the chemical composition of the material \citep{Hamad2013}, \citep{Sadat2011}, \citep{Grigore2017}, \citep{Jeswani2021}. 
 Recyclable polymers change their properties due to the treatments and substances to which they are exposed, such as wetting agents that have been shown to alter the buoyancy of polymeric materials \citep{Wang2014}. 
-A complication in industrial processing involves a series of mechanical treatments that in recyclable car parts, aging affects hydrophobicity, and if flotation systems are used, it can be further affected \citep{Fraunholcz2004}. 
-Although thermoplastic waste can lose its initial properties approximately between 70\% and 80\%, with the proper additive treatment, it can regain its initial properties \citep{Al2009}. 
+A complication in industrial processing involves a series of mechanical treatments that in recyclable car parts, aging affects hydrophobicity, and if flotation systems are used, it can be further affected \citep{Fraunholcz2004}
+Although thermoplastic waste can lose its initial properties approximately between 70 \% and 80 \%, with the proper additive treatment, it can regain its initial properties \citep{Al2009}. 
 Due to the low cost of mechanical recycling, most PET fibers waste is recycled in this way. 
-It is important to emphasize that both mechanical recycling and incineration when processing PET release around 784,284 tons of antimony into the atmosphere \citep{Chu2021}. 
+It is important to emphasize that both mechanical recycling and incineration, when processing PET, release around 784,284 tons of antimony into the atmosphere \citep{Chu2021}. 
 In the same way, depositing waste to the landfill or processing it through mechanical recycling also negatively impacts the environment.
 
 \subsection{Chemical Recycling}
