@@ -158,8 +158,14 @@ Therefore, Latin American developing countries require systems that provide solu
 
 \section{Methods for handling solid plastic waste}
 
-According to a World Bank report published in 2012 \citep{Fazeli2016}, the generation of urban solid waste worldwide reached 1.3 billion tonnes per year. The generation of urban solid waste in 2025 and 2050 is expected to increase to 2.2 billion tonnes per year and 4.2 billion tonnes per year \citep{Fazeli2016}. Each country must develop public policies in the area of handling plastic waste. Methods and developments must adapt and evolve by region, such as the case of landfills in Mexico, which can be official or clandestine, in which polymers are dumped along with the organic waste. There are methods to manipulate plastic waste, such as incineration, but they directly affect the environment because they form harmful ash and carbon dioxide \citep{Sharma2020}.
-Another example is the handling of plastic waste in incineration and landfills woven from PET fiber enters the biosphere \citep{Chu2021}. Another method is chemical recycling, in which plastic waste is converted into chemical raw materials and even fuels, as well as mechanical recycling methods used to form the product with the same characteristics of a virgin resin \citep{Thakur2018} and the method by disassembling electronic waste housings \citep{qu2006viable}. Recycling rates decrease with a low population density in rural communities and occur due to the distance from recycling centers, which contributes to recycling not contributing to a circular economy \citep{Kreiger2013}.
+According to a World Bank report published in 2012 \citep{Fazeli2016}, the generation of urban solid waste worldwide reached 1.3 billion tonnes per year. 
+The generation of urban solid waste in 2025 and 2050 is expected to increase to 2.2 billion tonnes per year and 4.2 billion tonnes per year \citep{Fazeli2016}. 
+Each country must develop public policies in the area of handling plastic waste. 
+Methods and developments must adapt and evolve by region, such as the case of landfills in Mexico, which can be official or clandestine, in which polymers are dumped along with the organic waste. 
+There are methods to manipulate plastic waste, such as incineration, but they directly affect the environment because they form harmful ash and carbon dioxide \citep{Sharma2020}.
+Another example is the handling of plastic waste in incineration and landfills woven from PET fiber enters the biosphere \citep{Chu2021}. 
+Another method is chemical recycling, in which plastic waste is converted into chemical raw materials and even fuels, as well as mechanical recycling methods used to form the product with the same characteristics of a virgin resin \citep{Thakur2018} and the method by disassembling electronic waste housings \citep{qu2006viable}. 
+Recycling rates decrease with a low population density in rural communities and occur due to the distance from recycling centers, which contributes to recycling not contributing to a circular economy \citep{Kreiger2013}.
 
 \subsection{Landfills in Mexico}
 
