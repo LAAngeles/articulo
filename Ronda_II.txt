@@ -515,7 +515,7 @@ We thank Consejo Nacional de Ciencia y Tecnología CONACYT and the Universidad A
     \caption{Urban solid waste management in Mexico}
     \begin{tabular}{p{1.7cm}p{3cm}p{5.4cm}p{5.5cm}}
     \hline
-    \multicolumn{4}{c}{Alternatives in Mexico for the management of post-consumer plastic waste}\\
+    \multicolumn{4}{c}{Methods in Mexico for the management of post-consumer plastic waste}\\
         \hline
         % encabezado
         Method& Description &Capacity& Limitations \\
