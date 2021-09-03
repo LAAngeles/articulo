@@ -249,7 +249,7 @@ Electronic waste, for its different components, is a source of toxic metals and 
 Electronic products contain polychlorinated biphenyls, lead, cadmium, and mercury, as well as gold, palladium, copper, bronze, aluminum, and plastics. 
 In addition, there is the possibility that various outdated electronic devices can be reused for research or academic development \citep{Kang2005}. 
 Electronic waste grows at an annual rate of approximately 2 million tons. 
-Only 17.4 \% of the world's electronic waste was recycled, and 82.6 \% was left untreated or processed informally \citep{Nithya2021}
+Only 17.4 \% of the world's electronic waste was recycled, and 82.6 \% was left untreated or processed informally \citep{Nithya2021}.
 Every year, millions of electronic products reach the end of their useful life and represent thousands of tons of thermoplastics such as ABS, HIPS, and others \citep{qu2006viable}. 
 Electrical and electronic equipment can fall into two categories: reusable equipment that conserves useful parts and recyclable equipment \citep{Kang2005}. 
 The waste management,  construction industries, electrical and electronic equipment are pioneers in implementing the circular economy \citep{Mhatre2021}. 
@@ -262,7 +262,13 @@ Polyolefin plastics are recyclable and represent half of all plastics such as HD
 
 \section{Technologies for the classification of polymers}
 
-Various technologies are available to process and classify polymers, including disassembling plastics into electronic products \citep{Williams2006}. The recycling process has several stages, and one of these stages is called pre-classification and is carried out mainly in collection centers in Mexico. Most of the recycling centers for electronic products and various materials choose manual classification and manual disassembly. In Mexico, these recycling centers even lack power tools to carry out this activity. In the collection centers, they find it challenging to identify what type of plastic it is, so they apply various tests to determine how to burn the plastic in \citep{Grigorescu2019}, show results and techniques of how to identify plastics by considering the color of the flame, the intensity of the flame, smell, color of the smoke as well as the type of ash. It is widely known that jobs that are carried out manually translate into high costs. This means that for developing countries like Mexico, it represents low profitability, and as a consequence, the circular economy grows slowly, and an impact is not reflected in the region.
+Various technologies are available to process and classify polymers, including disassembling plastics into electronic products \citep{Williams2006}. 
+The recycling process has several stages, and one of these stages is called pre-classification and is carried out mainly in collection centers in Mexico. 
+Most of the recycling centers for electronic products and various materials choose manual classification and manual disassembly. 
+In Mexico, these recycling centers even lack power tools to carry out this activity. 
+In the collection centers, they find it challenging to identify what type of plastic it is, so they apply various tests to determine how to burn the plastic in \citep{Grigorescu2019}, show results and techniques of how to identify plastics by considering the color of the flame, the intensity of the flame, smell, color of the smoke as well as the type of ash. 
+It is widely known that jobs that are carried out manually translate into high costs. 
+This means that for developing countries like Mexico, it represents low profitability, and as a consequence, the circular economy grows slowly, and an impact is not reflected in the region.
 
 \subsection{Plastics identification technologies}
 
